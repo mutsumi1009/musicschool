@@ -1,0 +1,18 @@
+// scss/foundation/_base.scss
+@use "variables" as *;
+@use "mixins" as *;   // ← 戻す
+
+html { font-size: 62.5%; }
+body {
+  font-family: $ff-sans;
+  font-size: $base-font-size;
+  line-height: 1.7;
+}
+
+section[id] {
+  scroll-margin-top: 8rem;
+  
+  @include sp { 
+    scroll-margin-top: 5rem; 
+  }
+}
