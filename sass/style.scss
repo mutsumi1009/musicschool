@@ -1,0 +1,50 @@
+/* foundation */
+@use "foundation/variables" as v;
+@use "foundation/function"  as fn;
+@use "foundation/mixin"     as m;
+@use "foundation/color";
+@use "foundation/font";
+@use "foundation/reset";
+@use "foundation/base";
+
+
+
+/* layout */
+@use "layout/header";
+@use "layout/footer";
+@use "layout/main";
+
+/* object */
+/* component */
+@use "object/component/c-button";
+@use "object/component/c-contact";
+
+@use "object/component/c-hero";
+@use "object/component/c-news";
+@use "object/component/c-works";
+
+
+/* project */
+/* project */
+@use "project/p-about";
+@use "project/p-company";
+@use "project/p-index";
+@use "project/p-footer";
+@use "project/p-fv";
+@use "project/p-header";
+@use "project/p-main";
+
+
+/* utillty */
+/* utility */
+@use "utility/form";
+@use "utility/heading";
+@use "utility/top";
+
+
+
+// @use "object/project/index-main";
+// @use "object/project/index-concept";
+// @use "object/project/index-message";
+// @use "object/project/result-list";
+// @use "object/project/result-details";

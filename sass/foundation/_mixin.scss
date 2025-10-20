@@ -1,0 +1,20 @@
+@mixin pc {
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin sp {
+    @media (max-width: 767px) {
+        @content;
+    }
+}
+
+// 中間幅（768px〜1024px）専用
+@mixin tab {
+	@media screen and (min-width: 768px) and (max-width: 1023px) {
+		@content;
+	}
+}
+
+
