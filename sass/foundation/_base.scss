@@ -1,0 +1,32 @@
+@use "./variables" as *;
+@use "./font" as *;
+@use "./mixin" as *;
+
+
+
+html {
+  font-size: 62.5%;
+  @include pc {
+    font-size: calc(10 / 920 * 100vw);
+  }
+  @media (min-width: 920px) {
+    font-size: 10px;
+  }
+  @media(max-width:375px) {
+    font-size: calc(10 /375 * 100vw);
+  }
+}
+
+body {
+  font-family: $font-serif;
+  font-size: $base-font-size;
+  line-height: 1.833;
+}
+
+section[id] {
+  scroll-margin-top: 8rem;
+
+  @include sp {
+    scroll-margin-top: 5rem;
+  }
+}
