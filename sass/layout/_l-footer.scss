@@ -1,10 +1,12 @@
-@use "../foundation/mixin" as *;
-@use "../foundation/color" as *;
+@use "../global/variables" as *;
+@use "../global/mixin" as *;
+
+
 
 
 
 .l-footer {
-    background: $c-main;
+    // background: $c-main;
     color: $c-accent;
     padding-block: 9.7rem;
     text-align: center;
@@ -18,7 +20,7 @@
         }
     }
     
-    .footer__nav-list {
+    .l-footer__nav-list {
         font-size: 1.7rem;
         line-height: 1.941;
         color: $c-accent;
