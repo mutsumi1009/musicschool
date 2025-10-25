@@ -1,6 +1,5 @@
-@use "./variables" as *;
-@use "./font" as *;
-@use "./mixin" as *;
+@use "../global/variables" as *;
+@use "../global/mixin" as *;
 
 
 
@@ -18,7 +17,7 @@ html {
 }
 
 body {
-  font-family: $font-serif;
+  font-family: $font-sans;
   font-size: $base-font-size;
   line-height: 1.833;
 }
