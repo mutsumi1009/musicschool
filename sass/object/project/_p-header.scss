@@ -1,0 +1,141 @@
+@use "../global/variable" as *;
+@use "../global/mixin" as *;
+@use "../global/function" as *; 
+@use "../foundation/base" as *;
+
+
+.p-header {
+	text-align: center;
+	transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+	height: 8rem;
+
+	@include sp {
+		height: 5rem;
+		background-color: $font-color;
+	}
+}
+
+.p-header__inner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 100%;
+	max-width: 108rem;
+	margin: 0 auto;
+	padding-inline: vw(100);
+
+
+	// @media screen and (max-width: 1024px) {
+	// 	padding-inline: 2rem;
+	// }
+}
+
+.p-header__logo {
+	display: flex;
+	align-items: center;
+	height: 100%;
+}
+
+.p-header .logo__img {
+	width: 100%;
+	height: auto;
+}
+
+.p-header .logo__img img {
+	display: block;
+	width: auto;
+	height: auto;
+}
+
+.p-header__logo-text {
+	display: flex;
+	flex-direction: column;
+	line-height: 1.2;
+}
+
+.logo__main {
+font-size: vw(20);	
+font-weight: 700;
+}
+
+.logo__sub {
+	font-size: vw(12);	
+	margin-top: vw(4);
+}
+
+
+
+
+.p-header__nav-list {
+	display: flex;
+	column-gap: 3.1rem;
+	height: 100%;
+	list-style: none;
+	margin: 0;
+	align-items: center;
+
+
+	@include tab {
+		column-gap: 2.1rem;
+	}
+
+	@include sp {
+		margin-left: 0;
+	}
+}
+	
+
+.p-header__nav-list li {
+	height: 100%;
+	display: flex;
+	align-items: center;
+}
+
+.p-header__nav-list li a {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	font-size: 1.8rem;
+	line-height: 1.833;
+	font-weight: 500;
+	color: $font-color;
+	text-decoration: none;
+	position: relative;
+
+	@include tab {
+		font-size: 1.6rem;
+	}
+
+	@include sp {
+		font-size: 1.6rem;
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		bottom: 2.5rem;
+		left: 0;
+		width: 100%;
+		height: 0.1rem;
+		// background-color: $font-color;
+		// /* ★デフォルトの下線の色（白） */
+		// transform: scaleX(0);
+		// transform-origin: center;
+		// transition: transform 0.5s ease-out;
+	}
+
+	&:hover {
+		color: $font-color;
+
+
+		&::after {
+			transform: scaleX(1);
+			transform-origin: center;
+		}
+	}
+}
+
+
+.p-header__site-title {
+	font-size: 2rem;
+}

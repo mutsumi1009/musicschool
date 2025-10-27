@@ -1,6 +1,6 @@
-@use "p-footer";
-@use "p-header";
-@use "p-main";
-@use "p-fv";
-@use "p-top-fv";
-@use "top";
+@forward "p-footer";
+@forward "p-header";
+@forward "p-main";
+@forward "p-fv";
+@forward "p-top-fv";
+@forward "p-top";

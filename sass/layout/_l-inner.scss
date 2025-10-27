@@ -1,0 +1,8 @@
+@use "../global/variable" as *;
+@use "../global/mixin" as *;
+
+.l-inner {
+    max-width: 92rem;
+    margin: 0 auto;
+    padding-inline: 2rem;
+}

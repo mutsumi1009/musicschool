@@ -1,5 +1,2 @@
-@use "c-button";
-@use "c-contact";
-@use "c-works";
-@use "c-news";
-@use "c-hero";
+@forward "c-button";
+@forward "c-tag";
