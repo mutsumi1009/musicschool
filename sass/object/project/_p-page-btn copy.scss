@@ -1,0 +1,13 @@
+@use "../../global/variable" as *;
+@use "../../global/mixin" as *;
+@use "../../global/function" as *;
+// @use "../../foundation/base" as *;
+
+.p-page-btn {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    // line-height: 2.2;
+    margin-block: 4rem 9rem;
+  
+}

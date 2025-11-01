@@ -1,0 +1,27 @@
+@use "../../global/variable" as *;
+@use "../../global/mixin" as *;
+@use "../../global/function" as *;
+// @use "../../foundation/base" as *;
+
+.p-404__keyvisual {
+    position: relative;
+    height: 20rem;
+    margin-top: 8rem;
+  }
+  
+  .p-404__keyvisual-text {
+    position: absolute;
+    top: 7.4rem;
+    left: 50%;
+    transform: translate(-50%);
+    text-align: center;
+    font-size: vw(25);
+    color: $font-color;
+  }
+  
+  
+  .p-404__text {
+    margin-block: 6.8rem 5rem;
+    text-align: center;
+  
+  }

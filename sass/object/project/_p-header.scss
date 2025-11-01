@@ -1,8 +1,8 @@
-@use "../global/variable" as *;
-@use "../global/mixin" as *;
-@use "../global/function" as *; 
-@use "../foundation/base" as *;
-
+// @use "../../global" as *;
+@use "../../global/variable" as *;
+@use "../../global/mixin" as *;
+@use "../../global/function" as *;
+@use "../../foundation/base" as *;
 
 .p-header {
 	text-align: center;
@@ -30,45 +30,47 @@
 	// }
 }
 
-.p-header__logo {
+.logo {
 	display: flex;
 	align-items: center;
 	height: 100%;
 }
 
-.p-header .logo__img {
-	width: 100%;
-	height: auto;
-}
+// .p-header .logo__img {
+// 	width: 100%;
+// 	height: auto;
+// }
 
-.p-header .logo__img img {
+.logo__img img {
 	display: block;
-	width: auto;
+	width: 3.2rem;
 	height: auto;
 }
 
 .p-header__logo-text {
 	display: flex;
 	flex-direction: column;
-	line-height: 1.2;
+	// line-height: 1.2;
 }
 
 .logo__main {
 font-size: vw(20);	
 font-weight: 700;
+line-height: 1.0;
+text-align: left;
 }
 
 .logo__sub {
 	font-size: vw(12);	
 	margin-top: vw(4);
+	font-weight: 700;
+	line-height: 1.0;
 }
-
-
 
 
 .p-header__nav-list {
 	display: flex;
-	column-gap: 3.1rem;
+	column-gap: 3.3rem;
 	height: 100%;
 	list-style: none;
 	margin: 0;
@@ -84,7 +86,6 @@ font-weight: 700;
 	}
 }
 	
-
 .p-header__nav-list li {
 	height: 100%;
 	display: flex;
@@ -95,10 +96,10 @@ font-weight: 700;
 	height: 100%;
 	display: flex;
 	align-items: center;
-	font-size: 1.8rem;
+	font-size: vw(17);	
 	line-height: 1.833;
 	font-weight: 500;
-	color: $font-color;
+	// color: $font-color;
 	text-decoration: none;
 	position: relative;
 
@@ -125,7 +126,7 @@ font-weight: 700;
 	}
 
 	&:hover {
-		color: $font-color;
+		// color: $c-accent;
 
 
 		&::after {
