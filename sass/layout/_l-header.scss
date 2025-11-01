@@ -1,14 +1,14 @@
 @use "../global/variable" as *;
 @use "../global/mixin" as *;
 @use "../global/function" as *;
-@use "../../foundation/base" as *;
+@use "../foundation/base" as *;
 
 .l-header {
 	width: 100%;
 	position: fixed;
 	top: 0;
 	z-index: 999;
-	background-color: $c-accent ;
+	background-color: $c-base ;
 
 	@include sp {
 		z-index: 1000;

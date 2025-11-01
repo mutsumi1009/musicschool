@@ -1,15 +1,22 @@
 @use "../../global/variable" as *;
 @use "../../global/mixin" as *;
-@use "../../global/function" as *; 
-@use "../../foundation/base" as *; 
-
+@use "../../global/function" as *;
+@use "../../foundation/base" as *;
 
 
 .p-footer {
-    background: $c-main;
+    background: $main-color;
     color: $c-accent;
-    padding-block: 9.7rem;
+    padding-block: 4.4rem 5.1rem;
     text-align: center;
+    width: 100%;
+    min-height: 27.4rem;
+}
+
+.p-footer__inner {
+    max-width: 108rem;
+    margin: 0 auto;
+    padding-inline: vw(44) vw(50);
 }
 
 .p-footer__nav {
@@ -21,7 +28,7 @@
 }
 
 .p-footer__nav-list {
-    font-size: 1.7rem;
+    font-size: vw(17);
     line-height: 1.941;
     color: $c-accent;
     display: flex;
@@ -54,7 +61,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 3.1rem;
+    gap: 1.21rem;
+    margin-top: 0.339rem;
 }
 
 .p-footer__sns a {
@@ -80,14 +88,14 @@
 .p-footer__copyright {
     background: $main-color;
     color: $font-color;
-    font-size: 2.0rem;
+    font-size: vw(15);
     line-height: 1.65;
     display: flex;
     text-align: center;
     justify-content: center;
-    padding-block: 3rem 2.9rem;
+    margin-top: 2.3rem;
     width: 100%;
-    margin-top: 8rem;
+   
 
     @include sp {
         padding-block: 2.1rem;
@@ -100,7 +108,9 @@
 
 .p-footer__content {}
 
-.p-footer__logo {}
+.p-footer__logo {
+    margin-top: 2.2rem;
+}
 
 .footer-logo__link {}
 
