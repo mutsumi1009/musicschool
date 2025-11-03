@@ -10,4 +10,7 @@
     // line-height: 2.2;
     margin-block: 4rem 9rem;
   
+    @include sp {
+    margin-block: 0.9rem 5rem;
+      }
 }
