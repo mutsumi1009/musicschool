@@ -18,16 +18,20 @@
     font-weight: 700;
     line-height: 1.32;
     color: $font-color;
-    
     border: none;
     cursor: pointer;
     border: 1px solid $main-color;
     transition: background-color 0.3s, color 0.3s;
     // width: 100%;
     max-width: 25rem;
-    // height: 5rem;
+     height: 5rem;
     padding: 1rem 5rem 0.7rem 5.1rem;
-    
+    white-space: nowrap;
+
+    @include sp {
+        font-size: 2rem;
+        width: 33.5rem;
+      }
 }
 
 .c-button--head {}

@@ -19,7 +19,7 @@
             <div class="p-header__inner">
                 <div class="p-header__logo">
                     <h1 class="p-header__site-title">
-                        <a href="#/fv" class="logo">
+                        <a href="index.html" class="logo">
                             <span class="logo__img">
                                 <img src="images/common/icon-pc.svg" alt="" width="32" height="50">
                             </span>
@@ -30,7 +30,7 @@
                         </a>
                     </h1>
                 </div>
-                <!-- 共通ナビ-->
+                <!-- PCナビ-->
                 <nav class="p-header__nav" id="global-nav">
                     <ul class="p-header__nav-list">
                         <li><a href="#料金">料金</a></li>
@@ -53,13 +53,23 @@
                 </span>
             </button>
 
-
+            <!-- SPナビ -->
+            <nav class="p-header__nav-sp" id="sp-nav">
+                <ul class="p-header__nav-sp-list">
+                    <li><a href="#料金">料金</a></li>
+                    <li><a href="#ブログ">ブログ</a></li>
+                    <li><a href="#卒業実績">卒業実績</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
     <main class="l-main p-404">
         <div class="p-404__keyvisual">
-            <img src="images/common/404-hero_pc.jpg" alt="404 not found キービジュアル">
+            <picture>
+                <source media="(min-width: 768px)" srcset="images/common/404-hero_pc.jpg">
+                <img src="images/common/404-hero_sp.jpg" alt="404 not found キービジュアル" width="375" height="300">
+            </picture>
             <p class="p-404__keyvisual-text">404 not found</p>
         </div>
 
@@ -70,7 +80,7 @@
             </p>
 
             <div class="p-page-btn">
-                <a href="index.html" class="c-button button-back">ホームへ戻る</a>
+                <a href="index.html" class="c-button c-button--back">ホームへ戻る</a>
             </div>
         </div>
 
@@ -95,7 +105,8 @@
                     </a>
                 </div>
                 <div class="p-footer__copyright">
-                    <p>Copyright © 0000 KITAMURA music school Inc. All Rights
+                    <p>Copyright © 0000 KITAMURA music school Inc.
+                        <span class="u-center-block"> All Rights</span>
                     </p>
                 </div>
                 <div class="p-footer__sns">
@@ -106,9 +117,16 @@
                 </div>
 
             </div>
-         
+
         </div>
     </footer>
+    <!-- コンテンツ -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+
+    <script src="js/script.js"></script>
+
 </body>
+
 
 </html>

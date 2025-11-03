@@ -1,20 +1,62 @@
+/* ===============================================
+# Mixin 
+=============================================== */
+
+// PCサイズ以上 (768px 〜)
 @mixin pc {
     @media (min-width: 768px) {
         @content;
     }
 }
 
+// SPサイズ以下 (〜 767px)
 @mixin sp {
     @media (max-width: 767px) {
         @content;
     }
 }
 
-// 中間幅（768px〜1024px）専用
+// タブレットサイズ (768px 〜 1023px)
 @mixin tab {
-	@media screen and (min-width: 768px) and (max-width: 1023px) {
-		@content;
-	}
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+        @content;
+    }
+}
+
+// PC時のみ適用 (この Mixin は `@include pc` と機能的に同じなので、`@include pc-only`を廃止し`@include pc`に統一しても良い)
+@mixin pc-only {
+    @media (min-width: 768px) {
+        @content;
+    }
 }
 
 
+/* --- ⬇️ 以下、Helper Class のスタイル --- */
+/* (Mixinを正しく使用して、表示/非表示を切り替えています) */
+
+// HTMLで使用されている `.pc-only` クラスのスタイル
+.pc-only {
+    display: none; // SPでは非表示
+
+    @include pc-only {
+        display: block; // PCでは表示
+    }
+}
+
+// HTMLで使用されている.pcクラスのスタイル
+.pc {
+    display: block; // PCでは表示 (デフォルト)
+
+    @include sp {
+        display: none; // SPでは非表示
+    }
+}
+
+// HTMLで使用されている.spクラスのスタイル
+.sp {
+    display: none; // PCでは非表示 (デフォルト)
+
+    @include sp {
+        display: block; // SPでは表示
+    }
+}

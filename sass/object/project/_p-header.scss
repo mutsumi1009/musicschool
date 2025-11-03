@@ -11,7 +11,7 @@
 
 	@include sp {
 		height: 5rem;
-		background-color: $font-color;
+	 background-color: $font-color;
 	}
 }
 
@@ -22,18 +22,26 @@
 	height: 100%;
 	max-width: 108rem;
 	margin: 0 auto;
-	padding-inline: vw(100);
-
+	// padding-inline: vw(100);
+	padding-inline: 10rem;
 
 	// @media screen and (max-width: 1024px) {
 	// 	padding-inline: 2rem;
 	// }
+	@include sp {
+		padding-inline: 2rem;
+	}
 }
+
 
 .logo {
 	display: flex;
 	align-items: center;
 	height: 100%;
+
+	@include sp {
+		height: auto;
+	}
 }
 
 // .p-header .logo__img {
@@ -45,26 +53,47 @@
 	display: block;
 	width: 3.2rem;
 	height: auto;
+
+	@include sp {
+		width: 3.2rem;
+		height: 2.1rem;
+	}
 }
 
 .p-header__logo-text {
 	display: flex;
 	flex-direction: column;
 	// line-height: 1.2;
+
+	@include sp {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+	}
 }
 
 .logo__main {
-font-size: vw(20);	
-font-weight: 700;
-line-height: 1.0;
-text-align: left;
+	font-size: vw(20);
+	font-weight: 700;
+	line-height: 1.0;
+	text-align: left;
+
+	@include sp {
+		font-size: 1.3rem;
+		white-space: nowrap;
+	}
 }
 
 .logo__sub {
-	font-size: vw(12);	
+	font-size: vw(12);
 	margin-top: vw(4);
 	font-weight: 700;
 	line-height: 1.0;
+
+	@include sp {
+		font-size: 1.3rem;
+		margin-top: 0;
+	}
 }
 
 
@@ -83,9 +112,10 @@ text-align: left;
 
 	@include sp {
 		margin-left: 0;
+		display: none;
 	}
 }
-	
+
 .p-header__nav-list li {
 	height: 100%;
 	display: flex;
@@ -96,7 +126,7 @@ text-align: left;
 	height: 100%;
 	display: flex;
 	align-items: center;
-	font-size: vw(17);	
+	font-size: vw(17);
 	line-height: 1.833;
 	font-weight: 500;
 	// color: $font-color;
@@ -136,7 +166,174 @@ text-align: left;
 	}
 }
 
+// .p-header__site-title {
+// 	font-size: 2rem;
 
-.p-header__site-title {
-	font-size: 2rem;
+// 		@include sp {
+// 		font-size: 1.3rem;
+// 	}
+// }
+
+
+// spナビゲゲーション
+.p-header__nav-sp {
+	display: none;
+
+	@include sp {
+		position: fixed;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		font-size: 1.8rem;
+		font-weight: 500;
+		top: 5rem;
+		right: -100%;
+		width: 80%;
+		max-width: 30rem;
+		transition: right 0.6s ease;
+		z-index: 1000;
+
+		&.is-open {
+			right: 0;
+		}
+	}
 }
+
+.p-header__nav-sp-list {
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	flex-grow: 1;
+	justify-content: center;
+
+	a {
+		display: flex;
+		align-items: center;
+		font-size: 1.8rem;
+		font-weight: 500;
+		color: $font-color;
+		text-decoration: none;
+		padding: 1.5rem 20.8rem 1rem 2rem;
+		transition: background-color 0.4s ease;
+		background-color: $main-color;
+
+		&:hover {
+			background-color: $text-color;
+			color: $font-color;
+		}
+	}
+}
+
+
+// ハンバーガーメニュー
+// PCでは非表示
+.c-hamburger {
+	display: none;
+
+	@include sp {
+		position: fixed;
+		top: 0;
+		right: 0;
+		width: 7.1rem;
+		height: 5rem;
+		background: $main-color;
+		z-index: 1001;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		cursor: pointer;
+		transition: background-color 0.3s ease-in-out,
+			transform 0.3s ease-in-out,
+			opacity 0.3s ease-in-out;
+
+		&:hover,
+		&:focus-visible {
+			//  background-color: color.adjust($font-color, $lightness: 4%);
+		}
+	}
+}
+
+
+// ★ 三本線のスタイル
+.c-hamburger__line,
+.c-hamburger__line::before,
+.c-hamburger__line::after {
+	position: absolute;
+	width: 3.3rem;
+	height: 0.4rem;
+	left: 2rem;
+	background: $font-color;
+	border-radius: 0.2rem;
+	transition:
+		transform .45s cubic-bezier(.22, .61, .36, 1),
+		opacity .35s ease,
+		background-color .35s ease;
+}
+
+
+// 中の線
+.c-hamburger__line {
+	top: 49%;
+	transform: translateY(-50%);
+}
+
+// 疑似要素の共通スタイル
+.c-hamburger__line::before,
+.c-hamburger__line::after {
+	content: "";
+	left: 0;
+}
+
+
+// 上の線
+.c-hamburger__line::before {
+	top: 49%;
+	transform: translateY(calc(-50% - 1.2rem));
+}
+
+// 下の線
+.c-hamburger__line::after {
+	top: 49%;
+	transform: translateY(calc(-50% + 1.2rem));
+}
+
+// メニューが開いた時のアニメーション
+.c-hamburger.is-open {
+	.c-hamburger__line {
+		background: transparent;
+	}
+
+	.c-hamburger__line::before {
+		top: 50%;
+		transform: translateY(-50%) rotate(45deg);
+	}
+
+	.c-hamburger__line::after {
+		top: 50%;
+		transform: translateY(-50%) rotate(-45deg);
+	}
+}
+
+// .c-hamburger__bg {
+// 	position: fixed;
+// 	top: 0;
+// 	right: 0;
+// 	width: 100vw;
+// 	height: 100vh;
+// 	background-color: $main-color;
+// 	opacity: 0;
+// 	z-index: 999;
+// 	transition: opacity 0.3s ease;
+// 	pointer-events: none;
+// }
+
+// .c-hamburger__bg.is-open {
+// 	opacity: 0.6;
+// 	transition: opacity 0.6s ease;
+// 	pointer-events: auto;
+// }

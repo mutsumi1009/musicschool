@@ -4,24 +4,45 @@
 // @use "../../foundation/base" as *;
 
 .p-404__keyvisual {
-    position: relative;
-    height: 20rem;
-    margin-top: 8rem;
+  position: relative;
+  height: 20rem;
+  margin-top: 8rem;
+
+  @include sp {
+    margin-top: 5rem;
   }
-  
-  .p-404__keyvisual-text {
-    position: absolute;
-    top: 7.4rem;
-    left: 50%;
-    transform: translate(-50%);
-    text-align: center;
-    font-size: vw(25);
-    color: $font-color;
+}
+
+.p-404__keyvisual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+.p-404__keyvisual-text {
+  position: absolute;
+  top: 7.4rem;
+  left: 50%;
+  transform: translate(-50%);
+  text-align: center;
+  font-size: vw(25);
+  color: $font-color;
+
+  @include sp {
+    font-size: 2.5rem;
   }
-  
-  
-  .p-404__text {
-    margin-block: 6.8rem 5rem;
-    text-align: center;
-  
+}
+
+
+.p-404__text {
+  // margin-block: 6.8rem 5rem;
+  text-align: center;
+
+  @include sp {
+    font-size: 1.6rem;
+    text-align: left;
+    margin-top: 4.7rem;
   }
+}

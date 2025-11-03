@@ -21,6 +21,8 @@ body {
   font-family: $font-sans;
   font-size: $base-font-size;
   line-height: 1.833;
+  margin: 0;
+  padding-top: 0;
 }
 
 section[id] {
@@ -37,3 +39,6 @@ section[id] {
 // 	display: block;
 // 	object-fit: cover;
 // }
+
+
+
