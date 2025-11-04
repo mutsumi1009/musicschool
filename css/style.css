@@ -165,6 +165,8 @@ meter {
 
 html {
   font-size: 62.5%;
+  margin: 0;
+  padding: 0;
 }
 @media (min-width: 768px) {
   html {
@@ -269,20 +271,19 @@ section[id] {
   padding-block: 4.4rem 5.1rem;
   text-align: center;
   width: 100%;
-  min-height: auto;
 }
 @media (max-width: 767px) {
   .p-footer {
     padding-block: 4.4rem 5.3rem;
+    min-height: auto;
   }
 }
 
 .p-footer__inner {
   max-width: 108rem;
   margin: 0 auto;
-  padding-inline: 4.0740740741vw 4.6296296296vw;
+  padding-inline: 4.4rem 5rem;
 }
-
 .p-footer__nav {
   margin-top: 0;
 }
@@ -335,6 +336,9 @@ section[id] {
   cursor: pointer;
 }
 
+.p-footer__logo {
+  margin-block: 2.174rem 2.3rem;
+}
 @media (max-width: 767px) {
   .p-footer__logo {
     display: -webkit-box;
@@ -410,8 +414,8 @@ section[id] {
 @media (max-width: 767px) {
   .p-footer__copyright {
     display: block;
+    padding-inline: 3rem;
     margin-top: 2.9rem;
-    white-space: nowrap;
   }
 }
 
@@ -428,13 +432,15 @@ section[id] {
   font-size: 1.3888888889vw;
   line-height: 1.65;
   text-align: center;
+  width: 100%;
 }
-@media (max-width: 767px) and (max-width: 767px) {
+@media (max-width: 767px) {
   .p-footer__copyright p {
+    display: block;
     font-size: 1.5rem;
     font-weight: 400;
     line-height: 1.25;
-    text-align: left;
+    margin: 0;
   }
 }
 
@@ -812,6 +818,14 @@ section[id] {
     margin-top: 5rem;
   }
 }
+.p-404__keyvisual::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(80, 80, 80, 0.4863);
+  mix-blend-mode: multiply;
+  z-index: 1;
+}
 
 .p-404__keyvisual img {
   width: 100%;
@@ -823,7 +837,7 @@ section[id] {
 
 .p-404__keyvisual-text {
   position: absolute;
-  top: 7.4rem;
+  top: 6.8518518519vw;
   left: 50%;
   -webkit-transform: translate(-50%);
           transform: translate(-50%);
@@ -834,11 +848,13 @@ section[id] {
 @media (max-width: 767px) {
   .p-404__keyvisual-text {
     font-size: 2.5rem;
+    top: 40%;
   }
 }
 
 .p-404__text {
   text-align: center;
+  margin-top: 6.8rem;
 }
 @media (max-width: 767px) {
   .p-404__text {
