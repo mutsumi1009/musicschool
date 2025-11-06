@@ -4,58 +4,28 @@
 // @use "../../foundation/base" as *;
 
 .p-404__keyvisual {
-  position: relative;
-  height: 20rem;
-  margin-top: 8rem;
+   @extend .c-hero;
+   height: 20rem;
+   margin-top: 8rem;
 
   @include sp {
-    margin-top: 5rem;
-  }
-
-  &::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-color: rgba(80, 80, 80, 0.4863);
-    mix-blend-mode: multiply;
-    z-index: 1;
-  }
-}
-
-
-
-.p-404__keyvisual img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
+   margin-top: 5rem;
+ }
+ }
 
 .p-404__keyvisual-text {
-  position: absolute;
-  top: vw(74);
-  left: 50%;
-  transform: translate(-50%);
-  text-align: center;
-  font-size: vw(25);
-  color: $font-color;
-
-  @include sp {
-    font-size: 2.5rem;
-    top: 40%;
-  }
+  @extend .c-hero__text;
 }
 
 
-.p-404__text {
-  // margin-block: 6.8rem 5rem;
+ .p-404__text {
+   // margin-block: 6.8rem 5rem;
   text-align: center;
-  margin-top: 6.8rem;
+   margin-top: 6.8rem;
 
   @include sp {
     font-size: 1.6rem;
     text-align: left;
-    margin-top: 4.7rem;
-  }
-}
+   margin-top: 4.7rem;
+ }
+ }
