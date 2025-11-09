@@ -14,57 +14,58 @@
 </head>
 
 <body>
-    <header class="l-header">
-        <div class="p-header">
-            <div class="p-header__inner">
-                <div class="p-header__logo">
-                    <h1 class="p-header__site-title">
-                        <a href="index.html" class="logo">
-                            <span class="logo__img">
-                                <img src="images/common/icon-pc.svg" alt="" width="32" height="50">
-                            </span>
-                            <span class="p-header__logo-text">
-                                <span class="logo__main">きたむら</span>
-                                <span class="logo__sub">ミュージックスクール</span>
-                            </span>
-                        </a>
-                    </h1>
+    <div class="l-wrapper">
+        <header class="l-header">
+            <div class="p-header">
+                <div class="p-header__inner">
+                    <div class="p-header__logo">
+                        <h1 class="p-header__site-title">
+                            <a href="index.html" class="logo">
+                                <span class="logo__img">
+                                    <img src="images/common/icon-pc.svg" alt="" width="32" height="50">
+                                </span>
+                                <span class="p-header__logo-text">
+                                    <span class="logo__main">きたむら</span>
+                                    <span class="logo__sub">ミュージックスクール</span>
+                                </span>
+                            </a>
+                        </h1>
+                    </div>
+                    <!-- PCナビ-->
+                    <nav class="p-header__nav" id="global-nav">
+                        <ul class="p-header__nav-list">
+                            <li><a href="#料金">料金</a></li>
+                            <li><a href="#ブログ">ブログ</a></li>
+                            <li><a href="#卒業実績">卒業実績</a></li>
+                            <li class="header__nav-item--contact">
+                                <a href="#お問い合わせ" class="c-button c-button--head">お問い合わせ</a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
-                <!-- PCナビ-->
-                <nav class="p-header__nav" id="global-nav">
-                    <ul class="p-header__nav-list">
+
+                <!-- ハンバーガー（SP用） -->
+                <button class="c-hamburger" aria-controls="global-nav" aria-expanded="false">
+                    <span class="c-hamburger__line">
+                    </span>
+                    <span class="c-hamburger__line">
+                    </span>
+                    <span class="c-hamburger__line">
+                    </span>
+                </button>
+
+                <!-- SPナビ -->
+                <nav class="p-header__nav-sp" id="sp-nav">
+                    <ul class="p-header__nav-sp-list">
                         <li><a href="#料金">料金</a></li>
                         <li><a href="#ブログ">ブログ</a></li>
                         <li><a href="#卒業実績">卒業実績</a></li>
-                        <li class="header__nav-item--contact">
-                            <a href="#お問い合わせ" class="c-button c-button--head">お問い合わせ</a>
-                        </li>
                     </ul>
                 </nav>
             </div>
+        </header>
 
-            <!-- ハンバーガー（SP用） -->
-            <button class="c-hamburger" aria-controls="global-nav" aria-expanded="false">
-                <span class="c-hamburger__line">
-                </span>
-                <span class="c-hamburger__line">
-                </span>
-                <span class="c-hamburger__line">
-                </span>
-            </button>
-
-            <!-- SPナビ -->
-            <nav class="p-header__nav-sp" id="sp-nav">
-                <ul class="p-header__nav-sp-list">
-                    <li><a href="#料金">料金</a></li>
-                    <li><a href="#ブログ">ブログ</a></li>
-                    <li><a href="#卒業実績">卒業実績</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <main class="l-main p-contact-send">
+        <main class="l-main p-contact-send">
             <div class="c-hero c-hero--with-border">
                 <picture class="c-hero__img">
                     <source media="(min-width: 768px)" srcset="images/contact/contact-send_pc.jpg">
@@ -73,62 +74,63 @@
                 <p class="c-hero__text">お問い合わせ</p>
             </div>
 
-        <!-- パンくずリスト -->
-        <nav class="c-breadcrumb" aria-label="パンくずリスト">
-            <ol class="c-breadcrumb__list">
-                <li class="c-breadcrumb__item"><a href="index.html">ホーム</a></li>
-                <!-- <li class="c-breadcrumb__item"><a href="index.html#お問い合わせ">お問い合わせ</a></li>  -->
-                <li class="c-breadcrumb__item" aria-current="page">送信完了</li>
-            </ol>
-        </nav>
-
-        <div class="l-inner">
-            <p class="c-page-message">
-                お問い合わせいただきありがとうございました。
-                <br>内容確認後、担当者よりメールにてご連絡いたします。
-            </p>
-
-            <div class="p-page-btn">
-                <a href="index.html" class="c-button c-button--back">ホームへ戻る</a>
-            </div>
-        </div>
-
-    </main>
-
-
-    <!--footerー-->
-    <footer class="l-footer p-footer">
-        <div class="p-footer__inner">
-            <nav class="p-footer__nav">
-                <ul class="p-footer__nav-list">
-                    <li><a href="#ホーム">ホーム</a></li>
-                    <li><a href="#料金">料金</a></li>
-                    <li><a href="#ブログ">ブログ</a></li>
-                    <li><a href="#卒業実績">卒業実績</a></li>
-                </ul>
+            <!-- パンくずリスト -->
+            <nav class="c-breadcrumb" aria-label="パンくずリスト">
+                <ol class="c-breadcrumb__list">
+                    <li class="c-breadcrumb__item"><a href="index.html">ホーム</a></li>
+                    <!-- <li class="c-breadcrumb__item"><a href="index.html#お問い合わせ">お問い合わせ</a></li>  -->
+                    <li class="c-breadcrumb__item" aria-current="page">送信完了</li>
+                </ol>
             </nav>
-            <div class="p-footer__content">
-                <div class="p-footer__logo">
-                    <a href="index.html" class="p-footer-logo__link">
-                        <img src="images/common/footer-icon.svg" alt="きたむらミュージックスクールロゴ" width="32" height="50">
-                    </a>
+
+            <div class="l-inner">
+                <p class="c-page-message">
+                    お問い合わせいただきありがとうございました。
+                    <br>内容確認後、担当者よりメールにてご連絡いたします。
+                </p>
+
+                <div class="p-page-btn">
+                    <a href="index.html" class="c-button c-button--back">ホームへ戻る</a>
                 </div>
-                <div class="p-footer__copyright">
-                    <p>Copyright © 0000 KITAMURA music school Inc.
-                        <span class="u-center-block"> All Rights</span>
-                    </p>
-                </div>
-                <div class="p-footer__sns">
-                    <a href="#"><img src="images/common/icon-twitter.svg" alt="Twitter"></a>
-                    <a href="#"><img src="images/common/icon-facebook.svg" alt="Facebook"></a>
-                    <a href="#"><img src="images/common/icon-youtube.svg" alt="YouTube"></a>
-                    <a href="#"><img src="images/common/icon-instagram.svg" alt="Instagram"></a>
+            </div>
+
+        </main>
+
+
+        <!--footerー-->
+        <footer class="l-footer p-footer">
+            <div class="p-footer__inner">
+                <nav class="p-footer__nav">
+                    <ul class="p-footer__nav-list">
+                        <li><a href="#ホーム">ホーム</a></li>
+                        <li><a href="#料金">料金</a></li>
+                        <li><a href="#ブログ">ブログ</a></li>
+                        <li><a href="#卒業実績">卒業実績</a></li>
+                    </ul>
+                </nav>
+                <div class="p-footer__content">
+                    <div class="p-footer__logo">
+                        <a href="index.html" class="p-footer-logo__link">
+                            <img src="images/common/footer-icon.svg" alt="きたむらミュージックスクールロゴ" width="32" height="50">
+                        </a>
+                    </div>
+                    <div class="p-footer__copyright">
+                        <p>Copyright © 0000 KITAMURA music school Inc.
+                            <span class="u-center-block"> All Rights</span>
+                        </p>
+                    </div>
+                    <div class="p-footer__sns">
+                        <a href="#"><img src="images/common/icon-twitter.svg" alt="Twitter"></a>
+                        <a href="#"><img src="images/common/icon-facebook.svg" alt="Facebook"></a>
+                        <a href="#"><img src="images/common/icon-youtube.svg" alt="YouTube"></a>
+                        <a href="#"><img src="images/common/icon-instagram.svg" alt="Instagram"></a>
+                    </div>
+
                 </div>
 
             </div>
-
-        </div>
-    </footer>
+        </footer>
+    </div>
     <!-- コンテンツ -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 

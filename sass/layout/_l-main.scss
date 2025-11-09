@@ -3,4 +3,25 @@
 @use "../global/function" as *;
 @use "../foundation/base" as *;
 
+/* l-main.scss (または該当ファイル) */
 
+.l-main {
+    flex: 1;
+    padding-top: 8rem; 
+    margin-bottom: 0;
+     overflow: hidden;
+    
+    @include sp {
+        padding-top: 5rem; // SPヘッダーの高さ
+    }
+}
+
+
+.l-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+
+  
