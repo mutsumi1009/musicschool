@@ -8,6 +8,7 @@ html {
   margin: 0;
   padding: 0;
 
+
   
   @include pc {
     font-size: calc(10 / 920 * 100vw);
@@ -26,6 +27,7 @@ body {
   line-height: 1.833;
   margin: 0;
   padding-top: 0;
+  height: 100%;
 }
 
 section[id] {
@@ -36,11 +38,11 @@ section[id] {
   }
 }
 
-// img {
-// 	width: 100%;
-// 	height: auto;
-// 	display: block;
-// 	object-fit: cover;
+//  img {
+//  	width: 100%;
+//  	height: auto;
+//  	display: block;
+//  	object-fit: cover;
 // }
 
 
