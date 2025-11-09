@@ -6,6 +6,7 @@
 
 // p-404
 .p-404 .p-page-btn {
+margin-top: 3.4rem;
 
   @include sp {
     margin-top: 0.9rem;
@@ -35,6 +36,7 @@
 /* p-contact-send.scss */
 .p-contact-send .p-page-btn {
 
+  margin-top: 4rem;
   @include sp {
     margin-top: 3.9rem;
   }
@@ -42,26 +44,17 @@
 
 
 .p-contact-send__content {
-  padding-block: 6.7rem 9rem;
+  padding-block: 5.4rem 9rem;
   // overflow: hidden;
 
   @include sp {
+    display: flex;
+    align-items: center;
     padding-block: 4rem 6rem;
+
   }
 }
-
-.p-404 {
-  min-height: 86.2rem;
-
-  @include sp {
-    min-height: 95.9rem;
-  }
-}
-
-.p-contact-send {
-  min-height: 91.1rem;
-
-  @include sp {
-    min-height: 99.6rem;
-  }
+// 404
+.p-404 .p-contact-send__content {
+  padding-block: 6.8rem 9rem;
 }
