@@ -8,10 +8,12 @@
   max-width: 92rem;
   margin: 0 auto;
   padding-inline: 2rem;
+   padding-top: 6.5rem;
 
   @include sp {
 		max-width: 100%;
 		padding-inline: 2rem;
+    padding-top: 4.7rem;
 	}
 }
 

@@ -1,0 +1,42 @@
+@use "../../global/variable" as *;
+@use "../../global/mixin" as *;
+@use "../../global/function" as *;
+@use "../component/c-hero";
+// @use "../../foundation/base" as *;
+
+// p-404
+.p-404 .p-page-btn {
+    
+    @include sp {
+      margin-top: 0.9rem; 
+    }
+  }
+
+  // p-contact-send
+ 
+  .p-contact-send{
+    text-align: center
+  }
+  
+.p-contact-send__keyvisual {
+  @extend .c-hero;
+  height: 20rem;
+  margin-top: 8rem;
+
+  @include sp {
+    margin-top: 5rem;
+  }
+}
+
+.p-contact-send__keyvisual-text {
+  @extend .c-hero__text;
+}
+
+/* p-contact-send.scss */
+
+.p-contact-send .p-page-btn {
+  
+  @include sp {
+      margin-top: 3.9rem; 
+  }
+}
