@@ -1,6 +1,6 @@
-@use "../../global/variable" as *;
-@use "../../global/function" as *;
-@use "../../global/mixin" as *;
+ @use "../../global/variable" as *;
+  @use "../../global/function" as *;
+ @use "../../global/mixin" as *;
 
 .c-breadcrumb {
   font-size: 1.6rem;
@@ -41,7 +41,7 @@
 }
 
 .c-breadcrumb a {
-  color: $text-color;
+  color: $c-accent;
   text-decoration: none;
   transition: opacity 0.3s ease;
 }

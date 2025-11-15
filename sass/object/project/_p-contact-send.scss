@@ -4,15 +4,18 @@
 @use "../component/c-hero";
 // @use "../../foundation/base" as *;
 
-// p-404
-.p-404 .p-page-btn {
-margin-top: 3.4rem;
+// // p-404
+// .p-404 .p-page-btn {
+// margin-top: 3.4rem;
 
-  @include sp {
-    margin-top: 0.9rem;
-  }
-}
+//   @include sp {
+//     margin-top: 0.9rem;
+//   }
+// }
 
+/* ===============================================
+# contact-send
+=============================================== */
 // p-contact-send
 .p-contact-send {
   text-align: center;
@@ -54,7 +57,12 @@ margin-top: 3.4rem;
 
   }
 }
-// 404
-.p-404 .p-contact-send__content {
-  padding-block: 6.8rem 9rem;
-}
+// // 404
+// .p-404 .p-contact-send__content {
+//   padding-block: 6.8rem 9rem;
+// }
+
+/* ===============================================
+# contact_form
+=============================================== */
+
