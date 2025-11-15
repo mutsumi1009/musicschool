@@ -74,8 +74,8 @@
 .c-page-message {
   // margin-block: 6.8rem 5rem;
  text-align: center;
-  // margin-top: 6.5rem;
   font-size: 1.8rem;
+  white-space: normal;
 
  @include sp {
    font-size: 1.6rem;

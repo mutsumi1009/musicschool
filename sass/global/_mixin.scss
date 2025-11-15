@@ -31,32 +31,32 @@
 }
 
 
-/* --- ⬇️ 以下、Helper Class のスタイル --- */
-/* (Mixinを正しく使用して、表示/非表示を切り替えています) */
+// /* --- ⬇️ 以下、Helper Class のスタイル --- */
+// /* (Mixinを正しく使用して、表示/非表示を切り替えています) */
 
-// HTMLで使用されている `.pc-only` クラスのスタイル
-.pc-only {
-    display: none; // SPでは非表示
+// // HTMLで使用されている `.pc-only` クラスのスタイル
+// .pc-only {
+//     display: none; // SPでは非表示
 
-    @include pc-only {
-        display: block; // PCでは表示
-    }
-}
+//     @include pc-only {
+//         display: block; // PCでは表示
+//     }
+// }
 
-// HTMLで使用されている.pcクラスのスタイル
-.pc {
-    display: block; // PCでは表示 (デフォルト)
+// // HTMLで使用されている.pcクラスのスタイル
+// .pc {
+//     display: block; // PCでは表示 (デフォルト)
 
-    @include sp {
-        display: none; // SPでは非表示
-    }
-}
+//     @include sp {
+//         display: none; // SPでは非表示
+//     }
+// }
 
-// HTMLで使用されている.spクラスのスタイル
-.sp {
-    display: none; // PCでは非表示 (デフォルト)
+// // HTMLで使用されている.spクラスのスタイル
+// .sp {
+//     display: none; // PCでは非表示 (デフォルト)
 
-    @include sp {
-        display: block; // SPでは表示
-    }
-}
+//     @include sp {
+//         display: block; // SPでは表示
+//     }
+// }
