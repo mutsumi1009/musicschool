@@ -7,7 +7,8 @@
 .l-inner {
   max-width: 92rem;
   margin: 0 auto;
-  padding-inline: 2rem;
+  // padding-inline: 2rem;
+  padding-inline: calc(20 / 1080 * 100%);
   //  padding-top: 6.5rem;
 
   @include sp {
