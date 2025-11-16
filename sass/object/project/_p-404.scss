@@ -56,7 +56,7 @@ margin-top: 3.4rem;
 // }
 // 404
 .p-404__content {
-  padding-block: 6.8rem 9rem;
-
+  // padding-block: 6.8rem 9rem;
+  padding-block: vw(68) vw(90);
   @include sp {}
 }
