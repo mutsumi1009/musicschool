@@ -10,7 +10,8 @@
 =============================================== */
 
 .p-contact-form__content {
-  padding-block: 6.8rem 6.5rem;
+  // padding-block: 6.8rem 6.5rem;
+  padding-block: calc(68 / 1080 * 100%) calc(65 / 1080 * 100%);
   // overflow: hidden;
 
   @include sp {
@@ -33,7 +34,6 @@
    width: auto;
     // padding: 0 1.5rem;
   }
-
 }
 
 // フォーム項目のリスト
@@ -69,7 +69,7 @@
 
 // タイトル部分
 .p-contact__title {
-  width: 14rem;
+  width: calc(140 / 1080 * 100%);
  
 
   @include sp {
@@ -87,6 +87,14 @@
     font-size: 1.6rem;
   }
 }
+
+
+.p-contact__item--inquiry .contact__label br {
+  @include sp {
+    display: none;
+  }
+}
+
 
 // コンテンツ部分
 .p-contact__content {
