@@ -427,19 +427,21 @@ section[id] {
 .c-hero, .p-contact-send__keyvisual {
   position: relative;
   overflow: hidden;
-  min-height: 20rem;
 }
 @media (max-width: 767px) {
   .c-hero, .p-contact-send__keyvisual {
     width: 100%;
-    height: 30rem;
+    height: auto;
     margin-top: 0;
   }
 }
 .c-hero::before, .p-contact-send__keyvisual::before {
   content: "";
   position: absolute;
-  inset: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-color: rgba(80, 80, 80, 0.4863);
   mix-blend-mode: multiply;
   z-index: 1;
@@ -447,18 +449,18 @@ section[id] {
 .c-hero picture, .p-contact-send__keyvisual picture {
   display: block;
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 .c-hero img, .p-contact-send__keyvisual img {
   width: 100%;
-  height: 100%;
+  height: auto;
   -o-object-fit: cover;
      object-fit: cover;
   display: block;
 }
 @media (max-width: 767px) {
   .c-hero img, .p-contact-send__keyvisual img {
-    height: auto;
+    height: 100%;
   }
 }
 
@@ -865,7 +867,7 @@ section[id] {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 2.6rem;
+  gap: 2.9rem;
   margin-top: 6rem;
 }
 @media (max-width: 767px) {
@@ -1310,4 +1312,5 @@ section[id] {
   }
 }
 
+@fo;
 /* foundation *//*# sourceMappingURL=style.css.map */
