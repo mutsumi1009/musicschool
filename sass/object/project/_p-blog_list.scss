@@ -4,287 +4,38 @@
 @use "../component/c-hero";
 // @use "../../foundation/base" as *;
 
-
-/* ===============================================
-# contact-form
-=============================================== */
-
-.p-contact-form__content {
-  // padding-block: 6.8rem 6.5rem;
-  padding-block: vw(68) vw(65);
-  // overflow: hidden;
-
-  @include sp {
-    // display: flex;
-    align-items: center;
-    padding-block: 4.7rem 10.8rem;
-
-  }
-}
-
-// フォーム全体
-
-.contact__form {
-  // max-width: 80rem;
-  // margin: 0 auto;
-
-  // padding: 0 2rem;
-
-  @include sp {
-    width: auto;
-    // padding: 0 1.5rem;
-  }
-}
-
-// フォーム項目のリスト
-.p-contact__items {
-  display: flex;
-  flex-direction: column;
-  gap: 2.9rem;
-  margin-top: 6rem;
-  // flex-wrap: nowrap;
-  // row-gap: 1.8rem;
-
-  @include sp {
-    gap: 0.8rem;
-    margin-top: 3.1rem;
-  }
-}
-
-// フォーム項目
-.p-contact__item {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  gap: 2.9rem;
-
-  @include sp {
-    flex-direction: column;
-    // align-items: center;
-    gap: 0.8rem;
-  }
-}
-
-
-
-// タイトル部分
-.p-contact__title {
-  width: 14rem;
-
-
-  @include sp {
-    width: auto;
-  }
-}
-
-// ラベル
-.contact__label {
-  display: inline-block;
-  font-size: 2rem;
-  color: $text-color;
-
-  @include sp {
-    font-size: 1.6rem;
-  }
-}
-
-.p-contact__item--inquiry {
-//  margin-top: -1rem;
-  @include sp {
-    align-items: flex-start;
-    gap: 0.1rem;
-  }
-}
-
-.p-contact__item--inquiry .contact__label br {
-  @include sp {
-    display: none;
-  }
-}
-
-
-// コンテンツ部分
-.p-contact__content {
-  flex: 1;
-  width: auto;
-
-  @include sp {
-    width: 100%;
-
-  }
-}
-
-// 入力フィールド
-.contact__input {
-  width: 100%;
-  height: 4rem;
-  padding: 1.2rem 1.5rem;
-  font-size: 1.5rem;
-  border: 0.5px solid #000;
-  // border-radius: 0.4rem;
-  background-color: #fff;
-  color: $text-color;
-  font-family: $font-sans;
-  transition: border-color 0.3s;
-
-  @include sp {
-    width: 100%;
-    margin: 0;
-
+// ブログ
+.p-blog-list__content {
+    // padding-block: 6.8rem 6.5rem;
+    padding-block: vw(67) vw(210);
+    // overflow: hidden;
+  
+    @include sp {
+      // display: flex;
+      align-items: center;
+      padding-block: 4.7rem 10.8rem;
+  
+    }
   }
 
-  &:focus {
-    outline: none;
-    // border-color: $main-color;
-  }
 
-  &::placeholder {
-    color: #B2B2B2;
-  }
 
-  // // textarea用
-  // &[name="message"] {
-  //   min-height: 15rem;
-  //   resize: vertical;
-
-  //   @include sp {
-  //     min-height: 12rem;
-  //   }
-  // }
-}
-
-.contact__textarea {
-  width: 100%;
-  min-height: 30rem;
-  padding: 1.5rem 2rem;
-  font-size: 1.5rem;
-  border: 0.5px solid #000;
-  // border-radius: 0.4rem;
-  background-color: #fff;
-  color: $text-color;
-  // background-color: $font-color;
-  line-height: 2.2;
-  overflow-wrap: anywhere;
-  resize: vertical;
-  display: block;
-
-  @include sp {
-    margin: 0 auto;
-    flex: unset;
-    min-height: 19rem;
-  }
-
-  // &:focus {
-  //   outline: none;
-  //   border-color: $main-color;
-  // }
-
-  &::placeholder {
-    color: #B2B2B2;
-  }
-
-}
-
-// チェックボックスグループ
-.contact__checkbox-group {
-  display: flex;
-  flex-direction: column;
-  gap: 0.8rem;
-
-  @include sp {
-    gap: 1.2rem;
-  }
-
-  label {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    cursor: pointer;
-    font-size: 1.6rem;
+.p-blog-list-title {
+    text-align: center;
+    font-size: 2.5rem;
     color: $text-color;
+    font-weight: 700;
+    // padding-block: 6.7rem 4rem;
+    white-space: nowrap;
+}
+
+.p-blog_list {
+    // display: grid;
+    // grid-template-columns: 1fr;
+    // gap: 3rem;
 
     @include sp {
-      font-size: 1.4rem;
-      gap: 1rem;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 4rem;
     }
-  }
-
-  input[type="checkbox"] {
-    position: absolute;
-    opacity: 0;
-    width: 0;
-    height: 0;
-
-    &:checked+.custom-checkbox-square {
-      // background-color: $main-color;
-      border-color: $text-color;
-
-      &::after {
-        border-color: $text-color;
-        opacity: 1;
-      }
-    }
-  }
-}
-
-// カスタムチェックボックス
-.custom-checkbox-square {
-  position: relative;
-  width: 2rem;
-  height: 2rem;
-  border: 0.5px solid #000;
-  // border-radius: 0.3rem;
-  background-color: #fff;
-  flex-shrink: 0;
-  transition: background-color 0.3s, border-color 0.3s;
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(45deg);
-    width: 0.5rem;
-    height: 1rem;
-    border: solid #fff;
-    border-width: 0 0.2rem 0.2rem 0;
-    opacity: 0;
-    transition: opacity 0.3s;
-  }
-}
-
-// チェックボックスのテキスト
-
-.checkbox-text {
-  flex: 1;
-  font-size: 1.8rem;
-
-  @include sp {
-    font-size: 1.6rem;
-  }
-}
-
-
-
-// 送信ボタン
-.contact__submit {
-  margin-top: 4rem;
-  text-align: center;
-
-  @include sp {
-    margin-top: 3rem;
-  }
-
-  .c-button {
-    max-width: 25rem;
-
-    @include sp {
-      // max-width: 100%;
-    }
-  }
-}
-
-.contact__button:hover {
-  background-color: $c-base;
-  color: $main-color;
 }

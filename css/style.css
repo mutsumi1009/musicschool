@@ -335,6 +335,19 @@ section[id] {
   border: 1px solid #CB0000;
 }
 
+/* フッター右上の 問い合わせボタン*/
+.c-button--footer {
+  position: relative;
+  width: 30rem;
+  height: 6rem;
+  padding-inline: 8rem 8.4rem;
+  top: 0;
+  right: 0;
+  z-index: 20;
+  font-size: 2rem;
+  line-height: 1.65;
+}
+
 .c-hamburger {
   display: none;
 }
@@ -506,6 +519,200 @@ section[id] {
     text-align: left;
     margin-top: 0rem;
   }
+}
+
+/* ===============================================
+# ブログカード：ラベル
+=============================================== */
+.c-blog-card {
+  display: block;
+}
+.c-blog-card__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 5rem;
+  margin-top: 3.8rem;
+}
+@media (max-width: 767px) {
+  .c-blog-card__link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    gap: 3rem;
+  }
+}
+
+.c-blog-card__img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.c-blog-card__img img {
+  width: 100%;
+}
+
+.c-blog-card__label {
+  position: absolute;
+  font-size: 1.5rem;
+  background-color: #CB0000;
+  color: #E8E8E8;
+  top: 0;
+  left: 0;
+  padding-inline: 0.2rem;
+  width: 8rem;
+  height: 3rem;
+  text-align: center;
+}
+
+.c-blog-card__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.c-blog-card__title {
+  font-size: 2rem;
+  font-weight: 700;
+}
+@media (max-width: 767px) {
+  .c-blog-card__title {
+    text-align: center;
+  }
+}
+
+.c-blog-card__date {
+  font-size: 1.7rem;
+}
+@media (max-width: 767px) {
+  .c-blog-card__date {
+    text-align: right;
+  }
+}
+
+.c-blog-card__text {
+  font-size: 1.8rem;
+  width: auto;
+  height: 9rem;
+  overflow: hidden;
+}
+@media (max-width: 767px) {
+  .c-blog-card__text {
+    width: 100%;
+    height: 15rem;
+    text-align: left;
+  }
+}
+
+.c-pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1rem;
+  margin-top: 7rem;
+}
+
+.c-pagination__num {
+  display: inline-block;
+  font-size: 1.8rem;
+  padding: 1rem;
+  border: 1px solid #000;
+  width: 5rem;
+  height: 5rem;
+  text-align: center;
+}
+
+.c-pagination__num.is-active {
+  background-color: #000;
+  color: #fff;
+}
+
+.c-pagination__dots {
+  font-size: 1.6rem;
+  padding: 0.8rem 1.2rem;
+}
+
+/* ===============================================
+TOPへ戻るボタン
+=============================================== */
+.page-top-btn {
+  position: fixed;
+  right: 11.7rem;
+  bottom: 3.1rem;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  width: 6.8rem;
+  height: 6.8rem;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media (max-width: 767px) {
+  .page-top-btn {
+    right: 2rem;
+    bottom: 6rem;
+    width: 5rem;
+    height: 5rem;
+  }
+}
+.page-top-btn img {
+  position: static;
+  -webkit-transform: none;
+          transform: none;
+}
+.is-show {
+  opacity: 1;
+  visibility: visible;
+}
+.is-show:hover {
+  opacity: 0.7;
+}
+
+.is-modal-open .page-top-btn {
+  display: none;
+}
+
+/* 一時的にUIを不可視＆非クリック化（モーダル/ハンバーガー表示中の誤操作防止） */
+.is-hidden-temp {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
 }
 
 .p-header {
@@ -1131,6 +1338,7 @@ section[id] {
   padding-block: 4.4rem 5.1rem;
   text-align: center;
   width: 100%;
+  position: relative;
 }
 @media (max-width: 767px) {
   .p-footer {
@@ -1312,5 +1520,39 @@ section[id] {
   }
 }
 
-@fo;
+/* フッター右上の問い合わせボタン */
+.p-contact-banner {
+  position: absolute;
+  right: 0;
+  bottom: 100%;
+  z-index: 30;
+}
+
+.p-blog-list__content {
+  padding-block: 6.2037037037vw 19.4444444444vw;
+}
+@media (max-width: 767px) {
+  .p-blog-list__content {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-block: 4.7rem 10.8rem;
+  }
+}
+
+.p-blog-list-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #000;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+@media (max-width: 767px) {
+  .p-blog_list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+  }
+}
+
 /* foundation *//*# sourceMappingURL=style.css.map */
