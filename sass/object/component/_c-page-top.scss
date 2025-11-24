@@ -10,10 +10,10 @@ TOPへ戻るボタン
 .page-top-btn {
 	position: fixed;
 	right: 11.7rem;
-	bottom: 3.1rem;
+	bottom: 9.1rem;
 	z-index: 9999;
-	opacity: 0;
-	visibility: hidden;
+	// opacity: 0;
+	// visibility: hidden;
 	// background-color: $main-color;
 	transition: 0.5s;
 	width: 6.8rem;
@@ -22,6 +22,8 @@ TOPへ戻るボタン
 	display: flex;
 	justify-content: center;
 	align-items: center;
+  opacity: 1 !important;
+  visibility: visible !important;
 	// clip-path: circle(50% at 50% 50%);
 	// overflow: hidden;
 	// -webkit-clip-path: circle(50% at 50% 50%);
@@ -43,22 +45,22 @@ TOPへ戻るボタン
 }
 
 // スクロール時に表示するためのクラス
-.is-show {
-	opacity: 1;
-	visibility: visible;
+// .is-show {
+// 	opacity: 1;
+// 	visibility: visible;
 
-	&:hover {
-		opacity: 0.7;
-	}
-}
+// 	&:hover {
+// 		opacity: 0.7;
+// 	}
+// }
 
-.is-modal-open .page-top-btn {
-	display: none;
-}
+// .is-modal-open .page-top-btn {
+// 	display: none;
+// }
 
-/* 一時的にUIを不可視＆非クリック化（モーダル/ハンバーガー表示中の誤操作防止） */
-.is-hidden-temp {
-	opacity: 0 !important;
-	visibility: hidden !important;
-	pointer-events: none !important;
-}
+// /* 一時的にUIを不可視＆非クリック化（モーダル/ハンバーガー表示中の誤操作防止） */
+// .is-hidden-temp {
+// 	opacity: 0 !important;
+// 	visibility: hidden !important;
+// 	pointer-events: none !important;
+// }
