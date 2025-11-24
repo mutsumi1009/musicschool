@@ -15,9 +15,10 @@
   // width: 108rem;
   @include sp {
     // margin-top: 0;
-    width: 100%;
+    // width: 100%;
+    // height: auto;
+    // margin-top: 0;
     height: auto;
-    margin-top: 0;
   }
 
   &::before {
@@ -70,6 +71,7 @@
   @include sp {
     font-size: 2.5rem;
     top: 44%;
+    
   }
 }
 

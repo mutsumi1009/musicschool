@@ -174,4 +174,10 @@
     right: 0;
     bottom: 100%;   
     z-index: 30;
+  
+    @include sp {
+        right: auto; 
+        left: 50%;   
+        transform: translateX(-50%); 
+    }
 }

@@ -4,7 +4,7 @@
 //  @use "../../foundation/base" as *;
 
 /* ===============================================
-# ホームへ戻るbutton
+# 問い合わせbutton
 =============================================== */
 
 .c-button {
@@ -41,17 +41,24 @@
   background-color: $main-color;
   color: $font-color;
   border: 1px solid $main-color;
+  font-size: 1.5rem;
 }
 
 /* フッター右上の 問い合わせボタン*/
 .c-button--footer {
   position: relative;
-  width: 30rem;
+  max-width: 33.5rem;
   height: 6rem;
   padding-inline: 8rem 8.4rem;
-  top: 0;   // フッターより上に出す高さを調整
-  right: 0;  // 右にぴったり（数値は調整OK）
+  top: 0;   
+  right: 0;  
   z-index: 20;
   font-size: 2rem;
   line-height: 1.65;
+  letter-spacing: 0.2em;
+
+  @include sp {
+    width: 33.5rem;
+   
+  }
 }

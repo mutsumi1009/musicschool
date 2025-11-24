@@ -49,3 +49,20 @@ $(function () {
 // }
 // $(window).on('scroll resize load', changeHeaderBg);
 // changeHeaderBg();
+
+// --- TOPへ戻る（FVより下で表示） ---
+
+function onScrollToTop() {
+  const y = $(window).scrollTop();
+  const threshold = 100;
+  if (y > threshold) $toTopBtn.addClass('is-show');
+  else $toTopBtn.removeClass('is-show');
+}
+$(window).on('scroll resize load', onScrollToTop);
+onScrollToTop();
+
+
+$toTopBtn.on('click', function (e) {
+  e.preventDefault();
+  $('html, body').animate({ scrollTop: 0 }, 500, 'linear');
+});

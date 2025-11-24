@@ -4,22 +4,7 @@
 @use "../component/c-hero";
 // @use "../../foundation/base" as *;
 
-// ブログ
-.p-blog-list__content {
-    // padding-block: 6.8rem 6.5rem;
-    padding-block: vw(67) vw(210);
-    // overflow: hidden;
-  
-    @include sp {
-      // display: flex;
-      align-items: center;
-      padding-block: 4.7rem 10.8rem;
-  
-    }
-  }
-
-
-
+// ブログタイトル
 .p-blog-list-title {
     text-align: center;
     font-size: 2.5rem;
@@ -27,15 +12,29 @@
     font-weight: 700;
     // padding-block: 6.7rem 4rem;
     white-space: nowrap;
-}
-
-.p-blog_list {
-    // display: grid;
-    // grid-template-columns: 1fr;
-    // gap: 3rem;
 
     @include sp {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 4rem;
+        line-height: 1.6;
+    }
+}
+
+.p-blog-list {
+    margin-top: 2rem;
+
+    @include sp {
+     
+    }
+}
+
+.p-blog-list__content {
+    // padding-block: 6.8rem 6.5rem;
+    padding-block: vw(67) vw(210);
+
+
+    @include sp {
+        // display: flex;
+        align-items: center;
+        padding-block: 5rem 20.3rem;
+
     }
 }

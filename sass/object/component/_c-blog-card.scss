@@ -8,22 +8,37 @@
 =============================================== */
 .c-blog-card {
     display: block;
+    margin-top: 3rem;
 
-    @include sp {}
+    @include sp {
+        width: 100%;
+        margin-inline: auto;
+        // margin-top: 3.5rem;
+    }
 }
+
+.c-blog-card + .c-blog-card {
+    margin-top: 7rem;
+  
+    @include sp {
+      margin-top: 3.9rem;
+    }
+  }
+  
 
 .c-blog-card__link {
     display: flex;
     flex-direction: row;
     gap: 5rem;
-    margin-top: 3.8rem;
+    // margin-top: 3.8rem;
 
     @include sp {
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
-        gap: 3rem;
+        gap: 2.3rem;
+        margin-top: 0;
     }
 }
 
@@ -31,10 +46,24 @@
 .c-blog-card__img {
     display: flex;
     position: relative;
+    width: 26rem;
+    height: 18.4rem;
+
+    @include sp {
+        width: 100%;
+        height: auto;
+        flex-shrink: 0;
+    }
 }
 
 .c-blog-card__img img {
     width: 100%;
+
+    @include sp {
+        width: auto;
+        height: auto;
+        // object-fit: cover;
+    }
 }
 
 .c-blog-card__label {
@@ -48,33 +77,39 @@
     width: 8rem;
     height: 3rem;
     text-align: center;
+
+    @include sp {
+        width: 9rem;
+
+    }
 }
 
 .c-blog-card__body {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    // gap: 0.5rem;
     width: 100%;
     flex: 1;
-
-
-
 }
 
 .c-blog-card__title {
     font-size: 2rem;
     font-weight: 700;
+    line-height: 1.25;
 
     @include sp {
-        text-align: center;
+        text-align: left;
     }
 }
 
 .c-blog-card__date {
     font-size: 1.7rem;
+    line-height: 1.764;
+    padding-top: 0.3rem;
 
     @include sp {
         text-align: right;
+        padding-top: 1.1rem;
     }
 
 }
@@ -84,10 +119,15 @@
     width: auto;
     height: 9rem;
     overflow: hidden;
+    line-height: 1.666;
+    padding-top: 0.9rem;
 
     @include sp {
+        font-size: 1.6rem;
         width: 100%;
-        height: 15rem;
+         height: auto;
+         overflow: visible;
         text-align: left;
+        line-height: 1.875;
     }
 }

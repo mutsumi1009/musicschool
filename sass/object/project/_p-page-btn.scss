@@ -3,14 +3,27 @@
 @use "../../global/function" as *;
 // @use "../../foundation/base" as *;
 
-.p-page-btn {
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    // line-height: 2.2;
-    margin-top: 3.8rem; 
+// .p-page-btn {
+//     text-align: center;
+//     align-items: center;
+//     justify-content: center;
+//     // line-height: 2.2;
+//     margin-top: 3.8rem; 
   
-    @include sp {
-    // margin-block: 0.9rem 5rem;
-      }
+//     @include sp {
+//     // margin-block: 0.9rem 5rem;
+//       }
+// }
+
+.page-top-btn {
+  position: fixed;
+  right: 11.7rem;
+  bottom: 37.7rem;
+  z-index: 999;
+
+  @include sp {
+
+    right: 2rem;
+    bottom: 43.7rem;
+  }
 }
