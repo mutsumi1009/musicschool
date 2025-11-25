@@ -11,6 +11,7 @@
   gap: 1rem;
   margin-top: 7rem;  
   
+  
   @include sp {
   gap: 0.5rem;
   margin-top: 5.9rem;
@@ -31,9 +32,9 @@
     font-size: 1.6rem;
     width: 4.4rem;
     height: 4.4rem;
-    display: flex;           
-    align-items: center;      
-    justify-content: center; 
+    // display: flex;           
+    // align-items: center;      
+    // justify-content: center; 
     line-height: 1.75;
   }
 }
@@ -46,10 +47,12 @@
 .c-pagination__dots {
   font-size: 1.6rem;
   padding: .8rem 1.2rem;
+  display: flex;
+    align-items: center;
+    justify-content: center;
 
   @include sp {
-    padding-inline: 1rem 1.2rem;
-  
+    // padding: 0.2rem;
   }
 }
 
