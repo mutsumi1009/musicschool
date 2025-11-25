@@ -9,7 +9,7 @@
 //     justify-content: center;
 //     // line-height: 2.2;
 //     margin-top: 3.8rem; 
-  
+
 //     @include sp {
 //     // margin-block: 0.9rem 5rem;
 //       }
@@ -20,10 +20,11 @@
   right: 11.7rem;
   bottom: 37.7rem;
   z-index: 999;
+  width: 6.8rem;
+  height: 6.8rem;
 
   @include sp {
-
     right: 2rem;
-    bottom: 43.7rem;
+    bottom: 37.7rem;
   }
 }
