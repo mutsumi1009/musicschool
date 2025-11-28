@@ -21,7 +21,7 @@
   border: none;
   cursor: pointer;
   border: 1px solid $main-color;
-  transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
   width: 100%;
   max-width: 25rem;
   height: 5rem;
@@ -42,6 +42,12 @@
   color: $font-color;
   border: 1px solid $main-color;
   font-size: 1.5rem;
+}
+
+.c-button:hover {
+  background-color: $font-color;  
+  color: $main-color;             
+  //  border-color: $main-color;     
 }
 
 /* フッター右上の 問い合わせボタン*/

@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ブログ一覧｜きたむらミュージックスクール</title>
-    <meta name="description" content="沖縄県宜野湾市にある大人のための音楽教室blog_listページです">
-    <meta name="keywords" content="ブログ,音楽, ミュージックスクール,music">
+    <title>検索結果｜きたむらミュージックスクール</title>
+    <meta name="description" content="きたむらミュージックスクールの検索結果ページです。">
+    <meta name="keywords" content="検索結果,音楽, Music,music">
     <meta name="robots" content="noindex">
     <link rel="icon" href="images/common/icon-pc.svg" type="image/svg+xml">
     <link rel="stylesheet" href="css/style.css">
@@ -40,7 +40,7 @@
                             <li class="p-header__nav-item--contact">
                                 <a href="#お問い合わせ" class="c-button c-button--head">お問い合わせ</a>
                             </li>
-                            
+
                         </ul>
                     </nav>
                 </div>
@@ -66,30 +66,36 @@
             </div>
         </header>
 
-        <main class="l-main p-blog-list">
-            
-            <div class="c-hero c-hero--with-border">
+        <main class="l-main p-search">
+
+            <!-- <div class="c-hero c-hero--with-border">
                 <picture class="c-hero__img">
                     <source media="(min-width: 768px)" srcset="images/blog/blog-list_pc.jpg">
                     <img src="images/blog/blog-list_sp.jpg" alt="ブログ" width="375" height="300">
                 </picture>
                 <p class="c-hero__text">ブログ</p>
-            </div>
+            </div> -->
 
             <!-- パンくずリスト -->
             <nav class="c-breadcrumb" aria-label="パンくずリスト">
                 <ol class="c-breadcrumb__list">
                     <li class="c-breadcrumb__item"><a href="index.html">ホーム</a></li>
                     <!-- <li class="c-breadcrumb__item"><a href="index.html#お問い合わせ">お問い合わせ</a></li>  -->
-                    <li class="c-breadcrumb__item" aria-current="page">ブログ</li>
-        
+                    <li class="c-breadcrumb__item" aria-current="page">検索</li>
+
                 </ol>
             </nav>
             <div class="p-blog-list__content">
-                <div class="l-inner">
-                    <h1 class="p-blog-list-title">ブログ一覧</h1>
+                <div class="p-search">
+                    <div class="l-inner">
+                        <div class="p-search__header">
+                            <h1 class="p-search__title">
+                                <span class="p-search__keyword">「キーワード」</span>の検索結果
+                            </h1>
+                            <p class="p-search__count">28件</p>
+                        </div>
 
-                    <div class="p-blog-list">
+
 
                         <!-- 1記事目 -->
                         <article class="c-blog-card">
@@ -321,15 +327,16 @@
 
                             </a>
                         </article>
-                    </div>
 
-                    <!-- ページネーション -->
-                    <div class="c-pagination">
-                        <a href="#" class="c-pagination__num is-active">1</a>
-                        <a href="#" class="c-pagination__num">2</a>
-                        <a href="#" class="c-pagination__num">3</a>
-                        <span class="c-pagination__dots">…</span>
-                        <a href="#" class="c-pagination__num">9</a>
+
+                        <!-- ページネーション -->
+                        <div class="c-pagination">
+                            <a href="#" class="c-pagination__num is-active">1</a>
+                            <a href="#" class="c-pagination__num">2</a>
+                            <a href="#" class="c-pagination__num">3</a>
+                            <!-- <span class="c-pagination__dots">…</span>
+                            <a href="#" class="c-pagination__num">9</a> -->
+                        </div>
                     </div>
                 </div>
             </div>
@@ -339,12 +346,14 @@
         <a href="#" class="js-to-top page-top-btn" id="page-top-btn">
             <img src="images/common/icon_page-top-btn.svg" alt="TOPへ戻る">
         </a>
-    
+
+
+
         <!--footerー-->
         <footer class="l-footer p-footer">
             <div class="p-contact-banner">
                 <a href="#お問い合わせ" class="c-button c-button--footer">お問い合わせ</a>
-           </div>
+            </div>
             <div class="p-footer__inner">
                 <nav class="p-footer__nav">
                     <ul class="p-footer__nav-list">
@@ -374,7 +383,7 @@
                 </div>
             </div>
         </footer>
-            
+
         <!-- コンテンツ -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
