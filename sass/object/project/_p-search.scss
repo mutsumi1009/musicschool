@@ -1,0 +1,37 @@
+@use "../../global/variable" as *;
+@use "../../global/mixin" as *;
+@use "../../global/function" as *;
+@use "../component/c-hero";
+// @use "../../foundation/base" as *;
+
+.p-search__header {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    //  margin-bottom: 4.2rem;
+}
+
+.p-search__header l-inner {
+padding-right: 626.01rem;
+}
+
+.p-search__title {
+    font-size: 1.8rem;
+    line-height: 1.666;
+}
+
+.p-search__count {
+    font-size: 1.8rem;
+}
+
+.p-search {
+    .c-blog-card {
+        margin-top: 4.2rem; 
+    }
+}
+
+
+.p-search__keyword {
+    font-weight: 700; 
+}
