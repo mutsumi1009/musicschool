@@ -1,0 +1,74 @@
+@use "../../global/variable" as *;
+@use "../../global/function" as *;
+@use "../../global/mixin" as *;
+
+
+c-page-title {
+
+}
+
+.c-page-title--result {
+
+}
+
+
+
+.c-result-card {
+display: flex;
+
+}
+
+.c-result-card__link {
+
+}
+
+.c-result-card__img {
+    display: block;
+    position: relative;
+    // width: 38.7rem;
+    // height: 27.3rem;
+
+    @include sp {
+        width: 100%;
+        height: auto;
+        flex-shrink: 0;
+    }
+}
+.c-result-card__img img {
+    width: 100%;
+    height: auto;
+
+    @include sp {
+        width: auto;
+        // height: auto;
+        // object-fit: cover;
+    }
+}
+  
+
+
+.c-tag {
+
+}
+
+.c-result-card__body {
+display: flex;
+flex-direction: column;
+}
+
+
+.c-result-card__text {
+font-size: 2rem;
+line-height: 1.25;
+overflow: hidden;
+-webkit-line-clamp: 2;   
+  -webkit-box-orient: vertical;
+
+}
+
+.c-result-card__date {
+font-size: 1.8rem;
+line-height: 1.777;
+text-align: right;
+}
+

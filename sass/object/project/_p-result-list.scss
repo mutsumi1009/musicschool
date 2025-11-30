@@ -1,0 +1,35 @@
+@use "../../global/variable" as *;
+@use "../../global/mixin" as *;
+@use "../../global/function" as *;
+@use "../component/c-hero";
+// @use "../../foundation/base" as
+
+.p-result-list__content {   
+        // padding-block: 6.8rem 6.5rem;
+        padding-block: vw(65) vw(220);
+    
+        @include sp {
+            // display: flex;
+            align-items: center;
+            padding-block: 5rem 20.3rem;
+    
+        }
+    }   
+
+
+    .p-result-list {
+        width: 100%;
+        flex: none;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 7.1rem 10.6rem; 
+        margin-top: 4rem;
+    
+        @include sp {
+            grid-template-columns: 1fr;
+            gap: 3.5rem;
+        }
+    }
+    
+
+
