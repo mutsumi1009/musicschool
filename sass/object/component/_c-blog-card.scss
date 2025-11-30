@@ -4,7 +4,7 @@
 
 
 /* ===============================================
-# ブログカード：ラベル
+# ブログカード
 =============================================== */
 .c-blog-card {
     display: block;
@@ -66,23 +66,23 @@
     }
 }
 
-.c-blog-card__label {
-    position: absolute;
-    font-size: 1.5rem;
-    background-color: $main-color;
-    color: $c-accent;
-    top: 0;
-    left: 0;
-    padding-inline: 0.2rem;
-    width: 8rem;
-    height: 3rem;
-    text-align: center;
+// .c-blog-card__label {
+//     position: absolute;
+//     font-size: 1.5rem;
+//     background-color: $main-color;
+//     color: $c-accent;
+//     top: 0;
+//     left: 0;
+//     padding-inline: 0.2rem;
+//     width: 8rem;
+//     height: 3rem;
+//     text-align: center;
 
-    @include sp {
-        width: 9rem;
+//     @include sp {
+//         width: 9rem;
 
-    }
-}
+//     }
+// }
 
 .c-blog-card__body {
     display: flex;

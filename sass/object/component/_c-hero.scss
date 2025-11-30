@@ -10,6 +10,7 @@
 .c-hero {
   position: relative;
   overflow: hidden;
+
   // min-height: 20rem;
   // margin-top: 8rem;
   // width: 108rem;
@@ -27,7 +28,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;  
+    height: 100%;
     background-color: rgba(80, 80, 80, 0.4863);
     mix-blend-mode: multiply;
     z-index: 1;
@@ -48,7 +49,7 @@
     @include sp {
       height: 100%;
     }
-    
+
   }
 }
 
@@ -71,20 +72,38 @@
   @include sp {
     font-size: 2.5rem;
     top: 44%;
-    
+
   }
 }
 
 // --- ページメッセージコンポーネント（再利用） ---
 .c-page-message {
   // margin-block: 6.8rem 5rem;
- text-align: center;
+  text-align: center;
   font-size: 1.8rem;
   white-space: normal;
 
- @include sp {
-   font-size: 1.6rem;
-   text-align: left;
-  margin-top: 0rem;
+  @include sp {
+    font-size: 1.6rem;
+    text-align: left;
+    margin-top: 0rem;
+  }
 }
+
+/* 卒業実績一覧ページ専用*/
+.c-hero--result {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+  }
+
+  .c-hero__text {
+    position: relative;
+    z-index: 2;
+  }
 }

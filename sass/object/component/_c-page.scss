@@ -4,7 +4,7 @@
 
 
 
-// --- ページメッセージコンポーネント（再利用） ---
+// --- ページメッセージコンポーネント ---
 .c-page-message {
   // margin-block: 6.8rem 5rem;
  text-align: center;
@@ -17,3 +17,22 @@
   margin-top: 0rem;
 }
 }
+
+
+/* ===============================================
+# ページタイトル（共通）
+=============================================== */
+.c-page-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: $text-color;
+  font-weight: 700;
+  // padding-block: 6.7rem 4rem;
+  white-space: nowrap;
+
+  @include sp {
+      line-height: 1.6;
+  }
+}
+
+
