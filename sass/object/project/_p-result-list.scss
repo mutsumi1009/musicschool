@@ -22,8 +22,8 @@
         flex: none;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 7.1rem 10.6rem; 
-        margin-top: 4rem;
+        gap: 6.6rem 10.6rem; 
+        margin-top: 3.4rem;
     
         @include sp {
             grid-template-columns: 1fr;

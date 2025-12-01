@@ -556,6 +556,10 @@ section[id] {
   }
 }
 
+.c-tag--lg {
+  width: 10rem;
+}
+
 .c-page-message {
   text-align: center;
   font-size: 1.8rem;
@@ -816,14 +820,15 @@ TOPへ戻るボタン
           transform: none;
 }
 .c-result-card {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: block;
 }
 
 .c-result-card__img {
   display: block;
   position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
 }
 @media (max-width: 767px) {
   .c-result-card__img {
@@ -831,12 +836,15 @@ TOPへ戻るボタン
     height: auto;
     -ms-flex-negative: 0;
         flex-shrink: 0;
+    aspect-ratio: auto;
   }
 }
 
 .c-result-card__img img {
   width: 100%;
   height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media (max-width: 767px) {
   .c-result-card__img img {
@@ -852,6 +860,7 @@ TOPへ戻るボタン
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  row-gap: 0.8rem;
 }
 
 .c-result-card__text {
@@ -860,6 +869,7 @@ TOPへ戻るボタン
   overflow: hidden;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+  margin-top: 1rem;
 }
 
 .c-result-card__date {
@@ -1797,8 +1807,8 @@ TOPへ戻るボタン
           flex: none;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 7.1rem 10.6rem;
-  margin-top: 4rem;
+  gap: 6.6rem 10.6rem;
+  margin-top: 3.4rem;
 }
 @media (max-width: 767px) {
   .p-result-list {
