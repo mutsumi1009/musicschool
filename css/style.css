@@ -860,7 +860,6 @@ TOPへ戻るボタン
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  row-gap: 0.8rem;
 }
 
 .c-result-card__text {
@@ -1765,6 +1764,7 @@ TOPへ戻るボタン
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-top: 6.6rem;
 }
 
 .p-search__header l-inner {
@@ -1815,6 +1815,113 @@ TOPへ戻るボタン
     grid-template-columns: 1fr;
     gap: 3.5rem;
   }
+}
+
+.c-hero--result-detail {
+  margin-top: 7rem;
+}
+
+.p-article-title {
+  margin-top: 5rem;
+  font-size: 2.5rem;
+  line-height: 1.6;
+  font-weight: 700;
+}
+
+.p-result_details .c-result-card__date {
+  text-align: left;
+  margin-top: 1.5rem;
+}
+
+.p-result-list .c-result-card__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 0.8rem;
+}
+
+.p-result-details__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4rem;
+  margin-top: 5.7rem;
+}
+
+.p-result_details__table {
+  width: 40rem;
+}
+.p-result_details__table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.p-result_details__table th,
+.p-result_details__table td {
+  border: 0.5px solid #707070;
+  padding-left: 2rem;
+  font-size: 1.8rem;
+  line-height: 1.5;
+}
+.p-result_details__table th {
+  font-weight: 700;
+  background: #e5e5e5;
+  width: 14rem;
+  padding: 2rem;
+}
+.p-result_details__table td {
+  width: 26rem;
+}
+
+.p-result_details__text {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-size: 1.8rem;
+  line-height: 1.666;
+  max-width: 44rem;
+}
+
+.p-article-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 19.9rem;
+  margin-top: 6rem;
+}
+
+.p-article-nav__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 1.6rem;
+}
+
+.p-article-nav__label {
+  display: inline-block;
+  background: #000;
+  width: 3.4rem;
+  color: #fff;
+  padding: 0.8rem 1.6rem;
+  font-size: 1.6rem;
+  margin-bottom: 1.6rem;
+}
+
+.p-article-nav__text {
+  font-size: 1.6rem;
+  font-weight: 700;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 /* foundation *//*# sourceMappingURL=style.css.map */
