@@ -21,10 +21,10 @@
  .p-blog-list {
     margin-top: 2rem;
 
-   @include sp {
-     
+  @include sp {
   }
-}
+  }
+  
 
 .p-blog-list__content {
     // padding-block: 6.8rem 6.5rem;
