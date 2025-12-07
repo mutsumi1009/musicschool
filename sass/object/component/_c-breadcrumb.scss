@@ -7,7 +7,8 @@
   color: $text-color;
   margin-top: 0;
   width: 100%;
-  height: 5rem;
+  // height: auto;
+  min-height: 5rem;
   background-color: #E8E8E8;
   padding: 1rem 9.31rem 0.7rem 10rem;
   z-index: 2;
@@ -54,3 +55,31 @@
     margin: 2rem 0 3rem;
   }
 }
+/* ===============================================
+# SP 共通：詳細ページのパンくずだけ折り返しレイアウト
+=============================================== */
+
+@include sp {
+  .is-detail-page .c-breadcrumb {
+    padding: 0.7rem 2rem 0.7rem 1.8rem;
+    min-height: 7.7rem;
+    height: auto;
+  }
+
+  .is-detail-page .c-breadcrumb__list {
+    flex-wrap: wrap;
+    row-gap: 0.4rem;
+    column-gap: 0.5rem;
+    gap: 0;
+  }
+
+  .is-detail-page .c-breadcrumb__item {
+    font-size: 1.4rem;
+  }
+
+  .is-detail-page .c-breadcrumb__item + .c-breadcrumb__item::before {
+    content: ">";
+    // margin: 0 0.3rem;
+  }
+}
+
