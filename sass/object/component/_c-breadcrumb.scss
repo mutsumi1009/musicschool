@@ -55,6 +55,16 @@
     margin: 2rem 0 3rem;
   }
 }
+
+.is-detail-page .c-breadcrumb {
+  
+  padding-right: 0;
+  padding-left: 0;
+  padding-top: 1rem;
+  padding-bottom: 0.7rem;
+}
+
+
 /* ===============================================
 # SP 共通：詳細ページのパンくずだけ折り返しレイアウト
 =============================================== */
@@ -70,11 +80,18 @@
     flex-wrap: wrap;
     row-gap: 0.4rem;
     column-gap: 0.5rem;
-    gap: 0;
+    // overflow-x: auto;
+    // gap: 0;
   }
 
   .is-detail-page .c-breadcrumb__item {
     font-size: 1.4rem;
+    white-space: normal;
+  }
+
+  .is-detail-page .c-breadcrumb__item.is-detail-page-item {
+    display: flex !important;
+    gap: 0 !important;   
   }
 
   .is-detail-page .c-breadcrumb__item + .c-breadcrumb__item::before {
@@ -83,3 +100,9 @@
   }
 }
 
+.is-detail-page .c-breadcrumb__item {
+  display: inline-block;
+  -ms-flex-align: initial;
+  align-items: initial;
+  gap: initial; 
+}
