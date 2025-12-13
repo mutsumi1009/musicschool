@@ -133,139 +133,17 @@ max-width: 44rem;
   }
 }
 }
+// 卒業実績詳細ページ用：記事ナビの gap 
+.p-result_details .c-article-nav {
+  gap: 19.9rem;
 
-.p-article-nav {
-display: flex;
-justify-content: space-between;
-gap: 19.9rem;
-margin-top: 6rem;
-
-@include sp {
-  gap: 8rem;
-}
-}
-
-
-.p-article-nav__link {
-  display: flex;
-  flex-direction: column; 
-  justify-content: space-between;
-  gap: 1.6rem;
-}
-
-.p-article-nav__label {
-  // display: inline-block;
-  display: inline-flex;
-  align-items: center;
-  justify-content: space-between;
-  background: #000;
-  width: auto;
-  height: 3.7rem;
-  color: #fff;
-  padding-inline: 2rem 2.32rem;
-  font-size: 1.6rem;
-  font-weight: 700;
-  // gap:1.9rem;
-  // margin-top: 6rem;
-}
-
-// 前の記事
-.p-article-nav__label--prev {
-  justify-content: flex-start;   
-  padding-left: 1.6rem;
-  font-size: 1.7rem;
 
   @include sp {
-    font-size: 1.5rem;
-    padding-left: 1rem;
+    gap: 8rem;
   }
-
-  &::before {
-    content: "◀";
-    margin-right: 0.8rem;
-    font-size: 1.7rem;
-    transform: translateY(1px);
-
-    @include sp {
-      font-size: 1.5rem;
-      margin-right: 0;
-    }
-  }
-}
-
-
-// 次の記事
-.p-article-nav__label--next {
-  justify-content: flex-end;    
-  text-align: right;
-  padding-right: 1.6rem;
-
-  &::after {
-    content: "▶";
-    margin-left: 0.8rem;
-    font-size: 1.7rem;
-    transform: translateY(1px);
-  }
-
-  @include sp {
-    font-size: 1.5rem;
-    margin-right: 0;
-  }
-}
-
-
-.p-article-nav__img {
-  margin-top: 1.6rem; 
-
-  @include sp {
-    margin-top: 0rem;
-  }
-}
-
-.p-article-nav__img img{
-  width: auto;
-
-  @include sp {
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-     }
   }
 
 
-.p-article-nav__text {
-  font-size: 1.6rem;
-  font-weight: 700;
-  flex: 1;
-
-}
-
-.p-article-related {
-display: flex;
-flex-direction: column;
-gap: 3rem;
-font-size: 1.8rem;
-
-@include sp {
-  
-}
-}
-
-.p-article-related__title {
-  display: inline-flex;
-  align-items: center;
-  background: #000;
-  color: #fff;
-  font-size: 1.6rem;
-  font-weight: 700;
-  height: 5rem;
-  padding: 0.8rem 1.6rem;
-  margin-top: 10rem;
-
-  @include sp {
-    margin-top: 5rem;
-  }
-}
 
 
 // .p-article-related {
@@ -326,6 +204,41 @@ font-size: 1.8rem;
 
   @include sp {
   
+  }
+}
+
+/* ===============================================
+# SP 共通：詳細ページのパンくずだけ折り返しレイアウト
+=============================================== */
+
+@include sp {
+  .is-detail-page .c-breadcrumb {
+    padding: 0.7rem 2rem 0.7rem 1.8rem;
+    min-height: 7.7rem;
+    height: auto;
+  }
+
+  .is-detail-page .c-breadcrumb__list {
+    flex-wrap: wrap;
+    row-gap: 0.4rem;
+    column-gap: 0.5rem;
+    // overflow-x: auto;
+    // gap: 0;
+  }
+
+  .is-detail-page .c-breadcrumb__item {
+    font-size: 1.4rem;
+    white-space: normal;
+  }
+
+  .is-detail-page .c-breadcrumb__item.is-detail-page-item {
+    display: flex !important;
+    gap: 0 !important;   
+  }
+
+  .is-detail-page .c-breadcrumb__item + .c-breadcrumb__item::before {
+    content: ">";
+    // margin: 0 0.3rem;
   }
 }
 
