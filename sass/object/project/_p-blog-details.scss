@@ -11,9 +11,21 @@
   @include sp {
     // display: flex;
     align-items: center;
-    padding-block: 5rem 20.3rem;
+    padding-block: 5rem 13.7rem;
   }
 }
+
+// ===============================================
+// ブログ詳細ページ専用：l-inner を flex 化
+// ===============================================
+.p-blog_details .l-inner {
+  @include sp {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+}
+
 
 .p-blog_details__wrapper {
   display: flex;
@@ -21,7 +33,9 @@
   align-items: flex-start;
 
   @include sp {
-  flex-direction: column;
+    flex-direction: column;
+    // display: contents;
+    order: 1;
   }
 }
 
@@ -38,7 +52,7 @@
   width: 60rem;
   height: 35rem;
   object-fit: cover;
-  
+
   @include tab {
     width: 100%;
     height: auto;
@@ -126,9 +140,9 @@
 }
 
 .c-article-related {
-  
+
   @include sp {
-    order: 2;
+    order: 3;
   }
 }
 
@@ -136,15 +150,16 @@
 .p-blog_details__sidebar {
   display: flex;
   flex-direction: column;
-  height: 5rem;
+  // height: 5rem;
   width: 25rem;
   gap: 3rem;
   margin-left: 3.1rem;
 
   @include sp {
-   width: 33.5rem;
-   height: 2.68rem;
-   order: 4;
+    width: 33.5rem;
+    // height: 2.68rem;
+    order: 4;
+    margin-left: 0;
   }
 }
 
@@ -162,10 +177,7 @@
   //  margin-top: 3rem;
   //  height: 20rem;
 
-  @include sp {
-    
-  
-  }
+  @include sp {}
 }
 
 
@@ -189,7 +201,7 @@
 
 .p-sidebar-banner {
   background-color: #fff;
-  border: 1px solid #000;
+  border: 0.5px solid #000;
   width: 100%;
   height: 20rem;
   display: flex;
@@ -198,6 +210,10 @@
   font-size: 1.6rem;
   font-weight: 700;
   // padding: 1.5rem;
+
+  @include sp {
+    height: 26.8rem;
+  }
 }
 
 .p-sidebar-banner__inner {
@@ -211,12 +227,17 @@
   font-size: 1.6rem;
   font-weight: 700;
   padding: 1.5rem;
+
+  @include sp {
+    width: 29.5rem;
+    height: 22.8rem;
+  }
 }
 
 
 .p-sidebar-search {
   background-color: #F5F5F5;
-  border: 1px solid #000;
+  border: 0.5px solid #000;
   width: 25rem;
   // height: 17rem;
   display: flex;
@@ -238,6 +259,12 @@
   background-color: #E8E8E8;
   padding: 1rem;
 
+  @include sp {
+    width: 29.5rem;
+    height: 5.4rem;
+  }
+
+
   &::placeholder {
     color: transparent;
   }
@@ -251,6 +278,11 @@
   display: flex;
   align-items: center;
   flex-shrink: 0;
+
+  @include sp {
+    width: 24.1rem;
+    height: 5.4rem;
+  }
 }
 
 
@@ -263,6 +295,11 @@
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
+
+  @include sp {
+    width: 5.4rem;
+    height: 5.4rem;
+  }
 }
 
 .p-sidebar-search__button img {
@@ -270,6 +307,11 @@
   height: auto;
   display: block;
   margin-top: 0.8rem;
+
+  @include sp {
+    // width: 2.6rem;
+    // height: 3.2rem;
+  }
 }
 
 .p-sidebar-list {
@@ -299,8 +341,12 @@
   width: 9.5rem;
   height: 7.5rem;
   background-color: #e8e8e8;
-
   flex-shrink: 0;
+
+  @include sp {
+    width: 16rem;
+    height: 11rem;
+  }
 }
 
 .p-sidebar-recommend__text {
@@ -344,7 +390,7 @@
   justify-content: flex-start;
 
   @include sp {
-    gap: 8rem;
+    gap: 2.2rem;
     order: 2;
   }
 }
@@ -389,20 +435,18 @@
 .p-blog_details .c-article-nav__text {
   white-space: normal;
   line-height: 1.56;
-  width: 6.8rem; 
+  width: 6.8rem;
 
-  @include sp {
-   
-  }
+  @include sp {}
 }
 
 .p-blog_details .c-article-nav__img {
-  
+
   @include sp {
-display: none;    
+    display: none;
   }
-  }
-  
+}
+
 
 /* ===============================================
 # blog詳細ページ用：関連記事
@@ -413,8 +457,8 @@ display: none;
 
   @include sp {
     width: 33.5rem;
-    text-align: center; 
-    justify-content: center; 
+    text-align: center;
+    justify-content: center;
   }
 }
 
@@ -422,7 +466,7 @@ display: none;
   gap: 3rem;
 }
 
-.p-blog_details .c-result-card__text{
+.p-blog_details .c-result-card__text {
   width: 35.9rem;
   font-weight: 700;
 
@@ -430,8 +474,8 @@ display: none;
 
 /* ブログ詳細ページ：関連記事カードの画像サイズ */
 .p-blog_details .c-article-related .c-result-card__img {
-  width: 20rem;   
-  height: 14rem;  
+  width: 20rem;
+  height: 14rem;
 }
 
 .p-blog_details .c-article-related .c-result-card__img img {
@@ -443,9 +487,9 @@ display: none;
 // ===============================================
 // ページ専用：パンくずの高さ調整（SP）
 // ===============================================
-  .p-blog_details .c-breadcrumb {
-    @include sp {
-    min-height: 5.9rem; 
+.p-blog_details .c-breadcrumb {
+  @include sp {
+    min-height: 5.9rem;
     // height: 5.9rem;
   }
 }
