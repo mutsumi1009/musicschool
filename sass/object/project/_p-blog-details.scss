@@ -18,13 +18,13 @@
 // ===============================================
 // ブログ詳細ページ専用：l-inner を flex 化
 // ===============================================
-.p-blog_details .l-inner {
-  @include sp {
-    display: flex;
-    flex-direction: column;
-    gap: 4rem;
-  }
-}
+// .p-blog_details .l-inner {
+//   @include sp {
+//     display: flex;
+//     flex-direction: column;
+//     gap: 4rem;
+//   }
+// }
 
 
 .p-blog_details__wrapper {
@@ -35,16 +35,17 @@
   @include sp {
     flex-direction: column;
     // display: contents;
-    order: 1;
+    // order: 1;
   }
 }
+
 
 .p-blog_details__main {
   justify-content: space-between;
   gap: 3.1rem;
 
   @include sp {
-    order: 1;
+    // order: 1;
   }
 }
 
@@ -66,6 +67,11 @@
 
 .p-blog_details .c-result-card__date {
   text-align: left;
+
+  @include sp {
+    font-size: 1.7rem;
+    // text-align: right;
+  }
 }
 
 
@@ -75,15 +81,39 @@
   display: flex;
   gap: 0.3rem;
   margin-top: 2.1rem;
+
+  @include sp {
+    gap: 0.2rem;
+  }
 }
+
 
 
 .p-blog-detail__text--lead {
   margin-top: 4.8rem;
+  font-size: 1.8rem;
+
+  @include tab {
+    margin-top: 3rem;
+    max-width: none; 
+  }
+
+  @include sp {
+    max-width: 33.5rem;
+    width: 100%;
+    font-size: 1.6rem;
+    margin-top: 2.7rem;
+  }
 }
 
 .p-blog-detail__text--under-h2 {
   margin-top: 1.5rem;
+
+  @include sp {
+    width: 33.5rem;
+    max-width: 100%;
+    font-size: 1.6rem;
+  }
 }
 
 
@@ -93,6 +123,11 @@
   font-size: 2rem;
   font-weight: 700;
   margin-top: 3.3rem;
+
+  @include sp {
+    max-width: 33.5rem;
+    width: 100%;
+  }
 }
 
 .p-blog-detail__image {
@@ -103,18 +138,31 @@
   width: 33.45rem;
   height: 22.3rem;
   object-fit: cover;
+
+  @include sp {
+    height: auto;
+  }
 }
 
 .p-blog-detail__list {
   margin-top: 2.8rem;
   padding-bottom: 4.05rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+
+  @include sp {
+    font-size: 1.6rem;
+  }
 }
 
 .p-blog-detail__subtitle {
   font-size: 2rem;
   font-weight: 700;
   margin-top: 4.35rem;
+
+  @include sp {
+    width: 32.5rem;
+
+  }
 }
 
 .p-blog-detail__quote {
@@ -124,6 +172,13 @@
   padding-inline: 3rem;
   padding-block: 1.8rem 1rem;
   line-height: 1.666;
+
+  @include sp {
+    font-size: 1.6rem;
+    width: 33.5rem;
+    padding-inline: 2.6rem 2rem;
+    line-height: 1.875;
+  }
 }
 
 .p-blog-detail__quote .logo__img {
@@ -140,13 +195,17 @@
 }
 
 .c-article-related {
-
   @include sp {
     order: 3;
   }
 }
 
 // 右サイトバー
+
+.p-blog_details__sidebar-area {
+  margin-top: 3.1rem;
+}
+
 .p-blog_details__sidebar {
   display: flex;
   flex-direction: column;
@@ -168,7 +227,6 @@
 }
 
 
-
 .p-sidebar-box {
   background-color: #000;
   border: 1px solid #fff;
@@ -177,7 +235,9 @@
   //  margin-top: 3rem;
   //  height: 20rem;
 
-  @include sp {}
+  @include sp {
+  
+  }
 }
 
 
@@ -463,12 +523,39 @@
 }
 
 .p-blog_details .c-result-card__link {
-  gap: 3rem;
+  gap: 2rem;
+
+  @include sp {
+    display: flex;
+    // justify-content: space-between;
+    align-items: flex-start;
+
+  }
+}
+
+.p-blog_details .c-result-card__body {
+  @include sp {
+    // width: 100%;
+    // max-width: 33.5rem;
+    flex: 1;          
+    max-width: none; 
+  }
 }
 
 .p-blog_details .c-result-card__text {
   width: 35.9rem;
   font-weight: 700;
+
+  @include sp {
+    width: 100%;
+    font-size: 1.7rem;
+  line-height: 1.674;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2; 
+    overflow: hidden;
+    // margin-top: 0;
+  }
 
 }
 
@@ -476,6 +563,12 @@
 .p-blog_details .c-article-related .c-result-card__img {
   width: 20rem;
   height: 14rem;
+
+  @include sp {
+    width: 16rem;
+    height: 11rem;
+    flex-shrink: 0;
+  }
 }
 
 .p-blog_details .c-article-related .c-result-card__img img {
