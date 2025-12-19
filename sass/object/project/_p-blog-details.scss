@@ -50,18 +50,18 @@
 }
 
 .p-blog_details__main .c-result-card__img {
-  width: 60rem;
-  height: 35rem;
+  width: 100%;
+  height: auto;
   object-fit: cover;
 
-  @include tab {
-    width: 100%;
-    height: auto;
-  }
+  // @include tab {
+  //   width: 100%;
+  //   height: auto;
+  // }
 
   @include sp {
-    width: 33.5rem;
-    height: 20rem;
+    width: auto;
+    height: auto;
   }
 }
 
@@ -88,18 +88,17 @@
 }
 
 
-
 .p-blog-detail__text--lead {
   margin-top: 4.8rem;
   font-size: 1.8rem;
 
   @include tab {
     margin-top: 3rem;
-    max-width: none; 
+    // max-width: none; 
   }
 
   @include sp {
-    max-width: 33.5rem;
+    // max-width: 33.5rem;
     width: 100%;
     font-size: 1.6rem;
     margin-top: 2.7rem;
@@ -108,9 +107,10 @@
 
 .p-blog-detail__text--under-h2 {
   margin-top: 1.5rem;
+  width: 100%;
 
   @include sp {
-    width: 33.5rem;
+    // width: 33.5rem;
     max-width: 100%;
     font-size: 1.6rem;
   }
@@ -123,10 +123,12 @@
   font-size: 2rem;
   font-weight: 700;
   margin-top: 3.3rem;
+  width: 100%;
+  height: auto;
 
   @include sp {
-    max-width: 33.5rem;
-    width: 100%;
+    // max-width: 33.5rem;
+    // width: 100%;
   }
 }
 
@@ -135,13 +137,11 @@
 }
 
 .p-blog-detail__image img {
-  width: 33.45rem;
-  height: 22.3rem;
+  width: 100%;
+  height: auto;
   object-fit: cover;
 
-  @include sp {
-    height: auto;
-  }
+  @include sp {}
 }
 
 .p-blog-detail__list {
@@ -158,9 +158,10 @@
   font-size: 2rem;
   font-weight: 700;
   margin-top: 4.35rem;
+  width: 100%;
 
   @include sp {
-    width: 32.5rem;
+    // width: 32.5rem;
 
   }
 }
@@ -172,10 +173,11 @@
   padding-inline: 3rem;
   padding-block: 1.8rem 1rem;
   line-height: 1.666;
+  width: 100%;
 
   @include sp {
     font-size: 1.6rem;
-    width: 33.5rem;
+    // width: 33.5rem;
     padding-inline: 2.6rem 2rem;
     line-height: 1.875;
   }
@@ -235,9 +237,7 @@
   //  margin-top: 3rem;
   //  height: 20rem;
 
-  @include sp {
-  
-  }
+  @include sp {}
 }
 
 
@@ -460,6 +460,10 @@
   font-weight: 500;
   width: 26rem;
 
+  @include tab {
+    
+  }
+
   @include sp {
     width: 15.6rem;
   }
@@ -513,7 +517,7 @@
 =============================================== */
 
 .p-blog_details .c-article-related__title {
-  width: 60rem;
+  width: 100%;
 
   @include sp {
     width: 33.5rem;
@@ -537,8 +541,8 @@
   @include sp {
     // width: 100%;
     // max-width: 33.5rem;
-    flex: 1;          
-    max-width: none; 
+    flex: 1;
+    max-width: none;
   }
 }
 
@@ -549,10 +553,10 @@
   @include sp {
     width: 100%;
     font-size: 1.7rem;
-  line-height: 1.674;
+    line-height: 1.674;
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2; 
+    -webkit-line-clamp: 2;
     overflow: hidden;
     // margin-top: 0;
   }

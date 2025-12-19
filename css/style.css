@@ -2287,21 +2287,15 @@ TOPへ戻るボタン
   gap: 3.1rem;
 }
 .p-blog_details__main .c-result-card__img {
-  width: 60rem;
-  height: 35rem;
+  width: 100%;
+  height: auto;
   -o-object-fit: cover;
      object-fit: cover;
 }
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  .p-blog_details__main .c-result-card__img {
-    width: 100%;
-    height: auto;
-  }
-}
 @media (max-width: 767px) {
   .p-blog_details__main .c-result-card__img {
-    width: 33.5rem;
-    height: 20rem;
+    width: auto;
+    height: auto;
   }
 }
 
@@ -2334,12 +2328,10 @@ TOPへ戻るボタン
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .p-blog-detail__text--lead {
     margin-top: 3rem;
-    max-width: none;
   }
 }
 @media (max-width: 767px) {
   .p-blog-detail__text--lead {
-    max-width: 33.5rem;
     width: 100%;
     font-size: 1.6rem;
     margin-top: 2.7rem;
@@ -2348,10 +2340,10 @@ TOPへ戻るボタン
 
 .p-blog-detail__text--under-h2 {
   margin-top: 1.5rem;
+  width: 100%;
 }
 @media (max-width: 767px) {
   .p-blog-detail__text--under-h2 {
-    width: 33.5rem;
     max-width: 100%;
     font-size: 1.6rem;
   }
@@ -2361,30 +2353,19 @@ TOPへ戻るボタン
   font-size: 2rem;
   font-weight: 700;
   margin-top: 3.3rem;
+  width: 100%;
+  height: auto;
 }
-@media (max-width: 767px) {
-  .p-blog-detail__heading {
-    max-width: 33.5rem;
-    width: 100%;
-  }
-}
-
 .p-blog-detail__image {
   margin-top: 1.7rem;
 }
 
 .p-blog-detail__image img {
-  width: 33.45rem;
-  height: 22.3rem;
+  width: 100%;
+  height: auto;
   -o-object-fit: cover;
      object-fit: cover;
 }
-@media (max-width: 767px) {
-  .p-blog-detail__image img {
-    height: auto;
-  }
-}
-
 .p-blog-detail__list {
   margin-top: 2.8rem;
   padding-bottom: 4.05rem;
@@ -2400,13 +2381,8 @@ TOPへ戻るボタン
   font-size: 2rem;
   font-weight: 700;
   margin-top: 4.35rem;
+  width: 100%;
 }
-@media (max-width: 767px) {
-  .p-blog-detail__subtitle {
-    width: 32.5rem;
-  }
-}
-
 .p-blog-detail__quote {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2416,11 +2392,11 @@ TOPへ戻るボタン
   padding-inline: 3rem;
   padding-block: 1.8rem 1rem;
   line-height: 1.666;
+  width: 100%;
 }
 @media (max-width: 767px) {
   .p-blog-detail__quote {
     font-size: 1.6rem;
-    width: 33.5rem;
     padding-inline: 2.6rem 2rem;
     line-height: 1.875;
   }
@@ -2732,6 +2708,11 @@ TOPへ戻るボタン
   font-weight: 500;
   width: 26rem;
 }
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .p-blog_details .c-article-nav__label--prev {
+    width: auto;
+  }
+}
 @media (max-width: 767px) {
   .p-blog_details .c-article-nav__label--prev {
     width: 15.6rem;
@@ -2791,7 +2772,7 @@ TOPへ戻るボタン
 # blog詳細ページ用：関連記事
 =============================================== */
 .p-blog_details .c-article-related__title {
-  width: 60rem;
+  width: 100%;
 }
 @media (max-width: 767px) {
   .p-blog_details .c-article-related__title {
