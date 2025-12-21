@@ -46,7 +46,7 @@
 
     @include sp {
         font-size: 1.5rem;
-        padding-left: 1rem;
+        padding-left: 2.2rem;
     }
 
     &::before {
@@ -57,7 +57,7 @@
 
         @include sp {
             font-size: 1.5rem;
-            margin-right: 0;
+            margin-right: 0.4rem;
         }
     }
 }
