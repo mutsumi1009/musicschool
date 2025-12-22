@@ -31,6 +31,8 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  gap: 3.1rem;
+
 
   @include sp {
     flex-direction: column;
@@ -42,7 +44,6 @@
 
 .p-blog_details__main {
   justify-content: space-between;
-  gap: 3.1rem;
 
   @include sp {
     // order: 1;
@@ -264,13 +265,13 @@
   // height: 5rem;
   width: 25rem;
   gap: 3rem;
-  margin-left: 3.1rem;
+  // margin-left: 3.1rem;
 
   @include sp {
     width: 33.5rem;
     // height: 2.68rem;
     order: 4;
-    margin-left: 0;
+    // margin-left: 0;
   }
 }
 
@@ -673,3 +674,5 @@
 .is-detail-page .c-breadcrumb__item+.c-breadcrumb__item::before {
   content: none;
 }
+
+

@@ -2271,6 +2271,7 @@ TOPへ戻るボタン
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  gap: 3.1rem;
 }
 @media (max-width: 767px) {
   .p-blog_details__wrapper {
@@ -2285,7 +2286,6 @@ TOPへ戻るボタン
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  gap: 3.1rem;
 }
 .p-blog_details__main .c-result-card__img {
   width: 100%;
@@ -2488,7 +2488,6 @@ TOPへ戻るボタン
           flex-direction: column;
   width: 25rem;
   gap: 3rem;
-  margin-left: 3.1rem;
 }
 @media (max-width: 767px) {
   .p-blog_details__sidebar {
@@ -2496,7 +2495,6 @@ TOPへ戻るボタン
     -webkit-box-ordinal-group: 5;
         -ms-flex-order: 4;
             order: 4;
-    margin-left: 0;
   }
 }
 
