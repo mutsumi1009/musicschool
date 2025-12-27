@@ -36,6 +36,7 @@
 
   @include sp {
     flex-direction: column;
+    gap: 0;
     // display: contents;
     // order: 1;
   }
@@ -198,6 +199,7 @@
   display: flex;
   background-color: #E8E8E8;
   margin-top: 1.7rem;
+  
   padding-inline: 3rem;
   padding-block: 1.8rem 1rem;
   line-height: 1.666;
@@ -206,20 +208,30 @@
   @include sp {
     font-size: 1.6rem;
     // width: 33.5rem;
-    padding-inline: 7rem 2rem;
+    // padding-inline: 7rem 2rem;
     line-height: 1.875;
-    padding-block: 1.4rem;
+    // padding-block: 1.4rem;
+    padding-inline: 2.1rem;
     margin-top: 0.9rem;
+    gap: 1.75rem;
+    align-items: flex-start;
   }
 }
 
-.p-blog-detail__quote .logo__img {
+.quote-icon {
   flex-shrink: 0;
-
-  @include sp {
-    
-  }
 }
+
+.quote-icon img {
+  @include sp {
+  
+  width: 100%;
+  height: auto;
+}
+}
+
+
+
 
 .p-blog-detail__textlink {
   position: relative;

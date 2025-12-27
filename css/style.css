@@ -513,6 +513,7 @@ section[id] {
   left: 0;
   width: 100%;
   height: 100%;
+  background-color: rgba(80, 80, 80, 0.4863);
   mix-blend-mode: multiply;
   z-index: 1;
 }
@@ -1471,7 +1472,7 @@ TOPへ戻るボタン
 # contact-form
 =============================================== */
 .p-contact-form__content {
-  padding-block: 6.2962962963vw 6.0185185185vw;
+  padding-block: 6.8rem 6.5rem;
 }
 @media (max-width: 767px) {
   .p-contact-form__content {
@@ -1790,7 +1791,7 @@ TOPへ戻るボタン
 }
 
 .p-footer__nav-list {
-  font-size: 1.5740740741vw;
+  font-size: 1.7rem;
   font-weight: 700;
   line-height: 1.941;
   color: #E8E8E8;
@@ -1962,7 +1963,7 @@ TOPへ戻るボタン
   margin-top: 2rem;
 }
 .p-blog-list__content {
-  padding-block: 6.2037037037vw 19.4444444444vw;
+  padding-block: 6.7rem 21rem;
 }
 @media (max-width: 767px) {
   .p-blog-list__content {
@@ -2009,7 +2010,7 @@ TOPへ戻るボタン
 }
 
 .p-result-list__content {
-  padding-block: 6.4814814815vw 14.537037037vw;
+  padding-block: 7rem 15.7rem;
 }
 @media (max-width: 767px) {
   .p-result-list__content {
@@ -2038,7 +2039,7 @@ TOPへ戻るボタン
 }
 
 .p-result-details__content {
-  padding-block: 7.1296296296vw 14.537037037vw;
+  padding-block: 7.7rem 15.7rem;
 }
 @media (max-width: 767px) {
   .p-result-details__content {
@@ -2279,6 +2280,7 @@ TOPへ戻るボタン
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    gap: 0;
   }
 }
 
@@ -2432,17 +2434,28 @@ TOPへ戻るボタン
 @media (max-width: 767px) {
   .p-blog-detail__quote {
     font-size: 1.6rem;
-    padding-inline: 7rem 2rem;
     line-height: 1.875;
-    padding-block: 1.4rem;
+    padding-inline: 2.1rem;
     margin-top: 0.9rem;
+    gap: 1.75rem;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
 }
 
-.p-blog-detail__quote .logo__img {
+.quote-icon {
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
+
+@media (max-width: 767px) {
+  .quote-icon img {
+    width: 100%;
+    height: auto;
+  }
+}
+
 .p-blog-detail__textlink {
   position: relative;
   display: inline-block;
@@ -2928,6 +2941,235 @@ TOPへ戻るボタン
 /* 詳細ページでは before を使わない */
 .is-detail-page .c-breadcrumb__item + .c-breadcrumb__item::before {
   content: none;
+}
+
+.p-plan__content {
+  padding-block: 6.8rem 22.3rem;
+}
+@media (max-width: 767px) {
+  .p-plan__content {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-block: 4.6rem 12.6rem;
+  }
+}
+
+.p-plan-price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 3rem;
+  margin-top: 4rem;
+}
+@media (max-width: 767px) {
+  .p-plan-price {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+.p-plan-price__label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #CB0000;
+  color: #F5F5F5;
+  font-size: 2rem;
+  font-weight: 700;
+  width: 21rem;
+  height: 6rem;
+}
+
+.p-plan-price__plus {
+  display: block;
+  position: relative;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 1.85rem;
+  height: 1.85rem;
+}
+
+.p-plan-price__plus::before,
+.p-plan-price__plus::after {
+  content: "";
+  position: absolute;
+  background-color: #000;
+}
+
+/* 横線 */
+.p-plan-price__plus::before {
+  width: 100%;
+  height: 0.3rem;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+/* 縦線 */
+.p-plan-price__plus::after {
+  height: 100%;
+  width: 0.3rem;
+  left: 50%;
+  top: 0;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.p-plan__message {
+  margin-top: 4.8rem;
+  font-size: 1.8rem;
+  line-height: 1.666;
+}
+@media (max-width: 767px) {
+  .p-plan__message {
+    font-size: 1.6rem;
+    margin-top: 4.7rem;
+    width: 33.5rem;
+    line-height: 1.875;
+    margin-inline: auto;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.p-plan-table .c-page-title {
+  margin-top: 5.7rem;
+}
+
+/* プラン表 共通セル */
+.p-plan-table__table {
+  margin-top: 5rem;
+  width: 100%;
+  border-collapse: collapse;
+}
+.p-plan-table__table th,
+.p-plan-table__table td {
+  padding: 3rem 1rem;
+  border-right: 1px solid #ccc;
+  vertical-align: middle;
+  font-size: 2.2rem;
+}
+
+.p-plan-table__table tbody th {
+  text-align: left;
+}
+
+.p-plan-table__table tbody td {
+  text-align: center;
+}
+
+/* 表の中身（td）を中央揃え */
+.p-plan-table__table tbody td {
+  text-align: center;
+}
+
+/* 月額料金 行だけ太字 */
+.p-plan-table__table tbody tr:first-child th,
+.p-plan-table__table tbody tr:first-child td {
+  font-weight: 700;
+}
+
+/* ベーシック・プレミアム（黒） */
+.p-plan-table__table thead th:not(:first-child) {
+  background-color: #000;
+  color: #E8E8E8;
+  text-align: center;
+}
+
+/* スタンダード（おすすめ）だけ赤 */
+.p-plan-table__price.is-red {
+  color: #CB0000;
+  font-weight: 700;
+  font-size: 2.2rem;
+}
+
+/* おすすめ（上） */
+.p-plan-table__badge {
+  display: block;
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+
+/* スタンダードプラン（下） */
+.p-plan-table__title {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.p-plan-table__table tbody tr:nth-child(even) {
+  background-color: rgba(80, 80, 80, 0.149);
+}
+
+.p-plan-table__cell {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.6rem;
+}
+
+.p-plan-table__dot {
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: #000;
+  border-radius: 50%;
+}
+
+.p-plan-table__dot--red {
+  background-color: #CB0000;
+}
+
+.p-plan-table__cell {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 0.6rem;
+  height: 100%;
+}
+
+.p-plan-table__dash {
+  width: 3rem;
+  color: #707070;
+}
+
+.p-page-note {
+  margin-top: 2.8rem;
 }
 
 /* foundation *//*# sourceMappingURL=style.css.map */
