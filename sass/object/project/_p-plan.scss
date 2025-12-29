@@ -111,6 +111,8 @@
   margin-top: 5rem;
   width: 100%;
   border-collapse: collapse;
+  table-layout: fixed;
+
 
   th,
   td {
@@ -166,9 +168,7 @@
 .p-plan-table__table tbody tr:first-child td {
   font-weight: 700;
 
-  @include sp {
-    
-  }
+  @include sp {}
 }
 
 
@@ -240,8 +240,8 @@
 
 .p-plan-table__cell {
   display: flex;
-  flex-direction: column;   
-  align-items: center;   
+  flex-direction: column;
+  align-items: center;
   gap: 0.6rem;
   height: 100%;
 
@@ -253,7 +253,7 @@
 }
 
 .p-plan-table__dash {
- width: 3rem;
+  width: 3rem;
   // height: 1px;
   color: #707070;
 }
@@ -264,16 +264,14 @@
 
 // おすすめスタンダードプランのみ
 th.is-recommend {
-    background-color: $main-color !important; 
-    // padding-top: 1.1rem !important;
-    // padding-bottom: 0.5rem !important;
-    
-  
-    @include sp {
-    
-    }
-  }
-  
+  background-color: $main-color !important;
+  // padding-top: 1.1rem !important;
+  // padding-bottom: 0.5rem !important;
+
+
+  @include sp {}
+}
+
 
 .p-plan-table__badge {}
 
@@ -297,7 +295,7 @@ th.is-recommend {
     overflow-x: scroll;
     // -webkit-overflow-scrolling: touch;
     padding-bottom: 1.75rem;
-   
+
   }
 
   // .p-plan-table__table {
@@ -305,19 +303,19 @@ th.is-recommend {
   // }
 
   .p-plan-table__table tbody tr {
-    min-height: 8.5rem; 
+    min-height: 8.5rem;
   }
 }
 
 @include sp {
   .p-plan-table__scroll {
-    position: relative;       
+    position: relative;
     overflow-x: scroll;
     // padding-bottom: 4rem;      
   }
 
   .p-plan-table__table {
-    width: 67rem;          
+    width: 85rem;
   }
 
   .p-plan-table__table tbody tr {
@@ -330,18 +328,31 @@ th.is-recommend {
      ダミースクロールバー
   =========================== */
 
-  .p-plan-table__scroll-bar {
-    width: 100%;
-    height: 2.5rem; // ← カンプの25px
+.p-plan-table__scroll-bar {
+  display: none;
+  // width: 100%;
+  // height: 2.5rem;
+  // display: flex;
+  // align-items: center;
+  // margin-top: 1.2rem;
+
+  @include sp {
     display: flex;
-    align-items: center; // 中身23pxを中央に
-    // margin-top: 1.2rem;
+    width: 100%;
+    height: 2.5rem;
+    align-items: center;
+    margin-top: 1.2rem;
   }
+}
 
-  /* 中身（100 × 23） */
-  .p-plan-table__scroll-thumb {
-    width: 33.5rem;      
-    height: 2.5rem;    
+/* 中身（100 × 23） */
+.p-plan-table__scroll-thumb {
+  display: none;
+
+  @include sp {
+    display: block;
+    width: 33.5rem;
+    height: 2.5rem;
     background-color: rgba(80, 80, 80, 0.15);
-
   }
+}
