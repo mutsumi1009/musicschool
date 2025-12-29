@@ -134,6 +134,42 @@ meter {
 /* ===============================================
 # Mixin 
 =============================================== */
+.pc-only {
+  display: none;
+}
+@media (min-width: 768px) {
+  .pc-only {
+    display: block;
+  }
+}
+
+.sp-only {
+  display: none;
+}
+@media (max-width: 767px) {
+  .sp-only {
+    display: inline;
+  }
+}
+
+.pc {
+  display: block;
+}
+@media (max-width: 767px) {
+  .pc {
+    display: none;
+  }
+}
+
+.sp {
+  display: none;
+}
+@media (max-width: 767px) {
+  .sp {
+    display: block;
+  }
+}
+
 html {
   font-size: 62.5%;
   margin: 0;
@@ -3057,6 +3093,13 @@ TOPへ戻るボタン
 .p-plan-table__scroll {
   overflow-x: auto;
 }
+@media (max-width: 767px) {
+  .p-plan-table__scroll {
+    position: relative;
+    overflow-x: scroll;
+    padding-bottom: 1.75rem;
+  }
+}
 
 /* プラン表 共通セル */
 .p-plan-table__table {
@@ -3076,7 +3119,9 @@ TOPへ戻るボタン
   text-align: left;
   vertical-align: bottom !important;
   border-right: 1px solid #ccc;
-  border-top: 1px solid #ccc;
+  white-space: nowrap;
+  width: 22rem;
+  font-size: 1.7rem;
 }
 @media (max-width: 767px) {
   .p-plan-table__table tbody th {
@@ -3089,6 +3134,14 @@ TOPへ戻るボタン
 .p-plan-table__table tbody td {
   text-align: center;
   border-right: 1px solid #ccc;
+  font-size: 1.7rem;
+}
+.p-plan-table__table tbody td .p-plan-table__num {
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+.p-plan-table__table tbody td:last-child {
+  border-right: none;
 }
 @media (max-width: 767px) {
   .p-plan-table__table tbody td {
@@ -3105,7 +3158,13 @@ TOPへ戻るボタン
 .p-plan-table__table tbody tr:first-child th,
 .p-plan-table__table tbody tr:first-child td {
   font-weight: 700;
+  border-top: 1px solid #ccc;
 }
+.p-plan-table__table tbody tr:last-child th,
+.p-plan-table__table tbody tr:last-child td {
+  border-bottom: 1px solid #ccc;
+}
+
 /* ベーシック・プレミアム（黒） */
 .p-plan-table__table thead th:not(:first-child) {
   background-color: #000;
@@ -3190,28 +3249,18 @@ th.is-recommend {
 /* ===============================================
   SP 横スクロール対応 
 =============================================== */
-@media (max-width: 767px) {
-  .p-plan-table__scroll {
-    position: relative;
-    overflow-x: scroll;
-    padding-bottom: 1.75rem;
-  }
-  .p-plan-table__table tbody tr {
-    min-height: 8.5rem;
-  }
+.p-plan-table__table tbody tr {
+  min-height: 8.5rem;
 }
-@media (max-width: 767px) {
-  .p-plan-table__scroll {
-    position: relative;
-    overflow-x: scroll;
-  }
-  .p-plan-table__table {
-    width: 85rem;
-  }
-  .p-plan-table__table tbody tr {
-    min-height: 8.5rem;
-  }
+
+.p-plan-table__table {
+  width: 85rem;
 }
+
+.p-plan-table__table tbody tr {
+  min-height: 8.5rem;
+}
+
 /* ===========================
      ダミースクロールバー
   =========================== */
@@ -3228,7 +3277,6 @@ th.is-recommend {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin-top: 1.2rem;
   }
 }
 
