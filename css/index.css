@@ -5,6 +5,42 @@
 /* ===============================================
 # Mixin 
 =============================================== */
+.pc-only {
+  display: none;
+}
+@media (min-width: 768px) {
+  .pc-only {
+    display: block;
+  }
+}
+
+.sp-only {
+  display: none;
+}
+@media (max-width: 767px) {
+  .sp-only {
+    display: inline;
+  }
+}
+
+.pc {
+  display: block;
+}
+@media (max-width: 767px) {
+  .pc {
+    display: none;
+  }
+}
+
+.sp {
+  display: none;
+}
+@media (max-width: 767px) {
+  .sp {
+    display: block;
+  }
+}
+
 /* ===============================================
 # カラー変数設定
 =============================================== */
