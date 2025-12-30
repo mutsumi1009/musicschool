@@ -3090,21 +3090,21 @@ TOPへ戻るボタン
   margin-top: 5.7rem;
 }
 
-.p-plan-table__scroll {
-  overflow-x: auto;
-}
 @media (max-width: 767px) {
   .p-plan-table__scroll {
     position: relative;
-    overflow-x: scroll;
-    padding-bottom: 1.75rem;
+    overflow-y: hidden;
   }
+}
+
+.simplebar-placeholder {
+  height: 0 !important;
 }
 
 /* プラン表 共通セル */
 .p-plan-table__table {
   margin-top: 5rem;
-  width: 100%;
+  width: 88rem;
   border-collapse: collapse;
   table-layout: fixed;
 }
@@ -3115,12 +3115,72 @@ TOPへ戻るボタン
   font-size: 2rem;
 }
 
+/* --- プラン表 全体 --- */
+.p-plan-table__table {
+  margin-top: 5rem;
+  width: 88rem;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+.p-plan-table__table th,
+.p-plan-table__table td {
+  vertical-align: middle;
+  text-align: center;
+}
+
+/* --- ヘッダー(thead) 突き出し --- */
+.p-plan-table__table thead {
+  /* ベーシック・プレミアム（黒） */
+}
+.p-plan-table__table thead th {
+  background-color: transparent;
+}
+.p-plan-table__table thead .p-plan-table__head-black {
+  background-color: #000 !important;
+  color: #fff !important;
+  height: 5rem;
+  padding-top: 1.1rem;
+  padding-bottom: 0.5rem;
+}
+.p-plan-table__table thead .p-plan-table__head-text {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+/* スタンダード（赤・おすすめ） */
+th.is-recommend {
+  background-color: #CB0000 !important;
+  color: #E8E8E8 !important;
+  padding-bottom: 0.5rem;
+  padding-top: 1.1rem;
+  vertical-align: bottom;
+}
+
+.p-plan-table__badge {
+  display: block;
+  font-size: 1.7rem;
+  font-weight: 700;
+  padding: 0;
+}
+
+.p-plan-table__title {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 0;
+}
+
+/* --- ボディ(tbody) --- */
+.p-plan-table__table tbody {
+  /* ✅ 月額料金の行（1行目）を太字にする */
+  /* ストライプ背景 */
+  /* 最終行の下線 */
+}
 .p-plan-table__table tbody th {
   text-align: left;
-  vertical-align: bottom !important;
   border-right: 1px solid #ccc;
-  white-space: nowrap;
   width: 22rem;
+  padding-left: 2rem;
   font-size: 1.7rem;
 }
 @media (max-width: 767px) {
@@ -3130,83 +3190,43 @@ TOPへ戻るボタン
     width: 16.7rem;
   }
 }
-
 .p-plan-table__table tbody td {
-  text-align: center;
   border-right: 1px solid #ccc;
+  padding: 2rem 1rem;
   font-size: 1.7rem;
-}
-.p-plan-table__table tbody td .p-plan-table__num {
-  font-size: 2.2rem;
-  font-weight: 700;
 }
 .p-plan-table__table tbody td:last-child {
   border-right: none;
 }
-@media (max-width: 767px) {
-  .p-plan-table__table tbody td {
-    width: 16.7rem;
-  }
+.p-plan-table__table tbody tr:first-child {
+  border-top: 1px solid #ccc;
 }
-
-/* 表の中身（td）を中央揃え */
-.p-plan-table__table tbody td {
-  text-align: center;
-}
-
-/* 月額料金 行だけ太字 */
 .p-plan-table__table tbody tr:first-child th,
 .p-plan-table__table tbody tr:first-child td {
   font-weight: 700;
-  border-top: 1px solid #ccc;
 }
-.p-plan-table__table tbody tr:last-child th,
-.p-plan-table__table tbody tr:last-child td {
+.p-plan-table__table tbody tr:first-child .p-plan-table__num {
+  font-size: 2.2rem;
+}
+.p-plan-table__table tbody tr:first-child td:nth-child(2) {
+  color: #000;
+}
+.p-plan-table__table tbody tr:nth-child(even) {
+  background-color: rgba(80, 80, 80, 0.1);
+}
+.p-plan-table__table tbody tr:last-child {
   border-bottom: 1px solid #ccc;
 }
 
-/* ベーシック・プレミアム（黒） */
-.p-plan-table__table thead th:not(:first-child) {
-  background-color: #000;
-  color: #E8E8E8;
-  text-align: center;
-  padding-top: 1.1rem;
-  padding-bottom: 0.6rem;
-}
-
-/* スタンダード（おすすめ）だけ赤 */
-.p-plan-table__price.is-red {
-  color: #CB0000;
-  font-weight: 700;
-  font-size: 2rem;
-}
-
-/* おすすめ（上） */
-.p-plan-table__badge {
-  display: block;
-  font-size: 1.7rem;
-  font-weight: 700;
-}
-
-/* スタンダードプラン（下） */
-.p-plan-table__title {
-  display: block;
-  font-size: 2rem;
-  font-weight: 700;
-}
-
-.p-plan-table__table tbody tr:nth-child(even) {
-  background-color: rgba(80, 80, 80, 0.149);
-}
-
+/* --- アイコン・装飾 --- */
 .p-plan-table__dot {
-  display: inline-block;
+  display: block;
   width: 1.5rem;
   height: 1.5rem;
   background-color: #000;
   border-radius: 50%;
+  margin: 0 auto;
 }
-
 .p-plan-table__dot--red {
   background-color: #CB0000;
 }
@@ -3223,73 +3243,46 @@ TOPへ戻るボタン
       -ms-flex-align: center;
           align-items: center;
   gap: 0.6rem;
-  height: 100%;
-}
-@media (max-width: 767px) {
-  .p-plan-table__cell {
-    min-width: 8.5rem;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
 }
 
 .p-plan-table__dash {
-  width: 3rem;
   color: #707070;
+  text-align: center;
 }
 
-th.is-recommend {
-  background-color: #CB0000 !important;
+/* カンプの赤い文字用クラス */
+.is-red {
+  color: #CB0000 !important;
+  font-weight: 700;
 }
+
 .p-page-note {
   margin-top: 2.8rem;
+  font-size: 1.4rem;
 }
 
-/* ===============================================
-  SP 横スクロール対応 
-=============================================== */
-.p-plan-table__table tbody tr {
-  min-height: 8.5rem;
-}
-
-.p-plan-table__table {
-  width: 85rem;
-}
-
-.p-plan-table__table tbody tr {
-  min-height: 8.5rem;
-}
-
-/* ===========================
-     ダミースクロールバー
-  =========================== */
-.p-plan-table__scroll-bar {
+/* --- SimpleBar 外側（レール） --- */
+.simplebar-track.simplebar-horizontal {
   display: none;
 }
 @media (max-width: 767px) {
-  .p-plan-table__scroll-bar {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    width: 100%;
+  .simplebar-track.simplebar-horizontal {
+    display: block;
+    background-color: rgba(80, 80, 80, 0.149);
     height: 2.5rem;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    border-radius: 0;
   }
 }
 
-/* 中身（100 × 23） */
-.p-plan-table__scroll-thumb {
-  display: none;
-}
 @media (max-width: 767px) {
-  .p-plan-table__scroll-thumb {
+  .simplebar-scrollbar::before {
+    content: "";
     display: block;
-    width: 33.5rem;
-    height: 2.5rem;
-    background-color: rgba(80, 80, 80, 0.15);
+    width: 10rem;
+    height: 2.3rem;
+    background-color: #9B9B9B;
+    border-radius: 0;
+    opacity: 1 !important;
   }
 }
 

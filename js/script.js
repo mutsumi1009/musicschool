@@ -68,29 +68,3 @@ $toTopBtn.on('click', function (e) {
 });
 
 
-/* ===============================================
-# プラン表のカスタムスクロールバー連動
-=============================================== */
-$(function () {
-  const $scrollArea = $('.p-plan-table__scroll'); // 表のスクロール枠
-  const $scrollThumb = $('.p-plan-table__scroll-thumb'); // グレーの動く棒
-  const $scrollBar = $('.p-plan-table__scroll-bar'); // 棒の土台
-
-  // 要素が存在しないときのエラーを防ぐ
-  if (!$scrollArea.length || !$scrollThumb.length) return;
-
-  $scrollArea.on('scroll', function () {
-    // 1. 表がどれくらいスクロールされたかの割合 (0〜1) を計算
-    let scrollLeft = $(this).scrollLeft();
-    let scrollWidth = $(this).get(0).scrollWidth - $(this).innerWidth();
-    let ratio = scrollLeft / scrollWidth;
-
-    // 2. 下のバーが動ける範囲を計算
-    let barWidth = $scrollBar.width();
-    let thumbWidth = $scrollThumb.width();
-    let moveRange = barWidth - thumbWidth;
-
-    // 3. 割合に応じて棒を移動
-    $scrollThumb.css('transform', 'translateX(' + (moveRange * ratio) + 'px)');
-  });
-});
