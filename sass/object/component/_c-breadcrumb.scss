@@ -8,7 +8,7 @@
   margin-top: 0;
   width: 100%;
   // height: auto;
-  min-height: 5rem;
+  height: 5rem;
   background-color: #E8E8E8;
   padding: 1rem 9.31rem 0.7rem 10rem;
   z-index: 2;
@@ -48,7 +48,7 @@
 
   @include sp {
     font-size: 1.6rem;
-    margin: 2rem 0 3rem;
+    // margin: 2rem 0 3rem;
   }
 }
 
