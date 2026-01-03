@@ -11,7 +11,7 @@
   @include sp {
     // display: flex;
     align-items: center;
-    padding-block: 4.6rem 12.6rem;
+    padding-block: 4.6rem 18.6rem;
   }
 }
 
@@ -99,20 +99,20 @@
 .p-plan__message {
   margin-top: 4.8rem;
   // このページでは中央寄せの flex 設定などは不要なので解除
-  display: block; 
+  display: block;
 
   /* ✅ 共通パーツ .c-page-message をこの中だけで上書き */
   .c-page-message {
     text-align: left !important; // 他の強い設定（centerなど）を強制上書き
     margin-inline: 0 !important; // 中央寄せ(auto)を解除して左端に固定
-    width: 100%;                 // 幅をいっぱいに広げて開始位置をカンプに合わせる
+    width: 100%; // 幅をいっぱいに広げて開始位置をカンプに合わせる
     font-size: 1.8rem;
     line-height: 1.666;
   }
 
   @include sp {
     margin-top: 4.7rem;
-    
+
     .c-page-message {
       text-align: left !important;
       margin-inline: 0 !important;
@@ -154,11 +154,13 @@
 .p-plan-table__table {
   margin-top: 4rem;
   width: 88rem;
+  // width: 100%;
   border-collapse: collapse;
   table-layout: fixed;
 
   @include sp {
-    margin-top: 0;
+    margin-top: 1.4rem;
+    width: 67rem;
   }
 
   th,
@@ -167,10 +169,11 @@
     text-align: center;
     // padding-block: 3.2rem 2.6rem;
     width: 5rem;
-   
+
+
     @include sp {
       padding-block: 1.0rem;
-      
+      vertical-align: middle;
     }
   }
 }
@@ -179,16 +182,14 @@
 .p-plan-table__table thead {
   th {
     background-color: transparent;
-    padding-top: 0;
+    padding-top: 0.3rem;
     padding-bottom: 0.2rem;
     font-size: 2rem;
-   
-   
-  
+
   }
 
   @include sp {
-    padding-block: 0.8rem ;
+    padding-block: 0.8rem 2.2rem;
   }
 }
 
@@ -197,8 +198,8 @@
   background-color: #000 !important;
   color: #fff !important;
   height: 5rem;
-  padding-top: 1.1rem;
-  padding-bottom: 0.5rem;
+  padding-top: 2.2rem;
+  padding-bottom: 0rem;
   vertical-align: middle;
 
   @include sp {
@@ -238,6 +239,10 @@ th.is-recommend {
   font-size: 1.7rem;
   font-weight: 700;
   padding-top: 1.1rem;
+
+  @include sp {
+    // padding-top: 0;
+  }
 }
 
 .p-plan-table__title {
@@ -245,6 +250,16 @@ th.is-recommend {
   font-size: 2rem;
   font-weight: 700;
   vertical-align: bottom;
+
+  @include sp {
+    white-space: nowrap;
+  }
+}
+
+th.is-recommend .p-plan-table__title {
+  @include sp {
+    font-size: 1.8rem; 
+  }
 }
 
 
@@ -253,7 +268,7 @@ th.is-recommend {
   th {
     text-align: left;
     border-right: 1px solid #ccc;
-    width: 22rem;
+    // width: 22rem;
     padding-left: 2rem;
     padding-top: 0.7rem;
     font-size: 1.7rem;
@@ -262,10 +277,11 @@ th.is-recommend {
     @include sp {
       font-size: 1.6rem;
       line-height: 1.5625;
-      white-space: normal;
-      width: 16.7rem;
+      white-space: nowrap;
+      max-width: 6rem;
       height: auto;
-      padding-inline: 3.05rem 3rem;
+      padding-inline: 1.05rem 3rem;
+      padding-block: 2.7rem;
     }
   }
 
@@ -299,17 +315,25 @@ th.is-recommend {
   }
 
 
-  /* ✅ 月額料金の行（1行目）を太字にする */
+  /*月額料金の行（1行目）を太字にする */
   tr:first-child {
     border-top: 1px solid #ccc;
-
+  
     th,
     td {
       font-weight: 700;
+      // padding-top: 2.6rem;
+  
+      @include sp {
+        // padding-top: 1.9rem;
+      }
     }
+  }
 
     .p-plan-table__num {
       font-size: 2.2rem;
+
+      @include sp {}
     }
 
     td:nth-child(2) {
@@ -326,7 +350,7 @@ th.is-recommend {
   tr:last-child {
     border-bottom: 1px solid #ccc;
   }
-}
+
 
 
 /* --- アイコン・装飾 --- */
@@ -352,9 +376,21 @@ th.is-recommend {
 }
 
 .p-plan-table__dash {
-  color: #707070;
-  text-align: center;
+  position: relative;
+  height: 8.5rem;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 3rem;
+    height: 0.1rem;
+    background-color: #707070;
+    transform: translate(-50%, -50%);
+  }
 }
+
 
 /* カンプの赤い文字用クラス */
 // .is-red {
@@ -363,8 +399,14 @@ th.is-recommend {
 // }
 
 .p-page-note {
-  margin-top: 2.8rem;
+  margin-top: 2.4rem;
   font-size: 1.7rem;
+
+  @include sp {
+    margin-top: 1.6rem;
+    font-size: 1.6rem;
+    line-height: 1.875;
+  }
 }
 
 /* --- SimpleBar 外側（レール） --- */
@@ -386,7 +428,7 @@ th.is-recommend {
     display: block;
     width: 10rem;
     height: 2.3rem;
-    background-color: #9B9B9B;
+    background-color: rgba(80, 80, 80, 0.251);
     border-radius: 0;
     opacity: 1 !important;
   }
