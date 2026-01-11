@@ -132,21 +132,13 @@
 }
 
 
-.p-plan-table__scroll {
-  // overflow-x: auto;
 
-  @include sp {
-    position: relative;
-    overflow-y: hidden;
-    // overflow-x: scroll;
-    // -webkit-overflow-scrolling: touch;
-    // padding-bottom: 1.75rem;
-  }
-}
 
-.simplebar-placeholder {
-  height: 0 !important;
-}
+
+
+// .simplebar-placeholder {
+//   height: 0 !important;
+// }
 
 
 
@@ -409,16 +401,35 @@ th.is-recommend .p-plan-table__title {
   }
 }
 
-/* --- SimpleBar 外側（レール） --- */
+/* --- SimpleBar  --- */
+.p-plan-table__scroll {
+  // overflow-x: auto;
+
+  @include sp {
+    position: relative;
+    overflow-y: hidden;
+    // overflow-x: scroll;
+    // -webkit-overflow-scrolling: touch;
+    //  padding-bottom: 1.75rem;
+    padding-bottom: 5rem;
+  }
+}
+
+
 .simplebar-track.simplebar-horizontal {
   display: none;
 
   @include sp {
-    display: block;
+    display: block !important;
     background-color: rgba(80, 80, 80, 0.149);
     height: 2.5rem;
     border-radius: 0;
-    margin-top: 1.75rem;
+    // margin-top: 1.75rem;
+    position: absolute;
+    bottom: 0.5rem;
+    left: 0;
+    width: 100%;
+    // visibility: visible !important;
   }
 }
 
@@ -426,7 +437,7 @@ th.is-recommend .p-plan-table__title {
   @include sp {
     content: "";
     display: block;
-    width: 10rem;
+    // width: 10rem;
     height: 2.3rem;
     background-color: rgba(80, 80, 80, 0.251);
     border-radius: 0;
