@@ -9,8 +9,10 @@
 
 .p-top-hero__catch {
     position: absolute;
-    inset: 0;
-
+    // inset: 0;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -21,7 +23,14 @@
     font-weight: 700;
     line-height: 1.5;
 
-    @include sp {}
+    @include sp {
+        display: block;
+        top: 51%;
+        left: 50%;
+        font-size: 3rem;
+        line-height: 1.666;
+        width: 30rem;
+    }
 }
 
 
@@ -29,7 +38,7 @@
 
 .p-top__content {
     // padding-block: 6.8rem 6.5rem;
-    padding-block: 6.6rem 14.5rem;
+    padding-block: 5.9rem 7.7rem;
 
     @include sp {
         // display: flex;
@@ -38,14 +47,11 @@
     }
 }
 
-
-
-
 .p-top-concept__title {
     color: $main-color;
     font-size: 3.55rem;
     font-weight: 700;
-    line-height: 1.428;
+    // line-height: 1.428;
     text-align: center;
 
     @include sp {
@@ -60,6 +66,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+    margin-top: 1rem;
 
     @include sp {
         font-size: 1.8rem;
@@ -74,6 +81,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 2.8rem;
 
     @include sp {
         margin-top: 2rem;
@@ -84,7 +92,7 @@
     display: flex;
     position: relative;
     justify-content: center;
-    margin-top: 2.6rem;
+    margin-top: 4.6rem;
     // padding-bottom: 5.5rem;
 
     @include sp {
@@ -102,12 +110,11 @@
 }
 
 
-
 .p-top-message__list {
     position: relative;
     display: flex;
     flex-direction: column;
-    gap: 8rem;
+    gap: 7rem;
     padding: 0;
     list-style: none;
 
@@ -115,11 +122,11 @@
         content: "";
         position: absolute;
         top: -5.2rem;
-        bottom: 0; 
+        bottom: 0;
         left: 50%;
         transform: translateX(-50%);
         width: 2px;
-        height: 210px;
+        height: 199px;
         background-color: $main-color;
     }
 }
@@ -128,9 +135,10 @@
 .p-top-message__item {
     position: relative;
     display: flex;
-    align-items: center; // 丸とテキストの高さを揃える
+    align-items: center;
     width: 100%;
-    min-width: 300px; // カンプの幅感に合わせて調整
+    min-width: 300px;
+
 }
 
 /* 赤丸（線の真上に配置） */
@@ -147,15 +155,22 @@
     z-index: 2;
 }
 
-.p-top-message__item:first-child::before {
-    top: 0.4rem;
+
+/* ⚪️2個目 */
+.p-top-message__item:nth-child(2)::before {
+    transform: translate(-50%, -60%);
+}
+
+/* ⚪️3個目 */
+.p-top-message__item:nth-child(3)::before {
+    transform: translate(-50%, -64%);
 }
 
 /* 左側の英語*/
 .p-top-message__en {
     font-size: 2.5rem;
     position: absolute;
-    right: calc(50% + 2.5rem); // 線の中央から左に25px離す
+    right: calc(50% + 4rem); // 線の中央から左に25px離す
     color: $main-color;
     font-weight: 700;
     white-space: nowrap;
@@ -170,7 +185,7 @@
 .p-top-message__jp {
     font-size: 2.3rem;
     position: absolute;
-    left: calc(50% + 3rem);
+    left: calc(50% + 4rem);
     white-space: nowrap;
 
     @include sp {
@@ -180,12 +195,27 @@
 
 }
 
+// 共通タイトル
+.p-section-title {
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+
+    // padding-top: 6.4rem;
+
+    @include sp {
+        font-size: 2.5rem;
+        // padding-top: 4.9rem;
+    }
+}
+
+
 .p-top-promo {
     // width: 108rem;
     text-align: center;
     background-color: $main-color;
-    padding-block: 6.8rem 6rem;
-    margin-top: 5.5rem;
+    padding-block: 6.2rem 6rem;
+    // margin-top: 5.5rem;
 
     @include sp {
         margin-top: 5rem;
@@ -215,68 +245,108 @@
     font-size: 1.8rem;
     background-color: $main-color;
     color: $c-accent;
-    padding-top: 6rem;
+    padding-top: 2rem;
 
     @include sp {
         padding-top: 1.7rem;
     }
 }
 
+/* ===============================================
+# ご利用の流れ
+=============================================== */
+
+.p-flow--down {
+    padding-block: 3.4rem 6.5rem;
+
+    @include sp {
+        padding-block: 4.6rem 5.5rem;
+    }
+}
 
 
-.p-flow {}
+.p-flow__list {
+    padding-top: 5.3rem;
 
-.p-flow--down {}
-
-.l-inner {}
-
-.p-section-title {}
-
-.p-flow__list {}
+    @include sp {
+        padding-top: 3.6rem;
+    }
+}
 
 .p-flow__item {
     display: flex;
-    gap: 6rem;
-    padding-top: 2.8rem;
-    // padding-left: 6rem; 
+    // gap: 6rem;
+    // padding-top: 2.8rem;
+    padding-left: 6rem;
     position: relative;
+
+    &+& {
+        margin-top: 5.8rem;
+
+        @include sp {
+            margin-top: 3.6rem;
+        }
+    }
 }
 
 /* 縦線（最後以外） */
 .p-flow__item::before {
     content: "";
     position: absolute;
-    left: 1.7rem;
-    top: 42px;
+    left: 5.8rem;
+    top: 0.8rem;
     width: 2px;
-    height: calc(100% + 5rem);
+    height: calc(100% + 5.8rem);
+    // height: 404px;
     background-color: $main-color;
+
+    @include sp {
+        height: calc(100% + 13.5rem);
+    }
 }
 
+// .p-flow__item--last::before {
+//     display: none;
+// }
 
+.p-flow__item--last {
+    &::before {
 
-.p-flow__item--last::before {
-    display: none;
+        height: 5.7rem;
+
+        @include sp {
+            height: calc(100% + 0rem) !important;
+        }
+    }
 }
 
 /* 先端矢印 */
 .p-flow__arrow {
     position: absolute;
-    left: 0.1rem;
-    bottom: -1.6rem;
+    // top: -5.6rem;
+    left: 6rem;
+    bottom: -2rem;
+    transform: translateX(-50%);
 }
 
-// .p-flow__arrow img {
+// .p-top-message__arrow {
+//     position: absolute;
+//     top: -5.6rem;
+//     left: 50%;
+//     bottom: 0;
+//     transform: translateX(-50%);
+// }
+// // .p-flow__arrow img {
 //     width: 1.6rem;
 //     height: auto;
 // }
 
 // 赤丸
-.p-flow__dot:before {
+.p-flow__item::after {
     content: "";
     position: absolute;
-    left: 2%;
-    top: 50%;
+    left: 6rem;
+    top: 0.8rem;
     transform: translate(-50%, -50%);
     width: 2rem;
     height: 2rem;
@@ -287,17 +357,27 @@
 
 .p-flow__content {
     display: flex;
-    gap: 6rem;
-    white-space: nowrap;
-    position: relative
+    gap: 10rem;
+    width: 100%;
+    align-items: flex-start;
+    position: relative;
+
+    @include sp {
+        display: block;
+        gap: 0;
+    }
 }
 
 .p-flow__title {
     font-size: 2.2rem;
     font-weight: 700;
-    line-height: 1.5rem;
+    // line-height: 1.5;
     color: $main-color;
     width: 15.4rem;
+    padding-left: 6.2rem;
+    padding-top: 0.5rem;
+    white-space: nowrap;
+    flex-shrink: 0;
 
     @include sp {}
 
@@ -306,41 +386,37 @@
 .p-flow__text {
     font-size: 1.8rem;
     line-height: 1.666;
-
-}
-
-.p-flow__item--last {}
-
-
-.p-top-reason {}
-
-.p-section-title {
-    font-size: 3rem;
-    font-weight: 700;
-    text-align: center;
-    padding-top: 6.4rem;
+    flex: 1;
+    // gap: 6rem;
 
     @include sp {
-        font-size: 2.5rem;
-        padding-top: 4.9rem;
+        font-size: 1.6rem;
+    }
+}
+
+/* ===============================================
+# 選ばれる理由
+=============================================== */
+.p-top-reason {
+    padding-block: 6.4rem 8rem;
+
+    @include sp {
+        padding-block: 4.9rem 3.9rem;
     }
 }
 
 .p-section-title.p-section-title--white {
     color: $font-color;
-
 }
-
 
 .p-top-reason__list {
     display: flex;
     flex-direction: column;
-    gap: 5rem;
-    padding-top: 3.5rem;
+    gap: 4rem;
+    padding-top: 2rem;
 
     @include sp {
         gap: 3.9rem;
-        ;
     }
 }
 
@@ -357,57 +433,61 @@
     }
 }
 
-.p-top-reason__img {}
+.p-top-reason__item:nth-child(1) .p-top-reason__item-title {
+    margin-top: 1rem; 
+}
+
+.p-top-reason__img img {
+    width: 35rem; 
+        // width: 100%;    
+        height: auto;   
+        aspect-ratio: 350 / 247; 
+        object-fit: cover; 
+        flex-shrink: 0;    
+    }
+
 
 .p-top-reason__content {
     position: relative;
     flex: 1;
-     margin-left: 0;
-   
-    
-    // padding-bottom: 2.4rem;       // 線と本文の距離
-    // border-bottom: 2px solid $main-color;
-    // margin: 0;
+    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 3.7rem;
+
+    @include sp {
+        gap: 1.7rem;
+    }
 }
-
-
 
 .p-top-reason__item-title {
     font-size: 2.2rem;
     font-weight: 700;
     position: relative;
-     display: block;
+    display: block;
     border-bottom: 2px solid $main-color;
     margin-left: -5rem;
     padding-left: 5rem;
 }
 
-// .p-top-reason__heading {
-//     border-bottom: 2px solid $main-color;
-//     padding-bottom: 1.2rem;   
-//     margin-bottom: 2.4rem;   
-//   }
-  
-
-
 
 .p-top-reason__text {
     font-size: 1.8rem;
-    margin-top: 3.7rem;
+    // margin-top: 3.7rem;
 
     @include sp {
         font-size: 1.6rem;
-
-
     }
 }
 
 .p-top-voice {
     background-color: $main-color;
-    margin-top: 9rem;
+    padding-block: 4.6rem 8.5rem;
+    // margin-top: 9rem;
 
     .l-inner {
         max-width: 960px;
+
     }
 }
 
@@ -441,8 +521,8 @@
 }
 
 .splide__arrow--prev {
-    top: 37% !important;
-    left: -4rem !important;
+    top: 40% !important;
+    left: -2rem !important;
     // top: 8rem; 
 
     @include sp {
@@ -451,8 +531,8 @@
 }
 
 .splide__arrow--next {
-    top: 37% !important;
-    right: -4rem !important;
+    top: 40% !important;
+    right: -2rem !important;
     // top: 0rem; 
 
     @include sp {
@@ -466,8 +546,6 @@
         display: none;
     }
 }
-
-
 
 
 .p-top-voice__slider {
@@ -487,7 +565,7 @@
     flex-direction: column;
     padding-top: 2.8rem;
     justify-content: center;
-    gap: 1.7rem;
+    // gap: 1.7rem;
     //    padding: 2rem;
 
     @include sp {
@@ -499,14 +577,39 @@
 
 .p-top-voice__img {
     position: relative;
+    // margin-top: 4rem;
 }
 
+/* 1枚目（左：丸山さん）の調整 */
+.p-top-voice__item:nth-child(1) {
+    .p-top-voice__img {
+        // 真ん中より左にズレているならプラス、右にズレているならマイナスで微調整
+        margin-left: -0.5rem; 
+    }
+}
 
+/* 3枚目（右：田森さん）の調整 */
+.p-top-voice__item:nth-child(3) {
+    .p-top-voice__img {
+        // 真ん中より右にズレているならマイナス、左にズレているならプラスで微調整
+        margin-left: -0.5rem; 
+    }
+}
+
+.p-top-voice__img img{
+    width: 27rem; 
+    // width: 100%;    
+    height: auto;   
+    aspect-ratio: 270 / 190; 
+    object-fit: cover; 
+    flex-shrink: 0;    
+}
 
 .p-top-voice__meta {
     font-size: 2.2rem;
     font-weight: 700;
     color: $font-color;
+    margin-top: 1.9rem;
     // margin-top: 1.7rem;
 }
 
@@ -520,50 +623,138 @@
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
     overflow: hidden;
-    padding-bottom: 8rem;
 
-    @include sp {
-        padding-bottom: 5rem;
-
-
-    }
+    @include sp {}
 
 }
 
+/* ===============================================
+# よくあるご質問
+=============================================== */
+.p-faq {
+    padding-block: 3.6rem 7.1rem;
 
-.p-flow {}
+    @include sp {
+        padding-block: 3.9rem 5rem;
+    }
+}
 
-.p-flow--down {}
+.p-faq__list {
+    border-top: 0.5px solid $text-color;
+}
 
-.p-flow__list {}
+.p-faq__item {
+    height: auto;
+    border-bottom: 0.5px solid $text-color;
+    transition: background-color 0.3s;
 
-.p-flow__item {}
+    &.is-open {
+        background-color: rgba(203, 0, 0, 0.098);
+    }
+}
 
-.p-flow__dot {}
+.p-faq__question {
+    display: flex;
+    position: relative;
+    padding-block: 2rem 1.5rem;
+    padding-right: 4rem;
+    width: 100%;
+    gap: 1rem;
+    cursor: pointer;
 
-.p-flow__content {}
+    &::after {
+        content: "";
+        position: absolute;
+        right: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        /* 書き出した画像のサイズに合わせる */
+        width: 1.4rem;
+        height: 0.9rem;
+        background: url("../images/top/icon-faq-arrow.svg") no-repeat center/contain;
+        transition: transform 0.3s;
 
-.p-flow__title {}
+        // text-align: right;
+        @include sp {
+            padding-block: 1.7rem .9rem;
 
-.p-flow__text {}
+        }
+    }
 
-.p-flow__item--last {}
+    /* 開いている時は180度回転させる */
+    &.is-open::after {
+        transform: translateY(-50%) rotate(180deg);
+    }
+}
 
-.p-faq {}
 
-.p-faq__list {}
+/* Qのマーク */
+.p-faq__q {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: $text-color;
+    color: $c-accent;
+    border-radius: 50%;
+    font-size: 1.7rem;
+    font-weight: 700;
+    flex-shrink: 0;
+    // margin-right: 1rem;
 
-.p-faq__item {}
+    @include sp {
+        width: 2.8rem;
+        height: 2.8rem;
+        font-size: 1.6rem;
+    }
+}
 
-.p-faq__question {}
+/* Aのマーク */
+.p-faq__a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: $main-color;
+    color: $c-accent;
+    border-radius: 50%;
+    font-size: 1.7rem;
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-right: 1rem;
 
-.p-faq__q {}
+    @include sp {
+        width: 2.8rem;
+        height: 2.8rem;
+        font-size: 1.6rem;
+    }
+}
 
-.p-faq__answer {}
+.p-faq__answer {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    color: $main-color;
+    font-size: 1.7rem;
+    line-height: 1.764;
+    background-color: rgba(203, 0, 0, 0.098);
+    height: 6.4rem;
+
+    @include sp {
+        height: 11.6rem;
+    }
+}
 
 .p-faq__a {}
 
-.p-blog-list {}
+
+
+
+/* ===============================================
+# ブログ一覧
+=============================================== */
 
 .p-top-page .p-top-blog__items {
     display: grid;
