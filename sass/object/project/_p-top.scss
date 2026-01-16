@@ -43,7 +43,7 @@
     @include sp {
         // display: flex;
         align-items: center;
-        padding-block: 4.6rem 18.6rem;
+        padding-block: 4.6rem 4.9rem;
     }
 }
 
@@ -218,7 +218,7 @@
     // margin-top: 5.5rem;
 
     @include sp {
-        margin-top: 5rem;
+        // margin-top: 5rem;
     }
 }
 
@@ -230,6 +230,7 @@
 }
 
 .p-top-promo__title {
+    position: relative;
     font-size: 3rem;
     font-weight: 700;
     // background-color: $main-color;
@@ -369,6 +370,8 @@
 }
 
 .p-flow__title {
+    position: relative;
+    top: -1rem;
     font-size: 2.2rem;
     font-weight: 700;
     // line-height: 1.5;
@@ -434,17 +437,17 @@
 }
 
 .p-top-reason__item:nth-child(1) .p-top-reason__item-title {
-    margin-top: 1rem; 
+    margin-top: 1rem;
 }
 
 .p-top-reason__img img {
-    width: 35rem; 
-        // width: 100%;    
-        height: auto;   
-        aspect-ratio: 350 / 247; 
-        object-fit: cover; 
-        flex-shrink: 0;    
-    }
+    width: 35rem;
+    // width: 100%;    
+    height: auto;
+    aspect-ratio: 350 / 247;
+    object-fit: cover;
+    flex-shrink: 0;
+}
 
 
 .p-top-reason__content {
@@ -584,7 +587,7 @@
 .p-top-voice__item:nth-child(1) {
     .p-top-voice__img {
         // 真ん中より左にズレているならプラス、右にズレているならマイナスで微調整
-        margin-left: -0.5rem; 
+        margin-left: -0.5rem;
     }
 }
 
@@ -592,17 +595,17 @@
 .p-top-voice__item:nth-child(3) {
     .p-top-voice__img {
         // 真ん中より右にズレているならマイナス、左にズレているならプラスで微調整
-        margin-left: -0.5rem; 
+        margin-left: -0.5rem;
     }
 }
 
-.p-top-voice__img img{
-    width: 27rem; 
+.p-top-voice__img img {
+    width: 27rem;
     // width: 100%;    
-    height: auto;   
-    aspect-ratio: 270 / 190; 
-    object-fit: cover; 
-    flex-shrink: 0;    
+    height: auto;
+    aspect-ratio: 270 / 190;
+    object-fit: cover;
+    flex-shrink: 0;
 }
 
 .p-top-voice__meta {
@@ -641,6 +644,7 @@
 
 .p-faq__list {
     border-top: 0.5px solid $text-color;
+    margin-top: 3.6rem;
 }
 
 .p-faq__item {
@@ -656,21 +660,22 @@
 .p-faq__question {
     display: flex;
     position: relative;
-    padding-block: 2rem 1.5rem;
-    padding-right: 4rem;
+    padding-block: 1.5rem;
+    padding-inline: 2rem 1.9rem;
     width: 100%;
     gap: 1rem;
+    line-height: 1.764;
     cursor: pointer;
 
     &::after {
         content: "";
         position: absolute;
-        right: 12px;
+        right: 30px;
         top: 50%;
         transform: translateY(-50%);
         /* 書き出した画像のサイズに合わせる */
         width: 1.4rem;
-        height: 0.9rem;
+        height: 1rem;
         background: url("../images/top/icon-faq-arrow.svg") no-repeat center/contain;
         transition: transform 0.3s;
 
@@ -741,6 +746,7 @@
     line-height: 1.764;
     background-color: rgba(203, 0, 0, 0.098);
     height: 6.4rem;
+    padding-inline: 2rem;
 
     @include sp {
         height: 11.6rem;
@@ -770,11 +776,13 @@
     display: flex;
     flex-direction: column;
     height: 100%;
+    gap: 1rem;
 }
 
 
 .p-top-page .c-blog-card__date {
     text-align: right;
+    padding-top: 1rem;
 }
 
 
@@ -783,13 +791,23 @@
     display: flex;
     flex-direction: column;
     height: 100%;
-
+   
 }
 
+/* TOPページ専用の上書き */
 .p-top-page .c-blog-card {
-    margin-top: 3.8rem;
+    // margin-top: 0;
+
+    &+.c-blog-card {
+        margin-top: 3.2rem;
+    }
 }
 
+.p-top-page .c-blog-card__img {
+    width: 26rem;
+    height: auto;
+    aspect-ratio: 260 / 200;
+}
 
 .p-top-blog__more {
     text-align: right;
@@ -801,4 +819,9 @@
     border-bottom: 1px solid currentColor;
     transition: opacity 0.3s;
 
+}
+
+.p-top-page .p-blog-list {
+    margin-top: 0;
+    padding-block: 5.6rem 20.2rem;
 }
