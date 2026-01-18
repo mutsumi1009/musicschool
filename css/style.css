@@ -174,6 +174,7 @@ html {
   font-size: 62.5%;
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 @media (min-width: 768px) {
   html {
@@ -426,7 +427,7 @@ section[id] {
 /* フッター右上の 問い合わせボタン*/
 .c-button--footer {
   position: relative;
-  max-width: 33.5rem;
+  max-width: 30rem;
   height: 6rem;
   padding-inline: 8rem 8.4rem;
   top: 0;
@@ -439,6 +440,7 @@ section[id] {
 @media (max-width: 767px) {
   .c-button--footer {
     width: 33.5rem;
+    max-width: 100%;
     padding-inline: 0;
   }
 }
@@ -1484,7 +1486,7 @@ TOPへ戻るボタン
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding-block: 4.6rem 4.9rem;
+    padding-block: 4.6rem 5.5rem;
   }
 }
 
@@ -1498,7 +1500,6 @@ TOPへ戻るボタン
   .p-top-concept__title {
     font-size: 2.5rem;
     line-height: 1.6;
-    margin-top: 1.6rem;
   }
 }
 
@@ -1521,7 +1522,7 @@ TOPへ戻るボタン
     line-height: 1.666;
     width: 33.5rem;
     height: 6rem;
-    margin: 0 auto;
+    text-align: left;
   }
 }
 
@@ -1539,7 +1540,7 @@ TOPへ戻るボタン
 }
 @media (max-width: 767px) {
   .p-top-message__semicircle {
-    margin-top: 2rem;
+    margin-top: 1.5rem;
   }
 }
 
@@ -1555,7 +1556,7 @@ TOPへ戻るボタン
 }
 @media (max-width: 767px) {
   .p-top-message__flow {
-    margin-top: 3rem;
+    margin-top: 6rem;
   }
 }
 
@@ -1674,14 +1675,25 @@ TOPへ戻るボタン
 }
 
 .p-top-promo {
-  text-align: center;
   background-color: #CB0000;
   padding-block: 6.2rem 6rem;
+  text-align: center;
 }
+@media (max-width: 767px) {
+  .p-top-promo {
+    padding-block: 4.9rem 3.5rem;
+  }
+}
+
 .p-top-promo__label {
   font-size: 3rem;
   font-weight: 700;
   color: #E8E8E8;
+}
+@media (max-width: 767px) {
+  .p-top-promo__label {
+    font-size: 2.5rem;
+  }
 }
 
 .p-top-promo__title {
@@ -1692,6 +1704,7 @@ TOPへ戻るボタン
 }
 @media (max-width: 767px) {
   .p-top-promo__title {
+    line-height: 1.6;
     font-size: 2.5rem;
   }
 }
@@ -1704,7 +1717,8 @@ TOPへ戻るボタン
 }
 @media (max-width: 767px) {
   .p-top-promo__text {
-    padding-top: 1.7rem;
+    padding-top: 1.4rem;
+    line-height: 1.666;
   }
 }
 
@@ -1716,7 +1730,7 @@ TOPへ戻るボタン
 }
 @media (max-width: 767px) {
   .p-flow--down {
-    padding-block: 4.6rem 5.5rem;
+    padding-block: 4rem 5.5rem;
   }
 }
 
@@ -1725,7 +1739,7 @@ TOPへ戻るボタン
 }
 @media (max-width: 767px) {
   .p-flow__list {
-    padding-top: 3.6rem;
+    padding-top: 3rem;
   }
 }
 
@@ -1736,12 +1750,19 @@ TOPへ戻るボタン
   padding-left: 6rem;
   position: relative;
 }
+@media (max-width: 767px) {
+  .p-flow__item {
+    position: relative;
+    padding-left: 0;
+    left: -0.2rem;
+  }
+}
 .p-flow__item + .p-flow__item {
   margin-top: 5.8rem;
 }
 @media (max-width: 767px) {
   .p-flow__item + .p-flow__item {
-    margin-top: 3.6rem;
+    margin-top: 4.3rem;
   }
 }
 
@@ -1758,6 +1779,8 @@ TOPへ戻るボタン
 @media (max-width: 767px) {
   .p-flow__item::before {
     height: calc(100% + 13.5rem);
+    top: 1.3rem;
+    left: 1.8rem;
   }
 }
 
@@ -1766,7 +1789,7 @@ TOPへ戻るボタン
 }
 @media (max-width: 767px) {
   .p-flow__item--last::before {
-    height: calc(100% + 0rem) !important;
+    height: calc(100% - 2rem) !important;
   }
 }
 
@@ -1777,6 +1800,12 @@ TOPへ戻るボタン
   bottom: -2rem;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+}
+@media (max-width: 767px) {
+  .p-flow__arrow {
+    left: 2rem;
+    bottom: -1rem;
+  }
 }
 
 .p-flow__item::after {
@@ -1791,6 +1820,12 @@ TOPへ戻るボタン
   background-color: #CB0000;
   border-radius: 50%;
   z-index: 2;
+}
+@media (max-width: 767px) {
+  .p-flow__item::after {
+    left: 2rem;
+    top: 1.5rem;
+  }
 }
 
 .p-flow__content {
@@ -1824,6 +1859,13 @@ TOPへ戻るボタン
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
+@media (max-width: 767px) {
+  .p-flow__title {
+    top: -1.2rem;
+    left: -1.1rem;
+  }
+}
+
 .p-flow__text {
   font-size: 1.8rem;
   line-height: 1.666;
@@ -1834,6 +1876,7 @@ TOPへ戻るボタン
 @media (max-width: 767px) {
   .p-flow__text {
     font-size: 1.6rem;
+    padding-left: 5.1rem;
   }
 }
 
@@ -1866,7 +1909,8 @@ TOPへ戻るボタン
 }
 @media (max-width: 767px) {
   .p-top-reason__list {
-    gap: 3.9rem;
+    gap: 0;
+    padding-top: 2.4rem;
   }
 }
 
@@ -1885,12 +1929,15 @@ TOPへ戻るボタン
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    gap: 3.9rem;
+    gap: 0;
+  }
+  .p-top-reason__item + .p-top-reason__item {
+    margin-top: 4rem;
   }
 }
 
 .p-top-reason__item:nth-child(1) .p-top-reason__item-title {
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
 
 .p-top-reason__img img {
@@ -1901,6 +1948,11 @@ TOPへ戻るボタン
      object-fit: cover;
   -ms-flex-negative: 0;
       flex-shrink: 0;
+}
+@media (max-width: 767px) {
+  .p-top-reason__img img {
+    aspect-ratio: 335/200;
+  }
 }
 
 .p-top-reason__content {
@@ -1920,7 +1972,7 @@ TOPへ戻るボタン
 }
 @media (max-width: 767px) {
   .p-top-reason__content {
-    gap: 1.7rem;
+    gap: 2.7rem;
   }
 }
 
@@ -1932,6 +1984,17 @@ TOPへ戻るボタン
   border-bottom: 2px solid #CB0000;
   margin-left: -5rem;
   padding-left: 5rem;
+}
+@media (max-width: 767px) {
+  .p-top-reason__item-title {
+    font-size: 2rem;
+    line-height: 1.5;
+    margin-top: 2.1rem;
+    position: relative;
+    left: 0rem;
+    margin-left: 0;
+    padding-left: 0;
+  }
 }
 
 .p-top-reason__text {
@@ -1946,6 +2009,11 @@ TOPへ戻るボタン
 .p-top-voice {
   background-color: #CB0000;
   padding-block: 4.6rem 8.5rem;
+}
+@media (max-width: 767px) {
+  .p-top-voice {
+    padding-block: 4.6rem;
+  }
 }
 .p-top-voice .l-inner {
   max-width: 960px;
@@ -1979,7 +2047,7 @@ TOPへ戻るボタン
 }
 
 .splide__arrow--prev {
-  top: 40% !important;
+  top: 43% !important;
   left: -2rem !important;
 }
 @media (max-width: 767px) {
@@ -1989,7 +2057,7 @@ TOPへ戻るボタン
 }
 
 .splide__arrow--next {
-  top: 40% !important;
+  top: 43% !important;
   right: -2rem !important;
 }
 @media (max-width: 767px) {
@@ -2024,11 +2092,19 @@ TOPへ戻るボタン
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  cursor: pointer;
+  overflow: hidden;
 }
 @media (max-width: 767px) {
   .p-top-voice__item {
     padding-top: 3.9rem;
     gap: 1.4rem;
+  }
+}
+@media (min-width: 768px) {
+  .p-top-voice__item:hover .p-top-voice__img img {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
   }
 }
 
@@ -2055,12 +2131,25 @@ TOPへ戻るボタン
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
+@media (max-width: 767px) {
+  .p-top-voice__img img {
+    width: auto;
+    height: 100%;
+    aspect-ratio: 335/200;
+  }
+}
 
 .p-top-voice__meta {
   font-size: 2.2rem;
   font-weight: 700;
   color: #fff;
   margin-top: 1.9rem;
+  opacity: 0.7;
+}
+@media (max-width: 767px) {
+  .p-top-voice__meta {
+    margin-top: 0;
+  }
 }
 
 .p-top-voice__text {
@@ -2072,24 +2161,31 @@ TOPへ戻るボタン
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
   overflow: hidden;
+  opacity: 0.7;
 }
+@media (max-width: 767px) {
+  .p-top-voice__text {
+    width: 100%;
+    text-align: left;
+  }
+}
+
 /* ===============================================
 # よくあるご質問
 =============================================== */
 .p-faq {
-  padding-block: 3.6rem 7.1rem;
+  padding-block: 3.6rem 3.5rem;
 }
 @media (max-width: 767px) {
   .p-faq {
-    padding-block: 3.9rem 5rem;
+    padding-block: 1.3rem 1.5rem;
   }
 }
 
 .p-faq__list {
   border-top: 0.5px solid #000;
-  margin-top: 3.6rem;
+  margin-top: 3.3rem;
 }
-
 .p-faq__item {
   height: auto;
   border-bottom: 0.5px solid #000;
@@ -2111,7 +2207,15 @@ TOPへ戻るボタン
   gap: 1rem;
   line-height: 1.764;
   cursor: pointer;
+  font-size: 1.8rem;
   /* 開いている時は180度回転させる */
+}
+@media (max-width: 767px) {
+  .p-faq__question {
+    padding-block: 2rem 0.9rem;
+    padding-inline: 1rem 1.9rem;
+    font-size: 1.6rem;
+  }
 }
 .p-faq__question::after {
   content: "";
@@ -2131,8 +2235,12 @@ TOPへ戻るボタン
 }
 @media (max-width: 767px) {
   .p-faq__question::after {
-    padding-block: 1.7rem 0.9rem;
+    right: 15px;
+    top: 55%;
   }
+}
+.p-faq__item:nth-child(4) .p-faq__question {
+  padding-block: 1rem;
 }
 .p-faq__question.is-open::after {
   -webkit-transform: translateY(-50%) rotate(180deg);
@@ -2162,9 +2270,13 @@ TOPへ戻るボタン
 }
 @media (max-width: 767px) {
   .p-faq__q {
-    width: 2.8rem;
-    height: 2.8rem;
     font-size: 1.6rem;
+    position: relative;
+    top: 0.5rem;
+    left: -1rem;
+  }
+  .p-faq__item:nth-child(4) .p-faq__q {
+    top: -0.3rem;
   }
 }
 
@@ -2192,8 +2304,6 @@ TOPへ戻るボタン
 }
 @media (max-width: 767px) {
   .p-faq__a {
-    width: 2.8rem;
-    height: 2.8rem;
     font-size: 1.6rem;
   }
 }
@@ -2216,6 +2326,8 @@ TOPへ戻るボタン
 @media (max-width: 767px) {
   .p-faq__answer {
     height: 11.6rem;
+    padding-inline: 0rem 1.9rem;
+    gap: 1rem;
   }
 }
 
@@ -2244,13 +2356,22 @@ TOPへ戻るボタン
   height: 100%;
   gap: 1rem;
 }
+@media (max-width: 767px) {
+  .p-top-page .c-blog-card__link {
+    gap: 3rem;
+  }
+}
 
 .p-top-page .c-blog-card__date {
   text-align: right;
   padding-top: 1rem;
 }
+@media (max-width: 767px) {
+  .p-top-page .c-blog-card__date {
+    padding-top: 1.5rem;
+  }
+}
 
-/* トップページ専用 */
 .p-top-page .c-blog-card__body {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2263,8 +2384,21 @@ TOPへ戻るボタン
 }
 
 /* TOPページ専用の上書き */
+.p-top-page .c-blog-card {
+  margin-top: 3rem;
+}
+@media (max-width: 767px) {
+  .p-top-page .c-blog-card {
+    margin-top: 3.3rem;
+  }
+}
 .p-top-page .c-blog-card + .c-blog-card {
-  margin-top: 3.2rem;
+  margin-top: 3rem;
+}
+@media (max-width: 767px) {
+  .p-top-page .c-blog-card + .c-blog-card {
+    margin-top: 4rem;
+  }
 }
 
 .p-top-page .c-blog-card__img {
@@ -2272,10 +2406,23 @@ TOPへ戻るボタン
   height: auto;
   aspect-ratio: 260/200;
 }
+@media (max-width: 767px) {
+  .p-top-page .c-blog-card__img {
+    width: auto;
+    height: 20rem;
+    aspect-ratio: 335/200;
+  }
+}
 
 .p-top-blog__more {
   text-align: right;
   margin-top: 3.7rem;
+}
+@media (max-width: 767px) {
+  .p-top-blog__more {
+    text-align: center;
+    margin-top: 3.4rem;
+  }
 }
 
 .p-top-blog__more-link {
@@ -2286,37 +2433,88 @@ TOPへ戻るボタン
 
 .p-top-page .p-blog-list {
   margin-top: 0;
-  padding-block: 5.6rem 20.2rem;
+  padding-block: 4.1rem 20.2rem;
+}
+@media (max-width: 767px) {
+  .p-top-page .p-blog-list {
+    padding-block: 3.1rem 19.2rem;
+  }
 }
 
-.page-top-btn {
+/* --- TOPへ戻る・お問合せボタン --- */
+.p-fixed-buttons {
   position: fixed;
-  right: 11.7rem;
-  bottom: 37.7rem;
+  right: -0.3rem;
+  bottom: 28.6rem;
   z-index: 999;
-  width: 6.8rem;
-  height: 6.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  gap: 3.1rem;
   opacity: 0;
   visibility: hidden;
   -webkit-transition: opacity 0.3s ease, visibility 0.3s ease;
   transition: opacity 0.3s ease, visibility 0.3s ease;
+  /* JSでクラスがついた時だけ、セットまとめて表示 */
+}
+@media (max-width: 767px) {
+  .p-fixed-buttons {
+    display: block;
+    right: 18.7rem;
+    bottom: 31.5rem;
+    gap: 1.9rem;
+  }
+}
+.p-fixed-buttons.is-show {
+  opacity: 1;
+  visibility: visible;
+}
+.p-fixed-buttons.is-show:hover {
+  opacity: 0.7;
+}
+
+/* 各ボタンのデザイン */
+.p-contact-banner {
+  margin: 0;
+}
+
+.page-top-btn {
+  position: absolute;
+  width: 6.8rem;
+  height: 6.8rem;
+  right: 11.9rem;
+  bottom: 8.9rem;
+  cursor: pointer;
+  display: block;
+  -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+  transition: opacity 0.3s, -webkit-transform 0.3s;
+  transition: transform 0.3s, opacity 0.3s;
+  transition: transform 0.3s, opacity 0.3s, -webkit-transform 0.3s;
 }
 @media (max-width: 767px) {
   .page-top-btn {
-    right: 2rem;
-    bottom: 37.7rem;
+    position: fixed;
+    right: 1.9rem;
+    bottom: 39rem;
   }
 }
 .page-top-btn img {
   width: 100%;
   height: auto;
 }
-.page-top-btn.is-show {
-  opacity: 1;
-  visibility: visible;
-}
-.page-top-btn.is-show:hover {
-  opacity: 0.7;
+@media (min-width: 768px) {
+  .page-top-btn:hover {
+    opacity: 0.7;
+    -webkit-transform: translateY(-3px);
+            transform: translateY(-3px);
+  }
 }
 
 .p-404 .p-page-btn {
