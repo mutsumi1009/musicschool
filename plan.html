@@ -82,15 +82,15 @@
 
             <!-- パンくずリスト -->
             <nav class="c-breadcrumb" aria-label="パンくずリスト">
-              
-                    <ol class="c-breadcrumb__list">
-                        <li class="c-breadcrumb__item"><a href="index.html">ホーム</a></li>
-                        <!-- <li class="c-breadcrumb__item"><a href="index.html#お問い合わせ">お問い合わせ</a></li> 
+
+                <ol class="c-breadcrumb__list">
+                    <li class="c-breadcrumb__item"><a href="index.html">ホーム</a></li>
+                    <!-- <li class="c-breadcrumb__item"><a href="index.html#お問い合わせ">お問い合わせ</a></li> 
                         <li class="c-breadcrumb__item"><a href="index.html">ブログ</a></li>
                         <li class="c-breadcrumb__item"><a href="index.html">ギター</a></li> -->
-                        <li class="c-breadcrumb__item" aria-current="page">プラン・料金</li>
-                    </ol>
-                
+                    <li class="c-breadcrumb__item" aria-current="page">プラン・料金</li>
+                </ol>
+
             </nav>
 
             <div class="p-plan__content">
@@ -241,25 +241,26 @@
         </main>
     </div>
 
-    <!-- TOPへ戻る -->
-    <a href="#" class="js-to-top page-top-btn" id="page-top-btn">
-        <img src="images/common/icon_page-top-btn.svg" alt="TOPへ戻る">
-    </a>
-
+    <!-- TOPへ戻る・お問合せボタン -->
+    <div class="p-fixed-buttons js-fixed-buttons">
+        <div class="p-contact-banner">
+            <a href="#お問い合わせ" class="c-button c-button--footer">お問い合わせ</a>
+        </div>
+        <a href="#" class="js-to-top page-top-btn" id="page-top-btn">
+            <img src="images/common/icon_page-top-btn.svg" alt="TOPへ戻る">
+        </a>
+    </div>
 
 
     <!--footerー-->
     <footer class="l-footer p-footer">
-        <div class="p-contact-banner">
-            <a href="#お問い合わせ" class="c-button c-button--footer">お問い合わせ</a>
-        </div>
         <div class="p-footer__inner">
             <nav class="p-footer__nav">
                 <ul class="p-footer__nav-list">
-                    <li><a href="#ホーム">ホーム</a></li>
-                    <li><a href="#料金">料金</a></li>
-                    <li><a href="#ブログ">ブログ</a></li>
-                    <li><a href="#卒業実績">卒業実績</a></li>
+                    <li><a href="index.html">ホーム</a></li>
+                        <li class="p-footer__nav-item"><a href="plan.html">料金</a></li>
+                        <li class="p-footer__nav-item"><a href="blog_list.html">ブログ</a></li>
+                        <li class="p-footer__nav-item"><a href="result_list.html">卒業実績</a></li>
                 </ul>
             </nav>
             <div class="p-footer__content">

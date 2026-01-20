@@ -169,6 +169,12 @@ max-width: 44rem;
   }
 }
 
+.is-detail-page {
+  .c-hero::before {
+    background-color: transparent;
+    mix-blend-mode: normal;
+  }
+}
 
 .p-article-related .c-result-card__img img {
   width: 26rem;
