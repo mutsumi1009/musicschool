@@ -7,6 +7,7 @@
 // p-404
 .p-404 .p-page-btn {
 margin-top: 3.4rem;
+text-align: center;
 
   @include sp {
     margin-top: 0.9rem;
@@ -16,6 +17,6 @@ margin-top: 3.4rem;
 // 404
 .p-404__content {
   // padding-block: 6.8rem 9rem;
-  padding-block: vw(68) vw(90);
+  padding-block: 6.8rem 9.0rem;
   @include sp {}
 }

@@ -1515,13 +1515,14 @@ TOPへ戻るボタン
           justify-content: center;
   text-align: center;
   margin-top: 1rem;
+  width: 100%;
 }
 @media (max-width: 767px) {
   .p-top-message__lead {
     font-size: 1.8rem;
     line-height: 1.666;
-    width: 33.5rem;
-    height: 6rem;
+    max-width: 33.5rem;
+    margin-inline: auto;
     text-align: left;
   }
 }
@@ -1739,7 +1740,7 @@ TOPへ戻るボタン
 }
 @media (max-width: 767px) {
   .p-flow__list {
-    padding-top: 3rem;
+    padding-top: 4rem;
   }
 }
 
@@ -1888,7 +1889,7 @@ TOPへ戻るボタン
 }
 @media (max-width: 767px) {
   .p-top-reason {
-    padding-block: 4.9rem 3.9rem;
+    padding-block: 4.9rem 4.4rem;
   }
 }
 
@@ -1937,7 +1938,12 @@ TOPへ戻るボタン
 }
 
 .p-top-reason__item:nth-child(1) .p-top-reason__item-title {
-  margin-top: 2rem;
+  margin-top: 1rem;
+}
+@media (max-width: 767px) {
+  .p-top-reason__item:nth-child(1) .p-top-reason__item-title {
+    margin-top: 1.8rem;
+  }
 }
 
 .p-top-reason__img img {
@@ -1952,6 +1958,8 @@ TOPへ戻るボタン
 @media (max-width: 767px) {
   .p-top-reason__img img {
     aspect-ratio: 335/200;
+    width: auto;
+    height: 100%;
   }
 }
 
@@ -1972,7 +1980,7 @@ TOPへ戻るボタン
 }
 @media (max-width: 767px) {
   .p-top-reason__content {
-    gap: 2.7rem;
+    gap: 2.5rem;
   }
 }
 
@@ -1994,6 +2002,7 @@ TOPへ戻るボタン
     left: 0rem;
     margin-left: 0;
     padding-left: 0;
+    max-width: 53.2rem;
   }
 }
 
@@ -2012,7 +2021,7 @@ TOPへ戻るボタン
 }
 @media (max-width: 767px) {
   .p-top-voice {
-    padding-block: 4.6rem;
+    padding-block: 4.4rem 4.7rem;
   }
 }
 .p-top-voice .l-inner {
@@ -2134,6 +2143,7 @@ TOPへ戻るボタン
 @media (max-width: 767px) {
   .p-top-voice__img img {
     width: auto;
+    max-width: 33.5rem;
     height: 100%;
     aspect-ratio: 335/200;
   }
@@ -2409,7 +2419,7 @@ TOPへ戻るボタン
 @media (max-width: 767px) {
   .p-top-page .c-blog-card__img {
     width: auto;
-    height: 20rem;
+    height: 100%;
     aspect-ratio: 335/200;
   }
 }
@@ -2519,6 +2529,7 @@ TOPへ戻るボタン
 
 .p-404 .p-page-btn {
   margin-top: 3.4rem;
+  text-align: center;
 }
 @media (max-width: 767px) {
   .p-404 .p-page-btn {
@@ -2527,7 +2538,7 @@ TOPへ戻るボタン
 }
 
 .p-404__content {
-  padding-block: 6.2962962963vw 8.3333333333vw;
+  padding-block: 6.8rem 9rem;
 }
 /* ===============================================
 # contact-send
@@ -3316,6 +3327,11 @@ TOPへ戻るボタン
   .p-article-related .c-result-card__link {
     display: block;
   }
+}
+
+.is-detail-page .c-hero::before {
+  background-color: transparent;
+  mix-blend-mode: normal;
 }
 
 .p-article-related .c-result-card__img img {
