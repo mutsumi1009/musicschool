@@ -330,22 +330,28 @@
 
                         <!-- ページネーション -->
                         <div class="c-pagination">
-                            <a href="#" class="c-pagination__num is-active">1</a>
+                            <span class="c-pagination__num is-active">1</span>
+                            
                             <a href="#" class="c-pagination__num">2</a>
                             <a href="#" class="c-pagination__num">3</a>
-                            <!-- <span class="c-pagination__dots">…</span>
-                            <a href="#" class="c-pagination__num">9</a> -->
+                            
+                            <span class="c-pagination__dots">…</span>
+                            <a href="#" class="c-pagination__num">9</a>
                         </div>
                     </div>
                 </div>
             </div>
         </main>
 
-        <!-- TOPへ戻る -->
-        <a href="#" class="js-to-top page-top-btn" id="page-top-btn">
-            <img src="images/common/icon_page-top-btn.svg" alt="TOPへ戻る">
-        </a>
-
+        <!-- TOPへ戻る・お問合せボタン -->
+        <div class="p-fixed-buttons js-fixed-buttons">
+            <div class="p-contact-banner">
+                <a href="contact_form.html" class="c-button c-button--footer">お問い合わせ</a>
+            </div>
+            <a href="#" class="js-to-top page-top-btn" id="page-top-btn">
+                <img src="images/common/icon_page-top-btn.svg" alt="TOPへ戻る">
+            </a>
+        </div>
 
 
         <!--footerー-->
@@ -384,6 +390,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
 
+        <!-- 共通JS -->
         <script src="js/script.js"></script>
 
 </body>

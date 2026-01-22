@@ -199,6 +199,8 @@ body {
   margin: 0;
   padding-top: 0;
   height: 100%;
+  letter-spacing: 0;
+  position: relative;
 }
 
 section[id] {
@@ -1885,7 +1887,7 @@ TOPへ戻るボタン
 # 選ばれる理由
 =============================================== */
 .p-top-reason {
-  padding-block: 6.4rem 8rem;
+  padding-block: 6.4rem 8.3rem;
 }
 @media (max-width: 767px) {
   .p-top-reason {
@@ -2119,16 +2121,14 @@ TOPへ戻るボタン
 
 .p-top-voice__img {
   position: relative;
-}
-
-/* 1枚目（左：丸山さん）の調整 */
-.p-top-voice__item:nth-child(1) .p-top-voice__img {
-  margin-left: -0.5rem;
-}
-
-/* 3枚目（右：田森さん）の調整 */
-.p-top-voice__item:nth-child(3) .p-top-voice__img {
-  margin-left: -0.5rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  scroll-margin-inline: auto;
 }
 
 .p-top-voice__img img {
@@ -3102,7 +3102,6 @@ TOPへ戻るボタン
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-top: 6.6rem;
 }
 
 .p-search__header l-inner {
@@ -3114,8 +3113,14 @@ TOPへ戻るボタン
   line-height: 1.666;
 }
 
-.p-search__count {
+.p-search__content {
+  padding-block: 6.6rem 21rem;
   font-size: 1.8rem;
+}
+@media (max-width: 767px) {
+  .p-search__content {
+    padding-block: 3.6rem 14.3rem;
+  }
 }
 
 .p-search .c-blog-card {
@@ -3152,6 +3157,26 @@ TOPへ戻るボタン
   .p-result-list {
     grid-template-columns: 1fr;
     gap: 3.5rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .p-search .c-hero {
+    aspect-ratio: 375/210;
+  }
+}
+
+@media (max-width: 767px) {
+  .p-search .c-hero picture {
+    height: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .p-search .c-hero img {
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 

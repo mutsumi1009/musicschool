@@ -438,7 +438,7 @@
 # 選ばれる理由
 =============================================== */
 .p-top-reason {
-    padding-block: 6.4rem 8rem;
+    padding-block: 6.4rem 8.3rem;
 
     @include sp {
         padding-block: 4.9rem 4.4rem;
@@ -660,23 +660,27 @@
 
 .p-top-voice__img {
     position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center; 
+    scroll-margin-inline: auto;
     // margin-top: 4rem;
 }
 
-/* 1枚目（左：丸山さん）の調整 */
-.p-top-voice__item:nth-child(1) {
-    .p-top-voice__img {
-        margin-left: -0.5rem;
-    }
-}
+// /* 1枚目（左：丸山さん）の調整 */
+// .p-top-voice__item:nth-child(1) {
+//     .p-top-voice__img {
+//         margin-left: -0.5rem;
+//     }
+// }
 
-/* 3枚目（右：田森さん）の調整 */
-.p-top-voice__item:nth-child(3) {
-    .p-top-voice__img {
-        // 真ん中より右にズレているならマイナス、左にズレているならプラスで微調整
-        margin-left: -0.5rem;
-    }
-}
+// /* 3枚目（右：田森さん）の調整 */
+// .p-top-voice__item:nth-child(3) {
+//     .p-top-voice__img {
+//         // 真ん中より右にズレているならマイナス、左にズレているならプラスで微調整
+//         margin-left: -0.5rem;
+//     }
+// }
 
 .p-top-voice__img img {
     width: 27rem;
