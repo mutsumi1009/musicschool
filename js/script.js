@@ -33,57 +33,8 @@ $(function () {
   });
 
   
-// // --- ヘッダーの背景色切り替え ---
-// const $header = $('.js-header');
-// const $fv = $('.fv');
-// const $toTopBtn = $('.js-to-top');
-
-// function changeHeaderBg() {
-//   if (!$header.length || !$fv.length) return;
-//   const fvBottom = $fv.offset().top + $fv.outerHeight();
-//   if ($(window).scrollTop() > fvBottom) {
-//     $header.css('background-color', '#4D9600');
-//   } else {
-//     $header.css('background-color', 'transparent');
-//   }
-// }
-// $(window).on('scroll resize load', changeHeaderBg);
-// changeHeaderBg();
-
-
-
-
-//  // --- TOPへ戻る（FVより下で表示） ---
-
-//  function onScrollToTop() {
-//   const y = $(window).scrollTop();
-//   const threshold = 100;
-//   if (y > threshold) $toTopBtn.addClass('is-show');
-//   else $toTopBtn.removeClass('is-show');
-// }
-// $(window).on('scroll resize load', onScrollToTop);
-// onScrollToTop();
-
-
-// $toTopBtn.on('click', function (e) {
-//   e.preventDefault();
-//   $('html, body').animate({ scrollTop: 0 }, 500, 'linear');
-// });
-
-
-// // --- スクロールでアニメーション発火 ---
-// AOS.init({
-// once: true,
-// duration: 900,
-// offset: 150,
-// easing: 'ease-out',
-// startEvent: 'load',
-// disable: () => window.matchMedia('(prefers-reduced-motion: reduce)').matches
-// });
-// window.addEventListener('load', () => AOS.refresh());
-
 $(function () {
-  // 1. 操作する対象（2つのボタンが入った親要素）を取得
+  // 1.（トップ戻る＆お問合せボタンの親要素）を取得
   const $fixedButtons = $('.js-fixed-buttons');
 
   // 2. 出し入れの判定関数
@@ -109,4 +60,29 @@ $(function () {
     e.preventDefault();
     $('html, body').animate({ scrollTop: 0 }, 500, 'linear');
   });
+});
+
+// --- フッター手前でストップさせる処理 ---
+$(window).on("scroll resize load", function () {
+  const $fixedButtons = $(".js-fixed-buttons"); // あなたが使っているクラス名
+  const scrollHeight = $(document).height(); 
+  const scrollPosition = $(window).height() + $(window).scrollTop();
+  
+  
+  const $footer = $(".l-footer"); 
+  const footHeight = $footer.length ? $footer.innerHeight() : 0;
+  
+  if (scrollHeight - scrollPosition <= footHeight) {
+    // フッター手前に来たら position を absolute に変更
+    $fixedButtons.css({
+      position: "absolute",
+      bottom: footHeight, 
+    });
+  } else {
+    // それ以外は元の fixed に戻す
+    $fixedButtons.css({
+      position: "fixed",
+      bottom: "0",
+    });
+  }
 });

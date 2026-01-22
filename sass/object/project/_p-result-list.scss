@@ -30,3 +30,32 @@
         gap: 3.5rem;
     }
 }
+
+
+.p-search .c-hero {
+
+    @include sp {
+        aspect-ratio: 375 / 210;
+    }
+  }
+  
+  .p-search .c-hero picture {
+
+    @include sp {
+        height: 100%;
+    }
+  }
+  
+  .p-search .c-hero img {
+
+    @include sp {
+        height: 100%;
+        object-fit: cover;
+    }
+  }
+  
+  
+ 
+
+  
+  

@@ -9,7 +9,7 @@
     position: relative;
     align-items: center;
     justify-content: space-between;
-    margin-top: 6.6rem;
+    // margin-top: 6.6rem;
 }
 
 .p-search__header l-inner {
@@ -21,8 +21,13 @@
     line-height: 1.666;
 }
 
-.p-search__count {
+.p-search__content {
+    padding-block: 6.6rem 21rem;
     font-size: 1.8rem;
+
+    @include sp {
+        padding-block: 3.6rem 14.3rem;
+    }
 }
 
 .p-search {
