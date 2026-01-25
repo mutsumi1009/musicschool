@@ -5,19 +5,13 @@
 // @use "../../foundation/base" as *;
 
 .p-plan__content {
-  // padding-block: 6.8rem 6.5rem;
   padding-block: 6.8rem 22.3rem;
 
   @include sp {
-    // display: flex;
     align-items: center;
     padding-block: 4.6rem 18.6rem;
   }
 }
-
-.c-page-title {}
-
-.c-page-title--plan {}
 
 .p-plan-price {
   display: flex;
@@ -30,6 +24,11 @@
     flex-direction: column;
     gap: 2rem;
     margin-top: 3.9rem;
+
+    @include md {
+      flex-direction: row;
+     
+    }
   }
 }
 
@@ -43,7 +42,6 @@
   font-weight: 700;
   width: 21rem;
   height: 6rem;
-  //  gap: 1rem;
 }
 
 .p-plan-price__plus {
@@ -79,22 +77,6 @@
   transform: translateX(-50%);
 }
 
-
-// .p-plan__message {
-//   margin-top: 4.8rem;
-//   font-size: 1.8rem;
-//   line-height: 1.666;
-
-//   @include sp {
-//     font-size: 1.6rem;
-//     margin-top: 4.7rem;
-//     // width: 33.5rem;
-//     line-height: 1.875;
-//     margin-inline: auto;
-//     // text-align: center;
-//     justify-content: center;
-//   }
-// }
 
 .p-plan__message {
   margin-top: 4.8rem;
@@ -132,16 +114,6 @@
 }
 
 
-
-
-
-
-// .simplebar-placeholder {
-//   height: 0 !important;
-// }
-
-
-
 /* --- プラン表 共通全体 --- */
 .p-plan-table__table {
   margin-top: 4rem;
@@ -151,7 +123,7 @@
   table-layout: fixed;
 
   @include sp {
-    margin-top: 1.4rem;
+    margin-top: 1.8rem;
     width: 67rem;
   }
 
@@ -250,7 +222,7 @@ th.is-recommend {
 
 th.is-recommend .p-plan-table__title {
   @include sp {
-    font-size: 1.8rem; 
+    font-size: 1.8rem;
   }
 }
 
@@ -310,38 +282,41 @@ th.is-recommend .p-plan-table__title {
   /*月額料金の行（1行目）を太字にする */
   tr:first-child {
     border-top: 1px solid #ccc;
-  
+
     th,
     td {
       font-weight: 700;
       // padding-top: 2.6rem;
-  
+
       @include sp {
         // padding-top: 1.9rem;
       }
     }
   }
 
-    .p-plan-table__num {
-      font-size: 2.2rem;
+  .p-plan-table__num {
+    font-size: 2.2rem;
+    display: inline-block;
 
-      @include sp {}
-    }
-
-    td:nth-child(2) {
-      color: $text-color;
+    @include sp {
+      padding-top: 0.3rem;
     }
   }
 
-  /* ストライプ背景 */
-  tr:nth-child(even) {
-    background-color: rgba(80, 80, 80, 0.1);
+  td:nth-child(2) {
+    color: $text-color;
   }
+}
 
-  /* 最終行の下線 */
-  tr:last-child {
-    border-bottom: 1px solid #ccc;
-  }
+/* ストライプ背景 */
+tr:nth-child(even) {
+  background-color: rgba(80, 80, 80, 0.1);
+}
+
+/* 最終行の下線 */
+tr:last-child {
+  border-bottom: 1px solid #ccc;
+}
 
 
 
@@ -384,20 +359,17 @@ th.is-recommend .p-plan-table__title {
 }
 
 
-/* カンプの赤い文字用クラス */
-// .is-red {
-//   color: $main-color !important;
-//   font-weight: 700;
-// }
-
 .p-page-note {
   margin-top: 2.4rem;
   font-size: 1.7rem;
+  letter-spacing: 0.01em;
 
   @include sp {
-    margin-top: 1.6rem;
+    margin-top: 1rem;
     font-size: 1.6rem;
     line-height: 1.875;
+    letter-spacing: 0.02em;
+
   }
 }
 

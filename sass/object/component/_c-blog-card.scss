@@ -8,30 +8,27 @@
 =============================================== */
 .c-blog-card {
     display: block;
-    margin-top: 3rem;
 
     @include sp {
         width: 100%;
         margin-inline: auto;
-        // margin-top: 3.5rem;
     }
 }
 
-.c-blog-card+.c-blog-card {
-    margin-top: 7rem;
+// .c-blog-card+.c-blog-card {
+//     margin-top: 7rem;
 
-    @include sp {
-        margin-top: 3.9rem;
-    }
-}
+//     @include sp {
+//         margin-top: 3.9rem;
+//     }
+// }
 
 
 .c-blog-card__link {
     display: flex;
     flex-direction: row;
     gap: 5rem;
-    // margin-top: 3.8rem;
-
+ 
     opacity: 1;
     transition: opacity 0.4s ease-in-out;
 
@@ -73,24 +70,6 @@
     }
 }
 
-// .c-blog-card__label {
-//     position: absolute;
-//     font-size: 1.5rem;
-//     background-color: $main-color;
-//     color: $c-accent;
-//     top: 0;
-//     left: 0;
-//     padding-inline: 0.2rem;
-//     width: 8rem;
-//     height: 3rem;
-//     text-align: center;
-
-//     @include sp {
-//         width: 9rem;
-
-//     }
-// }
-
 .c-blog-card__body {
     display: flex;
     flex-direction: column;
@@ -112,13 +91,12 @@
 .c-blog-card__date {
     font-size: 1.7rem;
     line-height: 1.764;
-    padding-top: 0.3rem;
+     padding-top: 0.3rem;
 
     @include sp {
         text-align: right;
         padding-top: 1.1rem;
     }
-
 }
 
 .c-blog-card__text {
@@ -127,7 +105,7 @@
     height: 9rem;
     // overflow: hidden;
     line-height: 1.666;
-    padding-top: 0.9rem;
+     padding-top: 0.9rem;
 
     @include sp {
         font-size: 1.6rem;

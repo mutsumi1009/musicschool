@@ -15,6 +15,12 @@
         @content;
     }
 }
+// 中間幅専用（480px 〜 767px）
+@mixin md {
+    @media (min-width: 480px) and (max-width: 767px) {
+        @content;
+    }
+}
 
 // タブレットサイズ (768px 〜 1023px)
 @mixin tab {

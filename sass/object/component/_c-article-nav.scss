@@ -41,7 +41,7 @@
 // 前の記事
 .c-article-nav__label--prev {
     justify-content: flex-start;
-    padding-left: 1.6rem;
+    padding-left: 2.1rem;
     font-size: 1.7rem;
 
     @include sp {
@@ -52,8 +52,8 @@
     &::before {
         content: "◀";
         margin-right: 0.8rem;
-        font-size: 1.7rem;
-        transform: translateY(1px);
+        font-size: 1.5rem;
+        //  transform: translateY(1px);
 
         @include sp {
             font-size: 1.5rem;
@@ -67,13 +67,13 @@
 .c-article-nav__label--next {
     justify-content: flex-end;
     text-align: right;
-    padding-right: 1.6rem;
+    padding-right: 1.9rem;
 
     &::after {
         content: "▶";
         margin-left: 0.8rem;
-        font-size: 1.7rem;
-        transform: translateY(1px);
+        font-size: 1.5rem;
+        // transform: translateY(1px);
     }
 
     @include sp {

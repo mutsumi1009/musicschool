@@ -4,26 +4,23 @@
 @use "../component/c-hero";
 // @use "../../foundation/base" as *;
 
-// // ブログタイトル
-// .p-blog-list-title {
-//     text-align: center;
-//     font-size: 2.5rem;
-//     color: $text-color;
-//     font-weight: 700;
-//     // padding-block: 6.7rem 4rem;
-//     white-space: nowrap;
 
-//     @include sp {
-//         line-height: 1.6;
-//     }
-// }
-
- .p-blog-list {
-    margin-top: 2rem;
+ /* --- _p-blog-list.scss --- */
+.p-blog-list {
+  margin-top: 5.7rem; 
 
   @include sp {
+      margin-top: 3.7rem;
   }
+
+  .c-blog-card + .c-blog-card {
+      margin-top: 7rem;
+
+      @include sp {
+          margin-top: 3.8rem;
+      }
   }
+}
   
 
 .p-blog-list__content {
