@@ -1061,6 +1061,15 @@ TOPへ戻るボタン
   gap: 3rem;
   font-size: 1.8rem;
 }
+@media (max-width: 767px) {
+  .c-article-related {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    gap: 2rem;
+  }
+}
+
 .c-article-related__title {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -3497,7 +3506,8 @@ TOPへ戻るボタン
   .p-blog-detail__text--lead {
     width: 100%;
     font-size: 1.6rem;
-    margin-top: 1.3rem;
+    margin-top: 2rem;
+    line-height: 1.8;
   }
 }
 
@@ -3511,6 +3521,7 @@ TOPへ戻るボタン
     max-width: 100%;
     font-size: 1.6rem;
     margin-top: 1.2rem;
+    line-height: 1.8;
   }
 }
 
@@ -3523,7 +3534,7 @@ TOPへ戻るボタン
 }
 @media (max-width: 767px) {
   .p-blog-detail__heading {
-    margin-top: 3.5rem;
+    margin-top: 3.7rem;
   }
 }
 
@@ -3535,7 +3546,7 @@ TOPへ戻るボタン
 }
 @media (max-width: 767px) {
   .p-blog-detail__image {
-    margin-top: 4rem;
+    margin-top: 4.2rem;
   }
 }
 
@@ -3554,7 +3565,7 @@ TOPへ戻るボタン
 @media (max-width: 767px) {
   .p-blog-detail__list {
     font-size: 1.6rem;
-    padding-bottom: 4.05rem;
+    padding-bottom: 4.9rem;
   }
 }
 
@@ -3574,10 +3585,12 @@ TOPへ戻るボタン
   width: 3px;
   height: 20px;
   background-color: #000;
+  margin-top: 4.2rem;
 }
 @media (max-width: 767px) {
   .p-blog-detail__subtitle::before {
     height: 50px;
+    top: -3.8rem;
   }
 }
 
@@ -3596,9 +3609,10 @@ TOPへ戻るボタン
 @media (max-width: 767px) {
   .p-blog-detail__quote {
     font-size: 1.6rem;
-    line-height: 1.875;
-    padding-inline: 2.1rem;
-    margin-top: 0.9rem;
+    line-height: 1.87;
+    padding-inline: 2.6rem;
+    padding-top: 2rem;
+    margin-top: 1.1rem;
     gap: 1.75rem;
     -webkit-box-align: start;
         -ms-flex-align: start;
@@ -3638,13 +3652,12 @@ TOPへ戻るボタン
   height: 1px;
   background-color: #CB0000;
 }
-
 @media (max-width: 767px) {
-  .c-article-related {
-    -webkit-box-ordinal-group: 4;
-        -ms-flex-order: 3;
-            order: 3;
-    gap: 2rem;
+  .p-blog-detail__textlink {
+    margin-top: 3rem;
+  }
+  .p-blog-detail__textlink::after {
+    bottom: -0.3rem;
   }
 }
 
@@ -3771,6 +3784,11 @@ TOPへ戻るボタン
   height: auto;
   gap: 0;
 }
+@media (max-width: 767px) {
+  .p-sidebar-search {
+    padding-block: 1.9rem;
+  }
+}
 
 .p-sidebar-search__input {
   width: 22rem;
@@ -3851,6 +3869,12 @@ TOPへ戻るボタン
   padding-top: 1rem;
 }
 @media (max-width: 767px) {
+  .p-sidebar-search__button img {
+    height: 100%;
+  }
+}
+
+@media (max-width: 767px) {
   .p-sidebar-list {
     margin-top: 0;
   }
@@ -3865,6 +3889,16 @@ TOPへ戻るボタン
 }
 .p-sidebar-recommend__item:nth-of-type(2) {
   margin-top: 1.5rem;
+}
+@media (max-width: 767px) {
+  .p-sidebar-recommend__item:nth-of-type(2) {
+    margin-top: 1.8rem;
+  }
+}
+@media (max-width: 767px) {
+  .p-sidebar-recommend__item {
+    margin-top: 2.5rem;
+  }
 }
 
 .p-sidebar-recommend__link {
@@ -3897,8 +3931,9 @@ TOPへ戻るボタン
 }
 @media (max-width: 767px) {
   .p-sidebar-recommend__text {
-    margin-top: 1.5rem;
+    padding-top: 1rem;
     padding-left: 0.7rem;
+    line-height: 1.647;
   }
 }
 
@@ -3938,7 +3973,7 @@ TOPへ戻るボタン
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
-    margin-top: 4rem;
+    margin-top: 4.5rem;
   }
 }
 
@@ -4023,6 +4058,7 @@ TOPへ戻るボタン
         -ms-flex-pack: center;
             justify-content: center;
     margin-top: 6.4rem;
+    padding-left: 1.5rem;
   }
 }
 
@@ -4034,6 +4070,7 @@ TOPへ戻るボタン
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    gap: 2rem;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
@@ -4060,9 +4097,8 @@ TOPへ戻るボタン
     font-size: 1.7rem;
     line-height: 1.674;
     display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
     overflow: hidden;
+    margin-top: 0.9rem;
   }
 }
 

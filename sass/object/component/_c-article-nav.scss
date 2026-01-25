@@ -119,8 +119,12 @@
     gap: 3rem;
     font-size: 1.8rem;
 
-    @include sp {}
+    @include sp {
+        order: 3;
+        gap: 2rem;
+    }
 }
+
 
 .c-article-related__title {
     display: inline-flex;
@@ -137,3 +141,6 @@
         margin-top: 5rem;
     }
 }
+
+
+  
