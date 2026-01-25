@@ -5,11 +5,8 @@
 @use "../utility/utility";
 // @use "../../foundation/base" as *;
 
-
-
 .p-top-hero__catch {
     position: absolute;
-    // inset: 0;
     top: 52%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -33,15 +30,10 @@
     }
 }
 
-
-.p-top-concept {}
-
 .p-top__content {
-    // padding-block: 6.8rem 6.5rem;
     padding-block: 5.9rem 7.7rem;
 
     @include sp {
-        // display: flex;
         align-items: center;
         padding-block: 4.6rem 5.5rem;
     }
@@ -51,13 +43,11 @@
     color: $main-color;
     font-size: 3.55rem;
     font-weight: 700;
-    // line-height: 1.428;
     text-align: center;
 
     @include sp {
         font-size: 2.5rem;
         line-height: 1.6;
-        // margin-top: 1.6rem;
     }
 }
 
@@ -72,13 +62,9 @@
     @include sp {
         font-size: 1.8rem;
         line-height: 1.666;
-        // width: 33.5rem;
         max-width: 33.5rem;
-      
         margin-inline: auto;
-        //  margin: 0 auto;
-         text-align: left;
-
+        text-align: left;
     }
 }
 
@@ -98,13 +84,10 @@
     position: relative;
     justify-content: center;
     margin-top: 4.6rem;
-    // padding-bottom: 5.5rem;
-
+   
     @include sp {
         margin-top: 6rem;
     }
-
-
 }
 
 .p-top-message__arrow {
@@ -113,7 +96,6 @@
     left: 50%;
     transform: translateX(-50%);
 }
-
 
 .p-top-message__list {
     position: relative;
@@ -136,14 +118,12 @@
     }
 }
 
-
 .p-top-message__item {
     position: relative;
     display: flex;
     align-items: center;
     width: 100%;
     min-width: 300px;
-
 }
 
 /* 赤丸（線の真上に配置） */
@@ -197,7 +177,6 @@
         font-size: 2rem;
         line-height: 2.5;
     }
-
 }
 
 // 共通タイトル
@@ -206,31 +185,22 @@
     font-weight: 700;
     text-align: center;
 
-    // padding-top: 6.4rem;
-
     @include sp {
         font-size: 2.5rem;
-        // padding-top: 4.9rem;
     }
 }
 
-
 .p-top-promo {
-    // width: 108rem;
     background-color: $main-color;
     padding-block: 6.2rem 6rem;
     text-align: center;
-    // margin-top: 5.5rem;
-
+  
     @include sp {
         padding-block: 4.9rem 3.5rem;
-        // margin-top: 5rem;
     }
 }
 
 .p-top-promo__label {
-
-    // background-color: $main-color;
     font-size: 3rem;
     font-weight: 700;
     color: $c-accent;
@@ -238,16 +208,13 @@
     @include sp {
         font-size: 2.5rem
     }
-
 }
 
 .p-top-promo__title {
     position: relative;
     font-size: 3rem;
     font-weight: 700;
-    // background-color: $main-color;
     color: $c-accent;
-    // width: 15.4rem;
 
     @include sp {
         line-height: 1.6;
@@ -276,10 +243,9 @@
     padding-block: 3.4rem 6.5rem;
 
     @include sp {
-        padding-block: 4rem 5.5rem;
+        padding-block: 4rem 5rem;
     }
 }
-
 
 .p-flow__list {
     padding-top: 5.3rem;
@@ -291,8 +257,6 @@
 
 .p-flow__item {
     display: flex;
-    // gap: 6rem;
-    // padding-top: 2.8rem;
     padding-left: 6rem;
     position: relative;
 
@@ -319,7 +283,6 @@
     top: 0.8rem;
     width: 2px;
     height: calc(100% + 5.8rem);
-    // height: 404px;
     background-color: $main-color;
 
     @include sp {
@@ -329,13 +292,8 @@
     }
 }
 
-// .p-flow__item--last::before {
-//     display: none;
-// }
-
 .p-flow__item--last {
     &::before {
-
         height: 5.7rem;
 
         @include sp {
@@ -347,7 +305,6 @@
 /* 先端矢印 */
 .p-flow__arrow {
     position: absolute;
-    // top: -5.6rem;
     left: 6rem;
     bottom: -2rem;
     transform: translateX(-50%);
@@ -357,18 +314,6 @@
         bottom: -1rem;
     }
 }
-
-// .p-top-message__arrow {
-//     position: absolute;
-//     top: -5.6rem;
-//     left: 50%;
-//     bottom: 0;
-//     transform: translateX(-50%);
-// }
-// // .p-flow__arrow img {
-//     width: 1.6rem;
-//     height: auto;
-// }
 
 // 赤丸
 .p-flow__item::after {
@@ -416,17 +361,15 @@
     flex-shrink: 0;
 
     @include sp {
-        top: -1.2rem;
+        top: -1.3rem;
         left: -1.1rem;
     }
-
 }
 
 .p-flow__text {
     font-size: 1.8rem;
     line-height: 1.666;
     flex: 1;
-    // gap: 6rem;
 
     @include sp {
         font-size: 1.6rem;
@@ -441,7 +384,7 @@
     padding-block: 6.4rem 8.3rem;
 
     @include sp {
-        padding-block: 4.9rem 4.4rem;
+        padding-block: 4.9rem 4.1rem;
     }
 }
 
@@ -465,31 +408,27 @@
     display: flex;
     align-items: flex-start;
     gap: 5rem;
-    // padding-top: 2.8rem;
 
     @include sp {
         flex-direction: column;
         gap: 0;
 
-        // padding-top: 0.9rem;
         &+& {
             margin-top: 4.0rem;
         }
     }
 }
 
-
-.p-top-reason__item:nth-child(1) .p-top-reason__item-title {
-    margin-top: 1rem;
+.p-top-reason__item:nth-child(n+2) .p-top-reason__item-title {
+    margin-top: 0;
 
     @include sp {
-      margin-top: 1.8rem;
+        margin-top: 1.8rem;
     }
 }
 
 .p-top-reason__img img {
-    width: 35rem;
-    // width: 100%;    
+    width: 35rem; 
     height: auto;
     aspect-ratio: 350 / 247;
     object-fit: cover;
@@ -499,10 +438,8 @@
         aspect-ratio: 335 / 200;
         width: auto;
         height: 100%;
-    ;
     }
 }
-
 
 .p-top-reason__content {
     position: relative;
@@ -510,10 +447,10 @@
     margin-left: 0;
     display: flex;
     flex-direction: column;
-    gap: 3.7rem;
+    gap: 3rem;
 
     @include sp {
-        gap: 2.5rem;
+        gap: 2rem;
     }
 }
 
@@ -523,49 +460,46 @@
     position: relative;
     display: block;
     border-bottom: 2px solid $main-color;
+    margin-top: 1rem;
     margin-left: -5rem;
     padding-left: 5rem;
+    padding-bottom: 0.7rem;
 
     @include sp {
-        // width: 100%;
         font-size: 2rem;
         line-height: 1.5;
-        // display: inline-block;
         margin-top: 2.1rem;
         position: relative;
         left: -0rem;
         margin-left: 0;
         padding-left: 0;
         max-width: 53.2rem;
-
     }
 }
 
-
 .p-top-reason__text {
     font-size: 1.8rem;
-    // margin-top: 3.7rem;
-
+  
     @include sp {
         font-size: 1.6rem;
-        // padding-bottom: 6rem;
-        // border-top: 2px solid $main-color;
-
     }
 }
 
 .p-top-voice {
     background-color: $main-color;
     padding-block: 4.6rem 8.5rem;
-    // margin-top: 9rem;
-
+  
     @include sp {
-        padding-block: 4.4rem 4.7rem;
+        padding-block: 5rem 4.7rem;
     }
 
     .l-inner {
         max-width: 960px;
+        padding-inline: 40px;
 
+        @include sp {
+            padding-inline: 20px;
+        }
     }
 }
 
@@ -588,34 +522,40 @@
     height: auto !important;
     padding: 0 !important;
     display: block;
-    // top: auto !important;
     transform: none !important;
 }
 
 /* 自作SVG画像サイズ */
 .splide__arrow img {
     width: 30px;
-    // height: auto;
 }
 
 .splide__arrow--prev {
     top: 43% !important;
-    left: -2rem !important;
-    // top: 8rem; 
-
+    left: -4rem !important;
+   
     @include sp {
+        top: 40% !important;
         left: 0 !important;
     }
+
+  @include md {
+    left: 10% !important;
+  }
 }
 
 .splide__arrow--next {
     top: 43% !important;
-    right: -2rem !important;
-    // top: 0rem; 
-
+    right: -4rem !important;
+   
     @include sp {
+        top: 40% !important;
         right: 0 !important;
     }
+
+    @include md {
+        right: 10% !important;
+      }
 }
 
 
@@ -631,64 +571,47 @@
 }
 
 .p-top-voice__item {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    padding-top: 2.8rem;
-    justify-content: center;
     cursor: pointer;
-    overflow: hidden;
-    // gap: 1.7rem;
-    //    padding: 2rem;
-
-    @include sp {
-        padding-top: 3.9rem;
-        gap: 1.4rem;
-
-    }
 
     @include pc {
         &:hover {
-
             .p-top-voice__img img {
                 transform: scale(1.1);
+            }
+
+            .p-top-voice__meta,
+            .p-top-voice__text {
+                opacity: 0.7;
+                transition: opacity 0.4s;
             }
         }
     }
 }
 
+
 .p-top-voice__img {
     position: relative;
-    width: 100%;
+    width: 27rem;
     display: flex;
-    justify-content: center; 
-    scroll-margin-inline: auto;
-    // margin-top: 4rem;
+    justify-content: center;
+    overflow: hidden;
+    margin-top: 2.8rem;
+
+    @include sp {
+        display: block;
+        margin-inline: auto;
+        width: 33.5rem;
+    }
 }
 
-// /* 1枚目（左：丸山さん）の調整 */
-// .p-top-voice__item:nth-child(1) {
-//     .p-top-voice__img {
-//         margin-left: -0.5rem;
-//     }
-// }
-
-// /* 3枚目（右：田森さん）の調整 */
-// .p-top-voice__item:nth-child(3) {
-//     .p-top-voice__img {
-//         // 真ん中より右にズレているならマイナス、左にズレているならプラスで微調整
-//         margin-left: -0.5rem;
-//     }
-// }
 
 .p-top-voice__img img {
-    width: 27rem;
-    // width: 100%;    
+    width: 100%;
     height: auto;
     aspect-ratio: 270 / 190;
     object-fit: cover;
     flex-shrink: 0;
+    transition: transform 0.5s ease;
 
     @include sp {
         width: auto;
@@ -702,12 +625,12 @@
     font-size: 2.2rem;
     font-weight: 700;
     color: $font-color;
-    margin-top: 1.9rem;
-    opacity: 0.7;
-    // margin-top: 1.7rem;
+    margin-top: 1.6rem;
+    opacity: 1;
+    text-align: center;
 
     @include sp {
-        margin-top: 0;
+        margin-top: 2.5rem;
     }
 }
 
@@ -715,19 +638,17 @@
     width: 27rem;
     font-size: 1.8rem;
     color: $font-color;
-    // margin-top: 1.7rem;
     line-height: 1.666;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
     overflow: hidden;
-    opacity: 0.7;
+    opacity: 1;
 
     @include sp {
         width: 100%;
-        text-align: left;
+        margin-top: 1rem;
     }
-
 }
 
 /* ===============================================
@@ -746,7 +667,6 @@
     margin-top: 3.3rem;
 
     @include sp {
-        //   margin-top: 3.8rem;
     }
 }
 
@@ -772,10 +692,9 @@
     font-size: 1.8rem;
 
     @include sp {
-        padding-block: 2rem .9rem;
+        padding-block: 1.9rem .9rem;
         padding-inline: 1rem 1.9rem;
         font-size: 1.6rem;
-
     }
 
     &::after {
@@ -789,8 +708,7 @@
         height: 1rem;
         background: url("../images/top/icon-faq-arrow.svg") no-repeat center/contain;
         transition: transform 0.3s;
-        // text-align: right;
-
+        
         @include sp {
             right: 15px;
             top: 55%;
@@ -801,13 +719,11 @@
         padding-block: 1rem;
     }
 
-
     /* 開いている時は180度回転させる */
     &.is-open::after {
         transform: translateY(-50%) rotate(180deg);
     }
 }
-
 
 /* Qのマーク */
 .p-faq__q {
@@ -822,10 +738,8 @@
     font-size: 1.7rem;
     font-weight: 700;
     flex-shrink: 0;
-    // margin-right: 1rem;
-
+  
     @include sp {
-        //  margin-top: 1.5rem;
         font-size: 1.6rem;
         position: relative;
         top: 0.5rem;
@@ -871,14 +785,10 @@
     @include sp {
         height: 11.6rem;
         padding-inline: 0rem 1.9rem;
+        padding-top: 0.5rem;
         gap: 1rem;
     }
 }
-
-.p-faq__a {}
-
-
-
 
 /* ===============================================
 # ブログ一覧
@@ -905,23 +815,19 @@
     }
 }
 
-
 .p-top-page .c-blog-card__date {
     text-align: right;
     padding-top: 1rem;
 
     @include sp {
-      padding-top: 1.5rem;
+        padding-top: 1.5rem;
     }
 }
-
-
 
 .p-top-page .c-blog-card__body {
     display: flex;
     flex-direction: column;
     height: 100%;
-
 }
 
 /* TOPページ専用の上書き */
@@ -932,18 +838,14 @@
         margin-top: 3.3rem;
     }
 
-    // margin-top: 0;
-
     &+.c-blog-card {
         margin-top: 3rem;
 
         @include sp {
             margin-top: 4rem;
-        
         }
     }
 }
-
 
 .p-top-page .c-blog-card__img {
     width: 26rem;
@@ -971,7 +873,6 @@
 
     border-bottom: 1px solid currentColor;
     transition: opacity 0.3s;
-
 }
 
 .p-top-page .p-blog-list {
@@ -979,6 +880,6 @@
     padding-block: 4.1rem 20.2rem;
 
     @include sp {
-        padding-block: 3.1rem 19.2rem; 
+        padding-block: 3.6rem 19.2rem;
     }
 }

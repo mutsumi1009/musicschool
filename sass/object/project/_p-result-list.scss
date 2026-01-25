@@ -54,8 +54,14 @@
     }
   }
   
-  
- 
+// ページ専用パンくずリスト
+.p-result_details .c-breadcrumb {
+    @include sp {
+        padding: 0.7rem 2rem 0.7rem 1.8rem;
+        min-height: 7.7rem;
+      // height: 5.9rem;
+    }
+  }
 
   
   

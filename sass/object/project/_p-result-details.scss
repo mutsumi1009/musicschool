@@ -220,3 +220,11 @@ max-width: 44rem;
   }
 }
 
+// パンくずリスト
+.p-blog_details .c-breadcrumb {
+  @include sp {
+    min-height: 5.9rem;
+    padding: 0;
+    // height: 5.9rem;
+  }
+}

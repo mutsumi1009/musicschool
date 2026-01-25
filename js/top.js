@@ -8,6 +8,8 @@
       arrows: true,
       pagination: true,
     
+      speed: 800,        // スライドが動く速さ
+      
       breakpoints: {
         767: {         
           perPage: 1,  
@@ -20,7 +22,7 @@
 
   // よくあるご質問
   $(function () {
-    // 最初の回答以外は隠しておく（最初からすべて閉じたい場合は .hide() だけでOK）
+    // 最初の回答以外は隠しておく（最初からすべて閉じたい場合は .hide() だけ）
     $(".p-faq__answer").hide();
   
     $(".p-faq__question").on("click", function () {
