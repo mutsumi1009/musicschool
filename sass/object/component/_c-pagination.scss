@@ -9,13 +9,13 @@
   display: flex;
   justify-content: center;
   gap: 1rem;
-  margin-top: 7rem;  
-  
-  
+  margin-top: 7rem;
+
+
   @include sp {
-  gap: 0.5rem;
-  margin-top: 5.9rem;
-  // padding-left: 0.7rem;
+    gap: 0.5rem;
+    margin-top: 5.9rem;
+    // padding-left: 0.7rem;
   }
 }
 
@@ -27,14 +27,19 @@
   width: 5rem;
   height: 5rem;
   text-align: center;
+  color: $text-color;
+  text-decoration: none;
+
+  &:hover {
+    background-color: $text-color;
+    color: $font-color;
+  }
 
   @include sp {
     font-size: 1.6rem;
     width: 4.4rem;
     height: 4.4rem;
-    // display: flex;           
-    // align-items: center;      
-    // justify-content: center; 
+   
     line-height: 1.75;
   }
 }
@@ -48,14 +53,12 @@
   font-size: 1.6rem;
   padding: .8rem 1.2rem;
   display: flex;
-    align-items: center;
-    justify-content: center;
+  align-items: center;
+  justify-content: center;
 
   @include sp {
     // padding: 0.2rem;
-    width: 2.8rem;   
+    width: 2.8rem;
     // height: 1.7rem;
   }
 }
-
-

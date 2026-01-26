@@ -21,6 +21,10 @@
   align-items: flex-start;
   gap: 3.1rem;
 
+  // @include md {
+  //   flex-direction: column;
+  //   gap: 0;
+  // }
 
   @include sp {
     flex-direction: column;
@@ -33,9 +37,16 @@
 
 .p-blog_details__main {
   justify-content: space-between;
+  width: auto;
+
+  @include pc {
+    flex: 1;
+    min-width: 0;
+  }
 
   @include sp {
     // order: 1;
+    width: 100%;
   }
 }
 
@@ -97,11 +108,9 @@
 
   @include tab {
     margin-top: 3rem;
-    // max-width: none; 
   }
 
   @include sp {
-    // max-width: 33.5rem;
     width: 100%;
     font-size: 1.6rem;
     margin-top: 2rem;
@@ -116,8 +125,7 @@
   line-height: 1.666;
 
   @include sp {
-    // width: 33.5rem;
-    max-width: 100%;
+    width: 100%;
     font-size: 1.6rem;
     margin-top: 1.2rem;
     line-height: 1.8;
@@ -261,6 +269,7 @@
 
 // 右サイトバー
 .p-blog_details__sidebar-area {
+  flex: 0 0 25rem;
 
   @include sp {
     margin-top: 3.1rem;
@@ -274,12 +283,13 @@
   width: 25rem;
   gap: 2.7rem;
 
-  @include sp {
-    // width: 33.5rem;
+  @include md {
     width: 100%;
-    // height: 2.68rem;
+  }
+
+  @include sp {
+    width: 100%;
     order: 4;
-    // margin-left: 0;
   }
 }
 
@@ -332,8 +342,8 @@
 }
 
 .p-sidebar-banner__inner {
-  display: flex;
-  // flex: 1;
+  // display: flex;
+  flex: 1;
   background-color: #e8e8e8;
   width: 22rem;
   height: 17rem;
@@ -414,6 +424,13 @@
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
+  cursor: pointer;          
+  transition: background-color 0.4s; 
+
+  &:hover {
+    background-color: #333; 
+   
+  }
 
   @include sp {
     width: 5.4rem;
@@ -428,8 +445,8 @@
   padding-top: 1rem;
 
   @include sp {
-   
-     height: 100%;
+
+    height: 100%;
   }
 }
 
@@ -525,6 +542,10 @@
   gap: 7.8rem;
   justify-content: flex-start;
   margin-top: 5.1rem;
+
+  @include md {
+  
+  }
 
   @include sp {
     gap: 2.2rem;

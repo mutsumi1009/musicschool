@@ -782,6 +782,12 @@ section[id] {
   width: 5rem;
   height: 5rem;
   text-align: center;
+  color: #000;
+  text-decoration: none;
+}
+.c-pagination__num:hover {
+  background-color: #000;
+  color: #fff;
 }
 @media (max-width: 767px) {
   .c-pagination__num {
@@ -3434,7 +3440,22 @@ TOPへ戻るボタン
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  width: auto;
 }
+@media (min-width: 768px) {
+  .p-blog_details__main {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    min-width: 0;
+  }
+}
+@media (max-width: 767px) {
+  .p-blog_details__main {
+    width: 100%;
+  }
+}
+
 .p-blog_details__main .c-result-card__img {
   width: 100%;
   height: auto;
@@ -3518,7 +3539,7 @@ TOPへ戻るボタン
 }
 @media (max-width: 767px) {
   .p-blog-detail__text--under-h2 {
-    max-width: 100%;
+    width: 100%;
     font-size: 1.6rem;
     margin-top: 1.2rem;
     line-height: 1.8;
@@ -3661,6 +3682,11 @@ TOPへ戻るボタン
   }
 }
 
+.p-blog_details__sidebar-area {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 25rem;
+          flex: 0 0 25rem;
+}
 @media (max-width: 767px) {
   .p-blog_details__sidebar-area {
     margin-top: 3.1rem;
@@ -3677,6 +3703,11 @@ TOPへ戻るボタン
           flex-direction: column;
   width: 25rem;
   gap: 2.7rem;
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  .p-blog_details__sidebar {
+    width: 100%;
+  }
 }
 @media (max-width: 767px) {
   .p-blog_details__sidebar {
@@ -3741,9 +3772,9 @@ TOPへ戻るボタン
 }
 
 .p-sidebar-banner__inner {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   background-color: #e8e8e8;
   width: 22rem;
   height: 17rem;
@@ -3855,6 +3886,12 @@ TOPへ戻るボタン
           align-items: center;
   -ms-flex-negative: 0;
       flex-shrink: 0;
+  cursor: pointer;
+  -webkit-transition: background-color 0.4s;
+  transition: background-color 0.4s;
+}
+.p-sidebar-search__button:hover {
+  background-color: #333;
 }
 @media (max-width: 767px) {
   .p-sidebar-search__button {
