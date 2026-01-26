@@ -148,15 +148,21 @@
                                 </li>
                             </ul>
 
-                            <p class="p-blog-detail__text--lead">
+                            <p class="p-blog-detail__text--lead pc">
+                                本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
+                            </p>
+                            <p class="p-blog-detail__text--lead sp">
                                 本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
                             </p>
-
                             <div class="p-blog-detail__section">
                                 <h2 class="p-blog-detail__heading">H2見出しが入ります。H2見出しが入ります。</h2>
 
-                                <p class="p-blog-detail__text--under-h2">
-                                    本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。                                </p>
+                                <p class="p-blog-detail__text--under-h2 pc">
+                                    本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
+                                </p>
+                                <p class="p-blog-detail__text--under-h2 sp">
+                                    本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
+                                </p>
 
                                 <div class="p-blog-detail__image">
                                     <img src="images/blog/blog-details_pc.jpg" alt="ピアノを弾く男性と犬の写真" width="335"
@@ -299,18 +305,18 @@
                                 <!-- ブログ内検索 -->
                                 <section class="p-sidebar-box">
                                     <h3 class="p-sidebar-title">ブログ内を検索</h3>
-
-                                    <div class="p-sidebar-search">
-
+                                
+                                    <form action="search.html" method="get" class="p-sidebar-search">
+                                
                                         <div class="p-sidebar-search__inner">
-                                            <input type="text" class="p-sidebar-search__input" placeholder="キーワードを入力">
+                                            <input type="text" name="s" class="p-sidebar-search__input" placeholder="キーワードを入力">
                                         </div>
-
+                                
                                         <button type="submit" class="p-sidebar-search__button">
                                             <img src="images/blog/icon-search.svg" alt="検索">
                                         </button>
-
-                                    </div>
+                                
+                                    </form>
                                 </section>
 
                                 <!-- おすすめの記事 -->
@@ -414,10 +420,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
 
-     <!-- 共通JS -->
-     <script src="js/script.js"></script>
+    <!-- 共通JS -->
+    <script src="js/script.js"></script>
 
 </body>
-
 
 </html>
