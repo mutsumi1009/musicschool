@@ -31,32 +31,21 @@ display: block;
   
 
 .c-result-card__img {
-    display: block;
-    position: relative;
-    // width: 100%; 
-    height: auto;
-    //  aspect-ratio: 387 / 283; 
-    overflow: hidden; 
-
-    @include sp {
-        width: 100%;
-        height: auto; 
-        flex-shrink: 0;
-        aspect-ratio: auto; 
-    }
+  position: relative;
+  aspect-ratio: 600/ 350; 
+  width: 100%;
     }
 
 .c-result-card__img img {
-    // width: 100%; 
+     width: 100%; 
     height: auto; 
     object-fit: cover; 
     
-
-    @include sp {
-        width: auto;
-        // height: auto;
-        // object-fit: cover;
-    }
+    // @include sp {
+    //     width: auto;
+    //     // height: auto;
+    //     // object-fit: cover;
+    // }
 }
   
 

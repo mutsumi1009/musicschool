@@ -28,7 +28,7 @@
 
 //   @include sp {
 //     right: 2rem;
- 
+
 //   }
 
 //   img {
@@ -53,21 +53,22 @@
 /* --- TOPへ戻る・お問合せボタン --- */
 .p-fixed-buttons {
   position: fixed;
-  right: -0.3rem; 
-  bottom: 28.6rem;  
+  right: -0.3rem;
+  bottom: 28.6rem;
   z-index: 999;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  gap: 3.1rem;    // ★ボタン同士の隙間
+  gap: 3.1rem; // ★ボタン同士の隙間
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease, visibility 0.3s ease;
 
+
   @include sp {
     display: block;
-    right: 18.7rem; 
-    bottom: 31.5rem;  
+    right: 18.7rem;
+    bottom: 31.5rem;
     gap: 1.9rem;
   }
 
@@ -84,23 +85,23 @@
 
 /* 各ボタンのデザイン */
 .p-contact-banner {
-  margin: 0; 
+  margin: 0;
 }
 
 .page-top-btn {
-  position: absolute;
+  // position: absolute;
   width: 6.8rem;
   height: 6.8rem;
-  right: 11.9rem;
-  bottom: 8.9rem;
+  // right: 11.9rem;
+  // bottom: 8.9rem;
   cursor: pointer;
   display: block;
   transition: transform 0.3s, opacity 0.3s;
 
   @include sp {
-    position: fixed;
-    right: 1.9rem;
-    bottom: 38.5rem;
+    // position: fixed;
+    // right: 1.9rem;
+    // bottom: 38.5rem;
   }
 
   img {
