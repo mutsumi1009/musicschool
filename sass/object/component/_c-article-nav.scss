@@ -6,11 +6,11 @@
 .c-article-nav {
     display: flex;
     justify-content: space-between;
-    gap: 19.9rem;
+    // gap: 19.9rem;
     margin-top: 6rem;
 
     @include sp {
-        gap: 8rem;
+        // gap: 8rem;
     }
 }
 
@@ -31,7 +31,7 @@
     width: auto;
     height: 3.7rem;
     color: #fff;
-    padding-inline: 2rem 2.32rem;
+    // padding-inline: 2rem 2.32rem;
     font-size: 1.6rem;
     font-weight: 700;
     // gap:1.9rem;
