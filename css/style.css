@@ -2406,7 +2406,7 @@ TOPへ戻るボタン
   position: fixed;
   right: -0.3rem;
   bottom: 28.6rem;
-  z-index: 999;
+  z-index: 9999;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2424,12 +2424,18 @@ TOPへ戻るボタン
   transition: opacity 0.3s ease, visibility 0.3s ease;
   /* JSでクラスがついた時だけ、セットまとめて表示 */
 }
+.p-fixed-buttons.is-footer-reached {
+  position: absolute;
+  bottom: 30.5rem !important;
+}
 @media (max-width: 767px) {
   .p-fixed-buttons {
-    display: block;
     right: 18.7rem;
-    bottom: 31.5rem;
+    bottom: 31.4rem;
     gap: 1.9rem;
+  }
+  .p-fixed-buttons.is-footer-reached {
+    bottom: 31.3rem !important;
   }
 }
 .p-fixed-buttons.is-show {
@@ -2446,14 +2452,22 @@ TOPへ戻るボタン
 }
 
 .page-top-btn {
-  width: 6.8rem;
-  height: 6.8rem;
+  width: 6.8rem !important;
+  height: 6.8rem !important;
+  right: 11.6rem;
+  bottom: 37.2rem;
   cursor: pointer;
   display: block;
   -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
   transition: opacity 0.3s, -webkit-transform 0.3s;
   transition: transform 0.3s, opacity 0.3s;
   transition: transform 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+}
+@media (max-width: 767px) {
+  .page-top-btn {
+    right: 1.9rem;
+    bottom: 39rem;
+  }
 }
 .page-top-btn img {
   width: 100%;
