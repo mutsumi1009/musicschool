@@ -3,59 +3,13 @@
 @use "../../global/function" as *;
 // @use "../../foundation/base" as *;
 
-// .p-page-btn {
-//     text-align: center;
-//     align-items: center;
-//     justify-content: center;
-//     // line-height: 2.2;
-//     margin-top: 3.8rem; 
-
-//     @include sp {
-//     // margin-block: 0.9rem 5rem;
-//       }
-// }
-
-// .page-top-btn {
-//   position: fixed;
-//   right: 11.7rem;
-//   bottom: 37.7rem;
-//   z-index: 999;
-//   width: 6.8rem;
-//   height: 6.8rem;
-//   opacity: 0;
-//   visibility: hidden;
-//   transition: opacity 0.3s ease, visibility 0.3s ease;
-
-//   @include sp {
-//     right: 2rem;
-
-//   }
-
-//   img {
-//    width: 100%;
-//    height: auto;
-//   }
-
-
-//   // スクロール時に表示するためのクラス
-//   &.is-show {
-//     opacity: 1;
-//     visibility: visible;
-
-//     &:hover {
-//       opacity: 0.7;
-//       // transform: translateY(-3px);
-//     }
-//   }
-
-// }
 
 /* --- TOPへ戻る・お問合せボタン --- */
 .p-fixed-buttons {
   position: fixed;
   right: -0.3rem;
   bottom: 28.6rem;
-  z-index: 999;
+  z-index: 9999;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -64,23 +18,32 @@
   visibility: hidden;
   transition: opacity 0.3s ease, visibility 0.3s ease;
 
+  &.is-footer-reached {
+    position: absolute;
+    bottom: 30.5rem !important;
+  }
 
   @include sp {
-    display: block;
+    // display: block;
     right: 18.7rem;
-    bottom: 31.5rem;
+    bottom: 31.4rem;
     gap: 1.9rem;
-  }
 
-  /* JSでクラスがついた時だけ、セットまとめて表示 */
-  &.is-show {
-    opacity: 1;
-    visibility: visible;
-
-    &:hover {
-      opacity: 0.7;
+    &.is-footer-reached {
+      bottom: 31.3rem !important;
     }
   }
+
+
+/* JSでクラスがついた時だけ、セットまとめて表示 */
+&.is-show {
+  opacity: 1;
+  visibility: visible;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
 }
 
 /* 各ボタンのデザイン */
@@ -89,19 +52,19 @@
 }
 
 .page-top-btn {
-  // position: absolute;
-  width: 6.8rem;
-  height: 6.8rem;
-  // right: 11.9rem;
-  // bottom: 8.9rem;
+  //  position: absolute;
+  width: 6.8rem !important;
+  height: 6.8rem !important;
+  right: 11.6rem;
+  bottom: 37.2rem;
   cursor: pointer;
   display: block;
   transition: transform 0.3s, opacity 0.3s;
 
   @include sp {
-    // position: fixed;
-    // right: 1.9rem;
-    // bottom: 38.5rem;
+    //  position: fixed;
+    right: 1.9rem;
+    bottom: 39rem;
   }
 
   img {

@@ -64,25 +64,18 @@ $(function () {
 
 // --- フッター手前でストップさせる処理 ---
 $(window).on("scroll resize load", function () {
-  const $fixedButtons = $(".js-fixed-buttons"); // あなたが使っているクラス名
+  const $fixedButtons = $(".js-fixed-buttons");
+  const $footer = $(".l-footer");
+  
   const scrollHeight = $(document).height(); 
   const scrollPosition = $(window).height() + $(window).scrollTop();
-  
-  
-  const $footer = $(".l-footer"); 
   const footHeight = $footer.length ? $footer.innerHeight() : 0;
   
-  if (scrollHeight - scrollPosition <= footHeight) {
-    // フッター手前に来たら position を absolute に変更
-    $fixedButtons.css({
-      position: "absolute",
-      bottom: footHeight, 
-    });
+  if (scrollHeight - scrollPosition <= (footHeight - 150)) {
+    // フッターに到達したらクラスをつける
+    $fixedButtons.addClass('is-footer-reached');
   } else {
-    // それ以外は元の fixed に戻す
-    $fixedButtons.css({
-      position: "fixed",
-      bottom: "0",
-    });
+    // 離れたら外す
+    $fixedButtons.removeClass('is-footer-reached');
   }
 });
