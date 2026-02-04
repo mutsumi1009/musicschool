@@ -8,26 +8,27 @@
 .p-fixed-buttons {
   position: fixed;
   right: -0.3rem;
-  bottom: 28.6rem;
+  bottom: 25.6rem;
   z-index: 9999;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  gap: 3.1rem; // ★ボタン同士の隙間
+  gap: 3.1rem; 
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease, visibility 0.3s ease;
 
   &.is-footer-reached {
     position: absolute;
-    bottom: 30.5rem !important;
+    bottom: 28.9rem !important;
   }
 
   @include sp {
-    // display: block;
-    right: 18.7rem;
-    bottom: 31.4rem;
+    //  display: block;
+    right: -11.1rem;
+    bottom: 14rem;
     gap: 1.9rem;
+    
 
     &.is-footer-reached {
       bottom: 31.3rem !important;
@@ -35,36 +36,48 @@
   }
 
 
-/* JSでクラスがついた時だけ、セットまとめて表示 */
-&.is-show {
-  opacity: 1;
-  visibility: visible;
+  /* JSでクラスがついた時だけ、セットまとめて表示 */
+  &.is-show {
+    opacity: 1;
+    visibility: visible;
 
-  &:hover {
-    opacity: 0.7;
+    &:hover {
+      // opacity: 0.7;
+    }
   }
 }
-}
 
-/* 各ボタンのデザイン */
+/* フッター右上の問い合わせボタン */
 .p-contact-banner {
+  // position: absolute;
+  right: 0;
+  bottom: 100%;   
+  z-index: 30;
   margin: 0;
+
+  @include sp {
+      right: auto; 
+      left: 50%;   
+      transform: translateX(-39%); 
+  }
 }
 
 .page-top-btn {
   //  position: absolute;
-  width: 6.8rem !important;
-  height: 6.8rem !important;
-  right: 11.6rem;
-  bottom: 37.2rem;
-  cursor: pointer;
-  display: block;
+  // width: 6.8rem !important;
+  // height: 6.8rem !important;
+  margin-inline: auto;
+  // right: 11.6rem;
+  // bottom: 37.2rem;
+  // cursor: pointer;
+  // display: block;
   transition: transform 0.3s, opacity 0.3s;
 
   @include sp {
+   
     //  position: fixed;
-    right: 1.9rem;
-    bottom: 39rem;
+    // right: 1.9rem;
+    // bottom: 39rem;
   }
 
   img {
@@ -79,3 +92,4 @@
     }
   }
 }
+

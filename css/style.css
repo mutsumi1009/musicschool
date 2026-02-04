@@ -826,7 +826,6 @@ section[id] {
 TOPへ戻るボタン
 =============================================== */
 .page-top-btn {
-  position: fixed;
   right: 11.7rem;
   bottom: 9.1rem;
   z-index: 9999;
@@ -847,19 +846,12 @@ TOPへ戻るボタン
   opacity: 1 !important;
   visibility: visible !important;
 }
-@media (max-width: 767px) {
-  .page-top-btn {
-    right: 2rem;
-    bottom: 6rem;
-    width: 5rem;
-    height: 5rem;
-  }
-}
 .page-top-btn img {
   position: static;
   -webkit-transform: none;
           transform: none;
 }
+
 .c-result-card {
   display: block;
 }
@@ -2405,7 +2397,7 @@ TOPへ戻るボタン
 .p-fixed-buttons {
   position: fixed;
   right: -0.3rem;
-  bottom: 28.6rem;
+  bottom: 25.6rem;
   z-index: 9999;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2426,12 +2418,12 @@ TOPへ戻るボタン
 }
 .p-fixed-buttons.is-footer-reached {
   position: absolute;
-  bottom: 30.5rem !important;
+  bottom: 28.9rem !important;
 }
 @media (max-width: 767px) {
   .p-fixed-buttons {
-    right: 18.7rem;
-    bottom: 31.4rem;
+    right: -11.1rem;
+    bottom: 14rem;
     gap: 1.9rem;
   }
   .p-fixed-buttons.is-footer-reached {
@@ -2442,32 +2434,28 @@ TOPへ戻るボタン
   opacity: 1;
   visibility: visible;
 }
-.p-fixed-buttons.is-show:hover {
-  opacity: 0.7;
-}
-
-/* 各ボタンのデザイン */
+/* フッター右上の問い合わせボタン */
 .p-contact-banner {
+  right: 0;
+  bottom: 100%;
+  z-index: 30;
   margin: 0;
+}
+@media (max-width: 767px) {
+  .p-contact-banner {
+    right: auto;
+    left: 50%;
+    -webkit-transform: translateX(-39%);
+            transform: translateX(-39%);
+  }
 }
 
 .page-top-btn {
-  width: 6.8rem !important;
-  height: 6.8rem !important;
-  right: 11.6rem;
-  bottom: 37.2rem;
-  cursor: pointer;
-  display: block;
+  margin-inline: auto;
   -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
   transition: opacity 0.3s, -webkit-transform 0.3s;
   transition: transform 0.3s, opacity 0.3s;
   transition: transform 0.3s, opacity 0.3s, -webkit-transform 0.3s;
-}
-@media (max-width: 767px) {
-  .page-top-btn {
-    right: 1.9rem;
-    bottom: 39rem;
-  }
 }
 .page-top-btn img {
   width: 100%;
@@ -3011,22 +2999,6 @@ TOPへ戻るボタン
     font-weight: 400;
     line-height: 1.25;
     margin: 0;
-  }
-}
-
-/* フッター右上の問い合わせボタン */
-.p-contact-banner {
-  position: absolute;
-  right: 0;
-  bottom: 100%;
-  z-index: 30;
-}
-@media (max-width: 767px) {
-  .p-contact-banner {
-    right: auto;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
   }
 }
 
