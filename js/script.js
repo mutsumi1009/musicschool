@@ -71,7 +71,7 @@ $(window).on("scroll resize load", function () {
   const scrollPosition = $(window).height() + $(window).scrollTop();
   const footHeight = $footer.length ? $footer.innerHeight() : 0;
   
-  if (scrollHeight - scrollPosition <= (footHeight - 150)) {
+  if (scrollHeight - scrollPosition <= (footHeight - 60)) {
     // フッターに到達したらクラスをつける
     $fixedButtons.addClass('is-footer-reached');
   } else {
