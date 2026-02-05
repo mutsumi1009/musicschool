@@ -52,12 +52,15 @@
 
 /* フッター右上の 問い合わせボタン*/
 .c-button--footer {
-  position: relative;
-  max-width: 30rem;
+  // position: relative;
+  display: flex;            
+  justify-content: center;
+   align-items: center;
+  width: 30rem;
   height: 6rem;
-  padding-inline: 8rem 8.4rem;
-  top: 0;   
-  right: 0;  
+  // padding-inline: 8rem 8.4rem;
+  // top: 0;   
+  // right: 0;  
   z-index: 20;
   font-size: 2rem;
   line-height: 1.65;
@@ -66,7 +69,7 @@
   @include sp {
     width: 33.5rem;
     max-width: 100%;
-     padding-inline: 0;
+    //  padding-inline: 0;
    
   }
 }

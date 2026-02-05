@@ -381,12 +381,17 @@ section[id] {
 
 /* フッター右上の 問い合わせボタン*/
 .c-button--footer {
-  position: relative;
-  max-width: 30rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 30rem;
   height: 6rem;
-  padding-inline: 8rem 8.4rem;
-  top: 0;
-  right: 0;
   z-index: 20;
   font-size: 2rem;
   line-height: 1.65;
@@ -396,7 +401,6 @@ section[id] {
   .c-button--footer {
     width: 33.5rem;
     max-width: 100%;
-    padding-inline: 0;
   }
 }
 
@@ -2396,8 +2400,8 @@ TOPへ戻るボタン
 /* --- TOPへ戻る・お問合せボタン --- */
 .p-fixed-buttons {
   position: fixed;
-  right: -0.3rem;
-  bottom: 25.6rem;
+  right: 0;
+  bottom: 0;
   z-index: 9999;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2414,20 +2418,12 @@ TOPへ戻るボタン
   visibility: hidden;
   -webkit-transition: opacity 0.3s ease, visibility 0.3s ease;
   transition: opacity 0.3s ease, visibility 0.3s ease;
+  width: 30rem;
   /* JSでクラスがついた時だけ、セットまとめて表示 */
-}
-.p-fixed-buttons.is-footer-reached {
-  position: absolute;
-  bottom: 28.9rem !important;
 }
 @media (max-width: 767px) {
   .p-fixed-buttons {
-    right: -11.1rem;
-    bottom: 14rem;
     gap: 1.9rem;
-  }
-  .p-fixed-buttons.is-footer-reached {
-    bottom: 31.3rem !important;
   }
 }
 .p-fixed-buttons.is-show {
@@ -2435,22 +2431,9 @@ TOPへ戻るボタン
   visibility: visible;
 }
 /* フッター右上の問い合わせボタン */
-.p-contact-banner {
-  right: 0;
-  bottom: 100%;
-  z-index: 30;
-  margin: 0;
-}
-@media (max-width: 767px) {
-  .p-contact-banner {
-    right: auto;
-    left: 50%;
-    -webkit-transform: translateX(-39%);
-            transform: translateX(-39%);
-  }
-}
-
 .page-top-btn {
+  width: 6.8rem;
+  height: 6.8rem;
   margin-inline: auto;
   -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
   transition: opacity 0.3s, -webkit-transform 0.3s;

@@ -7,8 +7,8 @@
 /* --- TOPへ戻る・お問合せボタン --- */
 .p-fixed-buttons {
   position: fixed;
-  right: -0.3rem;
-  bottom: 25.6rem;
+  right: 0;
+  bottom: 0;
   z-index: 9999;
   display: flex;
   flex-direction: column;
@@ -17,24 +17,25 @@
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease, visibility 0.3s ease;
+  width: 30rem;
 
-  &.is-footer-reached {
-    position: absolute;
-    bottom: 28.9rem !important;
-  }
+  // &.is-footer-reached {
+  //   position: absolute;
+  //   bottom: 28.9rem !important;
+  // }
 
   @include sp {
     //  display: block;
-    right: -11.1rem;
-    bottom: 14rem;
+    // right: -11.1rem;
+    // bottom: 14rem;
     gap: 1.9rem;
     
+    
 
-    &.is-footer-reached {
-      bottom: 31.3rem !important;
-    }
+    // &.is-footer-reached {
+    //   bottom: 31.3rem !important;
+    // }
   }
-
 
   /* JSでクラスがついた時だけ、セットまとめて表示 */
   &.is-show {
@@ -48,24 +49,24 @@
 }
 
 /* フッター右上の問い合わせボタン */
-.p-contact-banner {
-  // position: absolute;
-  right: 0;
-  bottom: 100%;   
-  z-index: 30;
-  margin: 0;
+// .p-contact-banner {
+//   // position: absolute;
+//   right: 0;
+//   bottom: 100%;   
+//   z-index: 30;
+//   margin: 0;
 
-  @include sp {
-      right: auto; 
-      left: 50%;   
-      transform: translateX(-39%); 
-  }
-}
+//   @include sp {
+//       right: auto; 
+//       left: 50%;   
+//       transform: translateX(-39%); 
+//   }
+// }
 
 .page-top-btn {
   //  position: absolute;
-  // width: 6.8rem !important;
-  // height: 6.8rem !important;
+  width: 6.8rem;
+  height: 6.8rem;
   margin-inline: auto;
   // right: 11.6rem;
   // bottom: 37.2rem;
