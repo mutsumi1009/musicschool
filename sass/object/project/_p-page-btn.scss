@@ -8,7 +8,7 @@
 .p-fixed-buttons {
   position: fixed;
   right: 0;
-  bottom: 0;
+  bottom: 2rem;
   z-index: 9999;
   display: flex;
   flex-direction: column;
@@ -19,22 +19,11 @@
   transition: opacity 0.3s ease, visibility 0.3s ease;
   width: 30rem;
 
-  // &.is-footer-reached {
-  //   position: absolute;
-  //   bottom: 28.9rem !important;
-  // }
-
   @include sp {
     //  display: block;
-    // right: -11.1rem;
-    // bottom: 14rem;
+    right: 1.7rem;
+    bottom: 31.5rem;
     gap: 1.9rem;
-    
-    
-
-    // &.is-footer-reached {
-    //   bottom: 31.3rem !important;
-    // }
   }
 
   /* JSでクラスがついた時だけ、セットまとめて表示 */
@@ -63,6 +52,10 @@
 //   }
 // }
 
+// .p-contact-banner {
+//   margin: 0;
+// }
+
 .page-top-btn {
   //  position: absolute;
   width: 6.8rem;
@@ -72,10 +65,10 @@
   // bottom: 37.2rem;
   // cursor: pointer;
   // display: block;
-  transition: transform 0.3s, opacity 0.3s;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 
   @include sp {
-   
+   margin-inline: 0.2rem;
     //  position: fixed;
     // right: 1.9rem;
     // bottom: 39rem;
@@ -88,8 +81,8 @@
 
   &:hover {
     @include pc {
-      opacity: 0.7;
-      transform: translateY(-3px);
+      opacity: 1;
+       transform: translateY(-3px);
     }
   }
 }

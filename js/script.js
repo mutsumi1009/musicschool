@@ -64,8 +64,7 @@ $('.js-to-top').on('click', function (e) {
 
 // --- フッター手前でストップさせる処理 ---
 $(window).on("scroll resize load", function () {
-const $fixedButtons = $(".js-fixed-buttons"); // あなたが使っているクラス名
-const scrollHeight = $(document).height(); 
+const $fixedButtons = $(".js-fixed-buttons"); 
 const scrollPosition = $(window).height() + $(window).scrollTop();
 
 
@@ -82,7 +81,7 @@ if (scrollHeight - scrollPosition <= footHeight) {
   // それ以外は元の fixed に戻す
   $fixedButtons.css({
     position: "fixed",
-    bottom: "0",
+    bottom: "20px",
   });
 }
 });

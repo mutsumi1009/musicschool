@@ -45,19 +45,20 @@
 }
 
 .c-button:hover {
-  background-color: $font-color;  
-  color: $main-color;             
+  background-color: $font-color;
+  color: $main-color;
   //  border-color: $main-color;     
 }
 
 /* フッター右上の 問い合わせボタン*/
 .c-button--footer {
   // position: relative;
-  display: flex;            
+  display: flex;
   justify-content: center;
-   align-items: center;
+  align-items: center;
   width: 30rem;
   height: 6rem;
+  max-width: none;
   // padding-inline: 8rem 8.4rem;
   // top: 0;   
   // right: 0;  
@@ -70,6 +71,6 @@
     width: 33.5rem;
     max-width: 100%;
     //  padding-inline: 0;
-   
+
   }
 }
