@@ -851,6 +851,13 @@ TOPへ戻るボタン
   -webkit-transform: none;
           transform: none;
 }
+@media (min-width: 768px) {
+  .page-top-btn:hover {
+    opacity: 0.7;
+    -webkit-transform: translateY(-3px);
+            transform: translateY(-3px);
+  }
+}
 
 .c-result-card {
   display: block;
@@ -1517,7 +1524,6 @@ TOPへ戻るボタン
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   width: 2px;
-  height: 199px;
   background-color: #CB0000;
 }
 
@@ -1603,7 +1609,7 @@ TOPへ戻るボタン
 
 .p-top-promo {
   background-color: #CB0000;
-  padding-block: 6.2rem 6rem;
+  padding-block: 6.2rem 5.7rem;
   text-align: center;
 }
 @media (max-width: 767px) {
@@ -1640,7 +1646,7 @@ TOPへ戻るボタン
   font-size: 1.8rem;
   background-color: #CB0000;
   color: #E8E8E8;
-  padding-top: 2rem;
+  padding-top: 2.3rem;
 }
 @media (max-width: 767px) {
   .p-top-promo__text {
@@ -1662,7 +1668,7 @@ TOPへ戻るボタン
 }
 
 .p-flow__list {
-  padding-top: 5.3rem;
+  padding-top: 5rem;
 }
 @media (max-width: 767px) {
   .p-flow__list {
@@ -1705,26 +1711,25 @@ TOPへ戻るボタン
 }
 @media (max-width: 767px) {
   .p-flow__item::before {
-    height: calc(100% + 13.5rem);
     top: 1.3rem;
     left: 1.8rem;
   }
 }
 
 .p-flow__item--last::before {
-  height: 5.7rem;
+  height: 6rem;
 }
 @media (max-width: 767px) {
   .p-flow__item--last::before {
-    height: calc(100% - 2rem) !important;
+    height: calc(100% - 1.8rem) !important;
   }
 }
 
 /* 先端矢印 */
 .p-flow__arrow {
   position: absolute;
-  left: 6rem;
-  bottom: -2rem;
+  left: 5.9rem;
+  bottom: -2.5rem;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
@@ -1739,7 +1744,7 @@ TOPへ戻るボタン
   content: "";
   position: absolute;
   left: 6rem;
-  top: 0.8rem;
+  top: 1.5rem;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   width: 2rem;
@@ -1815,7 +1820,7 @@ TOPへ戻るボタン
 }
 @media (max-width: 767px) {
   .p-top-reason {
-    padding-block: 4.9rem 4.1rem;
+    padding-block: 4.9rem 3.8rem;
   }
 }
 
@@ -1919,7 +1924,7 @@ TOPへ戻るボタン
   margin-top: 1rem;
   margin-left: -5rem;
   padding-left: 5rem;
-  padding-bottom: 0.7rem;
+  padding-bottom: 0.5rem;
 }
 @media (max-width: 767px) {
   .p-top-reason__item-title {
@@ -1936,20 +1941,22 @@ TOPへ戻るボタン
 
 .p-top-reason__text {
   font-size: 1.8rem;
+  padding-top: 0.7rem;
 }
 @media (max-width: 767px) {
   .p-top-reason__text {
     font-size: 1.6rem;
+    padding-top: 0.3rem;
   }
 }
 
 .p-top-voice {
   background-color: #CB0000;
-  padding-block: 4.6rem 8.5rem;
+  padding-block: 4.6rem 7.9rem;
 }
 @media (max-width: 767px) {
   .p-top-voice {
-    padding-block: 5rem 4.7rem;
+    padding-block: 4.7rem 4.2rem;
   }
 }
 .p-top-voice .l-inner {
@@ -1990,7 +1997,7 @@ TOPへ戻るボタン
 }
 
 .splide__arrow--prev {
-  top: 43% !important;
+  top: 41% !important;
   left: -4rem !important;
 }
 @media (max-width: 767px) {
@@ -2006,7 +2013,7 @@ TOPへ戻るボタン
 }
 
 .splide__arrow--next {
-  top: 43% !important;
+  top: 41% !important;
   right: -4rem !important;
 }
 @media (max-width: 767px) {
@@ -2113,6 +2120,7 @@ TOPへ戻るボタン
   -webkit-line-clamp: 3;
   overflow: hidden;
   opacity: 1;
+  line-height: 1.8;
 }
 @media (max-width: 767px) {
   .p-top-voice__text {
@@ -2164,15 +2172,15 @@ TOPへ戻るボタン
 @media (max-width: 767px) {
   .p-faq__question {
     padding-block: 1.9rem 0.9rem;
-    padding-inline: 1rem 1.9rem;
+    padding-inline: 1rem 1.6rem;
     font-size: 1.6rem;
   }
 }
 .p-faq__question::after {
   content: "";
   position: absolute;
-  right: 30px;
-  top: 50%;
+  right: 29px;
+  top: 55%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   /* 書き出した画像のサイズに合わせる */
@@ -2189,9 +2197,6 @@ TOPへ戻るボタン
     right: 15px;
     top: 55%;
   }
-}
-.p-faq__item:nth-child(4) .p-faq__question {
-  padding-block: 1rem;
 }
 .p-faq__question.is-open::after {
   -webkit-transform: translateY(-50%) rotate(180deg);
@@ -2227,7 +2232,7 @@ TOPへ戻るボタン
     left: -1rem;
   }
   .p-faq__item:nth-child(4) .p-faq__q {
-    top: -0.3rem;
+    top: -0.6rem;
   }
 }
 
@@ -2373,7 +2378,7 @@ TOPへ戻るボタン
 @media (max-width: 767px) {
   .p-top-blog__more {
     text-align: center;
-    margin-top: 3.4rem;
+    margin-top: 3.6rem;
   }
 }
 
@@ -2385,11 +2390,11 @@ TOPへ戻るボタン
 
 .p-top-page .p-blog-list {
   margin-top: 0;
-  padding-block: 4.1rem 20.2rem;
+  padding-block: 3.3rem 20.2rem;
 }
 @media (max-width: 767px) {
   .p-top-page .p-blog-list {
-    padding-block: 3.6rem 19.2rem;
+    padding-block: 3rem 19.2rem;
   }
 }
 
@@ -2428,15 +2433,9 @@ TOPへ戻るボタン
   opacity: 1;
   visibility: visible;
 }
-/* フッター右上の問い合わせボタン */
+
 .page-top-btn {
-  width: 6.8rem;
-  height: 6.8rem;
   margin-inline: auto;
-  -webkit-transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
-  transition: opacity 0.3s ease, -webkit-transform 0.3s ease;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  transition: opacity 0.3s ease, transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 @media (max-width: 767px) {
   .page-top-btn {
