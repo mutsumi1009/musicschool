@@ -11,10 +11,16 @@
   @include sp {
       // display: flex;
       align-items: center;
-      padding-block: 5rem 13.7rem;
+      padding-block: 6rem 23.7rem;
 
   }
 }   
+
+.p-result_details .c-hero--result-detail .c-result-card__img {
+  width: 100%;
+  aspect-ratio: 880 / 400 !important;
+  overflow: hidden;
+}
 
 .p-article-title {
   margin-top: 5rem; 
@@ -52,7 +58,7 @@
 .p-result-details__wrap {
 display: flex;
 gap: 4rem;
-margin-top: 5.7rem;
+margin-top: 4.7rem;
 
 @include sp {
   flex-direction: column;
@@ -67,7 +73,7 @@ width: auto;
 table {
   width: 100%;
   border-collapse: collapse;
-
+  
   @include tab {
     width: 100%;
   }
@@ -80,6 +86,7 @@ table {
 th,
 td {
   border: 0.5px solid #707070;
+  height: 3.8rem;
   padding-left: 2rem;
   font-size: 1.8rem;
   line-height: 1.5;
@@ -93,7 +100,7 @@ th {
   font-weight: 700;
   background: #e5e5e5;
   width: 14rem;
-  padding: 2rem;
+  padding: 1rem;
 
   @include sp {
     // width: auto;

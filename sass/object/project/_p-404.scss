@@ -16,7 +16,17 @@ text-align: center;
 
 // 404
 .p-404__content {
-  // padding-block: 6.8rem 9rem;
-  padding-block: 6.8rem 9.0rem;
+  padding-block: 4.7rem 5rem;
+
   @include sp {}
 }
+
+
+.p-404 {
+  .c-page-message {
+    @include sp {
+      text-align: unset;
+    }
+  }
+}
+

@@ -26,17 +26,47 @@
     font-size: 1.8rem;
 
     @include sp {
-        padding-block: 3.6rem 14.3rem;
+        padding-block: 3.6rem 20.3rem;
     }
 }
 
 .p-search {
     .c-blog-card {
         margin-top: 4.2rem;
+
+        & + .c-blog-card {
+            margin-top: 7rem;
+
+            @include sp {
+                margin-top: 3.7rem;
+            }
+        }
     }
 }
 
-
 .p-search__keyword {
     font-weight: 700;
+}
+
+.p-search {
+    .c-blog-card__text--pc {
+      display: block; 
+      
+      @include sp {
+        display: none; 
+      }
+    }
+  
+    .c-blog-card__text--sp {
+      display: none; 
+      
+      @include sp {
+        display: block; 
+      }
+    }
+  }
+
+  .p-search .c-blog-card__text {
+   
+    padding-top: 1rem;
 }

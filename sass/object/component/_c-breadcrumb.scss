@@ -14,9 +14,9 @@
 
   @include sp {
     padding: 0.7rem 2rem 0.7rem 1.8rem;
+    min-height: 0;
     height: 3.6rem;
   }
-
 }
 
 .c-breadcrumb__list {
@@ -28,7 +28,7 @@
 .c-breadcrumb__item {
   display: inline-flex;
   align-items: center;
-  // gap: 2rem;
+  gap: 2rem;
 }
 
 .c-breadcrumb__item+.c-breadcrumb__item::before {

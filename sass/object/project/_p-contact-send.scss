@@ -4,14 +4,6 @@
 @use "../component/c-hero";
 // @use "../../foundation/base" as *;
 
-// // p-404
-// .p-404 .p-page-btn {
-// margin-top: 3.4rem;
-
-//   @include sp {
-//     margin-top: 0.9rem;
-//   }
-// }
 
 /* ===============================================
 # contact-send
@@ -20,6 +12,8 @@
 .p-contact-send {
   text-align: center;
 }
+
+
 
 .p-contact-send__keyvisual {
   @extend .c-hero;
@@ -36,10 +30,9 @@
 }
 
 
-/* p-contact-send.scss */
 .p-contact-send .p-page-btn {
+  margin-top: 3.5rem;
 
-  margin-top: 4rem;
   @include sp {
     margin-top: 3.9rem;
   }
@@ -47,22 +40,22 @@
 
 
 .p-contact-send__content {
-  padding-block: 5.4rem 9rem;
-  // overflow: hidden;
-
+  padding-block: 6.7rem 9rem;
+ 
   @include sp {
     display: flex;
     align-items: center;
-    padding-block: 4rem 6rem;
+    padding-block: 5rem;
 
   }
 }
-// // 404
-// .p-404 .p-contact-send__content {
-//   padding-block: 6.8rem 9rem;
-// }
 
-/* ===============================================
-# contact_form
-=============================================== */
+/* contact_send ページ専用：下の余白（mainの余り高さ）を消す */
+.is-short-page .l-wrapper {
+  min-height: auto;
+}
 
+.is-short-page .l-main.p-contact-send {
+  flex: 0 0 auto;
+  min-height: auto;
+}
