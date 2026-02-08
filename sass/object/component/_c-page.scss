@@ -7,15 +7,17 @@
 // --- ページメッセージコンポーネント ---
 .c-page-message {
   // margin-block: 6.8rem 5rem;
- text-align: center;
+  text-align: center;
   font-size: 1.8rem;
   white-space: normal;
+  width: fit-content;
+  margin-inline: auto;
 
- @include sp {
-   font-size: 1.6rem;
-   text-align: left;
-  margin-top: 0rem;
-}
+  @include sp {
+    font-size: 1.6rem;
+    text-align: left;
+    margin-top: 0rem;
+  }
 }
 
 
@@ -31,8 +33,6 @@
   white-space: nowrap;
 
   @include sp {
-      line-height: 1.6;
+    line-height: 1.6;
   }
 }
-
-

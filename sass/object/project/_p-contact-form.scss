@@ -10,9 +10,7 @@
 =============================================== */
 
 .p-contact-form__content {
-   padding-block: 6.8rem 6.5rem;
-  // padding-block: vw(68) vw(65);
-  // overflow: hidden;
+  padding-block: 6.8rem 10rem;
 
   @include sp {
     // display: flex;
@@ -25,10 +23,6 @@
 // フォーム全体
 
 .contact__form {
-  // max-width: 80rem;
-  // margin: 0 auto;
-
-  // padding: 0 2rem;
 
   @include sp {
     width: auto;
@@ -47,7 +41,7 @@
 
   @include sp {
     gap: 0.8rem;
-    margin-top: 3.1rem;
+    margin-top: 3rem;
   }
 }
 
@@ -61,11 +55,15 @@
   @include sp {
     flex-direction: column;
     // align-items: center;
-    gap: 0.8rem;
+    gap: 0.7rem;
   }
 }
 
-
+.p-contact__item--message {
+  @include sp {
+    gap: 0; 
+  }
+}
 
 // タイトル部分
 .p-contact__title {
@@ -84,12 +82,27 @@
   color: $text-color;
 
   @include sp {
+    display: inline-block;
     font-size: 1.6rem;
+  }
+
+  &-sub {
+    display: block;
+    // margin-top: 0.5rem; 
+    font-size: 2rem;
+
+    @include sp {
+      // --- SPの設定 ---
+      display: inline;
+      margin-left: 1.4rem;
+      font-size: 1.6rem;
+    }
   }
 }
 
 .p-contact__item--inquiry {
-//  margin-top: -1rem;
+
+  //  margin-top: -1rem;
   @include sp {
     align-items: flex-start;
     gap: 0.1rem;
@@ -118,7 +131,7 @@
 .contact__input {
   width: 100%;
   height: 4rem;
-  padding: 1.2rem 1.5rem;
+  padding: 1.5rem 1.8rem;
   font-size: 1.5rem;
   border: 0.5px solid #000;
   // border-radius: 0.4rem;
@@ -135,34 +148,21 @@
 
   &:focus {
     outline: none;
-    // border-color: $main-color;
   }
 
   &::placeholder {
     color: #B2B2B2;
   }
-
-  // // textarea用
-  // &[name="message"] {
-  //   min-height: 15rem;
-  //   resize: vertical;
-
-  //   @include sp {
-  //     min-height: 12rem;
-  //   }
-  // }
 }
 
 .contact__textarea {
   width: 100%;
   min-height: 30rem;
-  padding: 1.5rem 2rem;
+  padding: 0.9rem 2rem;
   font-size: 1.5rem;
   border: 0.5px solid #000;
-  // border-radius: 0.4rem;
   background-color: #fff;
   color: $text-color;
-  // background-color: $font-color;
   line-height: 2.2;
   overflow-wrap: anywhere;
   resize: vertical;
@@ -174,11 +174,6 @@
     min-height: 19rem;
   }
 
-  // &:focus {
-  //   outline: none;
-  //   border-color: $main-color;
-  // }
-
   &::placeholder {
     color: #B2B2B2;
   }
@@ -189,7 +184,7 @@
 .contact__checkbox-group {
   display: flex;
   flex-direction: column;
-  gap: 0.8rem;
+  gap: 0.6rem;
 
   @include sp {
     gap: 1.2rem;
@@ -253,34 +248,25 @@
   }
 }
 
-// チェックボックスのテキスト
-
+// チェックボックスの
 .checkbox-text {
   flex: 1;
   font-size: 1.8rem;
 
   @include sp {
     font-size: 1.6rem;
+    line-height: 1.875;
   }
 }
 
 
-
 // 送信ボタン
 .contact__submit {
-  margin-top: 4rem;
+  margin-top: 4.4rem;
   text-align: center;
 
   @include sp {
-    margin-top: 3rem;
-  }
-
-  .c-button {
-    max-width: 25rem;
-
-    @include sp {
-      // max-width: 100%;
-    }
+    margin-top: 4.8rem;
   }
 }
 

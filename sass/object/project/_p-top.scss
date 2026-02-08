@@ -759,6 +759,28 @@
     }
 }
 
+
+.p-faq__answer {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    color: $main-color;
+    font-size: 1.7rem;
+    line-height: 1.764;
+    background-color: rgba(203, 0, 0, 0.098);
+    // height: 6.4rem;
+    padding-block: 1.5rem 0.9rem;
+    padding-inline: 2rem;
+
+    @include sp {
+        font-size: 1.6rem;
+        line-height: 1.875;
+        padding-inline: 0rem 1.9rem;
+        padding-top: 1.9rem;
+        gap: 1rem;
+    }
+}
+
 /* Aのマーク */
 .p-faq__a {
     display: inline-flex;
@@ -776,25 +798,6 @@
 
     @include sp {
         font-size: 1.6rem;
-    }
-}
-
-.p-faq__answer {
-    display: flex;
-    align-items: center;
-    font-weight: 700;
-    color: $main-color;
-    font-size: 1.7rem;
-    line-height: 1.764;
-    background-color: rgba(203, 0, 0, 0.098);
-    height: 6.4rem;
-    padding-inline: 2rem;
-
-    @include sp {
-        height: 11.6rem;
-        padding-inline: 0rem 1.9rem;
-        padding-top: 0.5rem;
-        gap: 1rem;
     }
 }
 

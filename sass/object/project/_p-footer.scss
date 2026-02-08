@@ -7,10 +7,9 @@
 .p-footer {
     background: $main-color;
     color: $c-accent;
-    padding-block: 4.4rem 5.1rem;
+    padding-block: 4.4rem 4.9rem;
     text-align: center;
     width: 100%;
-    // height: auto;
     position: relative;
 
     @include sp {
@@ -161,7 +160,6 @@
         font-size: 1.5rem;
         font-weight: 400;
         line-height: 1.25;
-        // text-align: left;
         margin: 0;
     }
 }
