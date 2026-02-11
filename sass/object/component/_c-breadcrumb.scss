@@ -7,7 +7,7 @@
   color: $text-color;
   margin-top: 0;
   width: 100%;
-  min-height: 5rem;
+  // min-height: 5rem;
   background-color: #E8E8E8;
   padding: 1rem 9.31rem 0.7rem 10rem;
   z-index: 2;
@@ -15,7 +15,7 @@
   @include sp {
     padding: 0.7rem 2rem 0.7rem 1.8rem;
     min-height: 0;
-    height: 3.6rem;
+    // height: 3.6rem;
   }
 }
 

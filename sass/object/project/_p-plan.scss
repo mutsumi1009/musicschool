@@ -5,7 +5,7 @@
 // @use "../../foundation/base" as *;
 
 .p-plan__content {
-  padding-block: 6.8rem 22.3rem;
+  padding-block: 6.8rem 22rem;
 
   @include sp {
     align-items: center;
@@ -131,9 +131,7 @@
   td {
     vertical-align: middle;
     text-align: center;
-    // padding-block: 3.2rem 2.6rem;
     width: 5rem;
-
 
     @include sp {
       padding-block: 1.0rem;
@@ -146,7 +144,7 @@
 .p-plan-table__table thead {
   th {
     background-color: transparent;
-    padding-top: 0.3rem;
+    padding-top: 0.1rem;
     padding-bottom: 0.2rem;
     font-size: 2rem;
 
@@ -170,7 +168,6 @@
     height: 6.6rem;
     white-space: normal;
     line-height: 1.25;
-    // padding-block: 0.8rem;
     vertical-align: bottom;
   }
 }
@@ -178,9 +175,9 @@
 .p-plan-table__head-text {
   font-size: 1.8rem;
   font-weight: 700;
+  letter-spacing: 0.09em;
 
   @include sp {
-
     font-size: 2rem;
 
   }
@@ -375,14 +372,10 @@ tr:last-child {
 
 /* --- SimpleBar  --- */
 .p-plan-table__scroll {
-  // overflow-x: auto;
 
   @include sp {
     position: relative;
     overflow-y: hidden;
-    // overflow-x: scroll;
-    // -webkit-overflow-scrolling: touch;
-    //  padding-bottom: 1.75rem;
     padding-bottom: 5rem;
   }
 }
