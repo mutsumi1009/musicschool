@@ -7,7 +7,7 @@
     display: flex;
     justify-content: space-between;
     // gap: 19.9rem;
-    margin-top: 6rem;
+    // margin-top: 6rem;
 
     @include sp {
         // gap: 8rem;
@@ -19,7 +19,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 1.6rem;
+     gap: 1.6rem;
 }
 
 .c-article-nav__label {
@@ -73,7 +73,6 @@
         content: "▶";
         margin-left: 0.8rem;
         font-size: 1.5rem;
-        // transform: translateY(1px);
     }
 
     @include sp {
@@ -84,7 +83,7 @@
 
 
 .c-article-nav__img {
-    margin-top: 1.6rem;
+    // margin-top: 1.6rem;
 
     @include sp {
         margin-top: 0rem;
@@ -135,10 +134,10 @@
     font-weight: 700;
     height: 5rem;
     padding: 0.8rem 1.6rem;
-    margin-top: 10rem;
+    // margin-top: 10rem;
 
     @include sp {
-        margin-top: 5rem;
+        // margin-top: 5rem;
     }
 }
 

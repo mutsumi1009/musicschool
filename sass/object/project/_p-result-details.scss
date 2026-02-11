@@ -4,26 +4,29 @@
 @use "../component/c-hero";
 // @use "../../foundation/base" as
 
-.p-result-details__content {   
-  // padding-block: 6.8rem 6.5rem;
-  padding-block: 7.7rem 15.7rem;
+.p-result-details__content {
+  padding-block: 7rem 15.7rem;
 
   @include sp {
-      // display: flex;
-      align-items: center;
-      padding-block: 6rem 23.7rem;
+    // display: flex;
+    align-items: center;
+    padding-block: 5rem 20rem;
 
   }
-}   
+}
 
 .p-result_details .c-hero--result-detail .c-result-card__img {
   width: 100%;
-  aspect-ratio: 880 / 400 !important;
+  aspect-ratio: 880 / 400;
   overflow: hidden;
+
+  @include sp {
+    aspect-ratio: 335 / 236;
+  }
 }
 
 .p-article-title {
-  margin-top: 5rem; 
+  margin-top: 5rem;
   font-size: 2.5rem;
   line-height: 1.6;
   font-weight: 700;
@@ -32,93 +35,98 @@
     margin-top: 3rem;
     font-size: 2rem;
     align-items: center;
-    // text-align: center;
   }
 }
 
 .p-result_details .c-result-card__date {
-  text-align: left;   
-  margin-top: 1.5rem; 
+  text-align: left;
+  margin-top: 1.5rem;
+
+  @include sp {
+    margin-top: 0;
+    font-size: 1.7rem;
+    padding-top: 0.2rem;
+  }
 }
 
 
 .p-result-list .c-result-card__body {
   display: flex;
   flex-direction: column;
-  row-gap: 0.8rem;  
+  row-gap: 0.8rem;
 }
 
 
-.p-result-list .c-result-card__link {
-    display: block;
-  }
 
 
 
 .p-result-details__wrap {
-display: flex;
-gap: 4rem;
-margin-top: 4.7rem;
+  display: flex;
+  gap: 4rem;
+  margin-top: 5.1rem;
 
-@include sp {
-  flex-direction: column;
-  gap: 3rem;
-  margin-top: 3rem;
-}
+  @include sp {
+    flex-direction: column;
+    gap: 3rem;
+    margin-top: 2rem;
+  }
 }
 
 .p-result_details__table {
-width: auto;
+  width: auto;
 
-table {
-  width: 100%;
-  border-collapse: collapse;
-  
-  @include tab {
+  table {
     width: 100%;
+    border-collapse: collapse;
+
+    @include tab {
+      width: 100%;
+    }
+
+    @include sp {
+      width: 100%;
+    }
   }
 
-  @include sp {
-    width: 100%;
+  th,
+  td {
+    border: 0.5px solid #707070;
+    height: 3.8rem;
+    padding-left: 2rem;
+    font-size: 1.8rem;
+    line-height: 1.5;
+
+    @include sp {
+      padding-left: 1rem;
+    }
+  }
+
+  th {
+    font-weight: 700;
+    background: #e5e5e5;
+    width: 14rem;
+    padding-top: 1rem;
+
+    @include sp {}
+  }
+
+  td {
+    width: 26rem;
   }
 }
 
-th,
-td {
-  border: 0.5px solid #707070;
-  height: 3.8rem;
-  padding-left: 2rem;
-  font-size: 1.8rem;
-  line-height: 1.5;
-
-  @include sp {
-    // width: auto;
-  }
+.p-result_details .c-article-nav {
+  margin-top: 6rem;
 }
 
-th {
-  font-weight: 700;
-  background: #e5e5e5;
-  width: 14rem;
-  padding: 1rem;
-
-  @include sp {
-    // width: auto;
-
-  }}
-
-td {
-  width: 26rem; 
-}
-}
-
-.p-article-nav__link {
+.p-article-nav__link .c-article-nav__link {
   display: flex;
-  flex-direction: column; 
-  gap: 1.2rem;
+  flex-direction: column;
+  gap: 0;
 }
 
-.p-article-nav__content {
+.p-article-nav__content,
+.c-article-nav__content {
   display: flex;
   align-items: flex-start;
   gap: 1.6rem;
@@ -129,50 +137,86 @@ td {
   }
 }
 
-.p-result_details__text {
-flex: 1; 
-font-size: 1.8rem;   
-line-height: 1.666; 
-max-width: 44rem;
-
-@include sp {
-  max-width: 100%;
-}
-} 
-
-.p-result-details__description {
-@include sp {
-  br {
-    display: none;
+.p-result_details .c-article-nav__img {
+  @include sp {
+    display: none !important;
   }
 }
+
+.p-result_details .c-tag{
+  @include sp {
+    width: 8rem;
+  }
 }
-// 卒業実績詳細ページ用：記事ナビの gap 
+
+.p-result_details__text,
+.c-article-nav__text {
+  flex: 1;
+  font-size: 1.6rem;
+  line-height: 1.666;
+  max-width: 44rem;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: clip;
+
+  @include sp {
+    max-width: 100%;
+    -webkit-line-clamp: 3;
+  }
+}
+
+.p-result-details__description {
+  flex: 1;
+  font-size: 1.8rem;
+  line-height: 1.666;
+  max-width: 44rem;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+
+  @include sp {
+    max-width: 100%;
+
+    br {
+      display: none;
+    }
+  }
+}
+
+// 卒業実績詳細ページ用：記事ナビ
 .p-result_details .c-article-nav {
   gap: 19.9rem;
 
 
   @include sp {
-    gap: 8rem;
+    gap: 2.2rem;
+    margin-top: 3.9rem;
   }
-  }
+}
 
 
-
-
-// .p-article-related {
-// display: flex;
-// justify-content: space-between;
-// gap: 3.4rem;
-// }
-
-.p-article-related .c-result-card__link {
-  display: flex;
-  align-items: flex-start;
-  gap: 1.6rem;
+.p-result_details .c-article-related__title {
+  font-size: 1.8rem;
+  margin-top: 9rem;
+  padding-left: 2.9rem;
 
   @include sp {
-    display: block;
+    margin-top: 5.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 1.6rem;
+  }
+}
+
+.p-result_details .c-result-card__link {
+  display: flex !important;
+  align-items: flex-start;
+  gap: 3rem;
+
+  @include sp {
+    gap: 2rem;
   }
 }
 
@@ -183,26 +227,21 @@ max-width: 44rem;
   }
 }
 
-.p-article-related .c-result-card__img img {
-  width: 26rem;
-  height: auto;
+.p-result_details .c-result-card__img {
+  aspect-ratio: 260 / 183;
   object-fit: cover;
 
   @include sp {
-    width: auto;
+    width: 16rem;
+    aspect-ratio: 160 / 111;
+    flex-shrink: 0
   }
 }
 
 
-.p-article-related .c-result-card__img {
-  width: 26rem;
-  height: auto;
-  flex-shrink: 0;
-
-  @include sp {
-    width: auto;
-  }
-
+.p-result_details .c-result-card__img img {
+  width: 100%;
+  height: 100%;
 }
 
 
@@ -213,25 +252,57 @@ max-width: 44rem;
   align-items: flex-start;
   gap: 0.8rem;
 
-  @include sp {
-   
-  }
+  @include sp {}
 }
 
 .p-article-related .c-result-card {
   display: flex;
-  gap: 1.6rem;   
+  gap: 1.6rem;
 
+  @include sp {}
+}
+
+.p-result_details .c-result-card__text {
   @include sp {
-  
+    font-size: 1.7rem;
+    font-weight: 700;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: clip;
+    line-height: 1.647;
   }
 }
 
-// パンくずリスト
-.p-blog_details .c-breadcrumb {
+// // パンくずリスト
+// .p-blog_details .c-breadcrumb {
+//   @include sp {
+//     min-height: 5.9rem;
+//     padding: 0;
+//     // height: 5.9rem;
+//   }
+// }
+
+// .p-result_details .c-breadcrumb {
+
+//   @include sp {
+//     padding-block: 1rem 0.7rem;
+//     min-height: 7.7rem;
+//     height: auto;
+//     padding-top: 0.5rem;
+//   }
+// }
+
+
+// ページ専用パンくずリスト
+.p-result_details .c-breadcrumb {
   @include sp {
-    min-height: 5.9rem;
-    padding: 0;
-    // height: 5.9rem;
+    padding: 0.7rem 0.9rem 0.7rem 0.3rem;
+    min-height: 7.7rem;
+    height: auto;
   }
+}
+
+.p-result_details .c-breadcrumb__item {
+  display: inline;
+  line-height: 1.25;
 }

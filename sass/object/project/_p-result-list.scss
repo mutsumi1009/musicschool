@@ -5,64 +5,64 @@
 // @use "../../foundation/base" as
 
 .p-result-list__content {
-    padding-block: 7rem 21.2rem;
-   
+  padding-block: 7rem 21.2rem;
 
-    @include sp {
-        align-items: center;
-        padding-block: 5rem 20.3rem;
 
-    }
+  @include sp {
+    align-items: center;
+    padding-block: 5rem 20.3rem;
+
+  }
 }
 
 
 .p-result-list {
-    width: 100%;
-    flex: none;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 7rem 10.6rem;
-    margin-top: 3rem;
+  width: 100%;
+  flex: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 7rem 10.6rem;
+  margin-top: 3rem;
 
-    @include sp {
-        grid-template-columns: 1fr;
-        gap: 3.5rem;
-    }
+  @include sp {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+  }
 }
 
 
 .p-search .c-hero {
 
-    @include sp {
-        aspect-ratio: 375 / 210;
-    }
+  @include sp {
+    aspect-ratio: 375 / 210;
   }
-  
-  .p-search .c-hero picture {
+}
 
-    @include sp {
-        height: 100%;
-    }
-  }
-  
-  .p-search .c-hero img {
+.p-search .c-hero picture {
 
-    @include sp {
-        height: 100%;
-        object-fit: cover;
-    }
+  @include sp {
+    height: 100%;
   }
-  
-// ページ専用パンくずリスト
-.p-result_details .c-breadcrumb {
-    @include sp {
-        padding: 0.7rem 2rem 0.7rem 1.8rem;
-        min-height: 7.7rem;
-      // height: 5.9rem;
-    }
-  }
+}
 
-  
-  .p-result-list .c-result-card__img {
-    aspect-ratio: 387 / 273;
+.p-search .c-hero img {
+
+  @include sp {
+    height: 100%;
+    object-fit: cover;
   }
+}
+
+
+
+.p-result-list .c-result-card__img {
+  aspect-ratio: 387 / 273;
+}
+
+.p-result-list .c-result-card__text {
+  margin-top: 2rem;
+
+  @include sp {
+  
+  }
+}
