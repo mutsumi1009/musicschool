@@ -26,7 +26,6 @@
 
   @include sp {
     width: auto;
-    // padding: 0 1.5rem;
   }
 }
 
@@ -36,8 +35,6 @@
   flex-direction: column;
   gap: 2.9rem;
   margin-top: 6rem;
-  // flex-wrap: nowrap;
-  // row-gap: 1.8rem;
 
   @include sp {
     gap: 0.8rem;
@@ -101,11 +98,17 @@
 }
 
 .p-contact__item--inquiry {
-
   //  margin-top: -1rem;
   @include sp {
     align-items: flex-start;
     gap: 0.1rem;
+  }
+  .contact__label {
+    line-height: 1.5;
+
+    @include sp {
+      line-height: 2.06;
+    }
   }
 }
 
@@ -187,7 +190,7 @@
   gap: 0.6rem;
 
   @include sp {
-    gap: 1.2rem;
+    gap: 1.1rem;
   }
 
   label {

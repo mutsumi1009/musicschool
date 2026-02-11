@@ -545,7 +545,7 @@
   display: flex;
   gap: 7.8rem;
   justify-content: flex-start;
-  margin-top: 4.9rem;
+  margin-top: 5.1rem;
 
   @include md {}
 
@@ -564,6 +564,9 @@
 
   @include tab {}
 
+  // @include sp {
+  //   width: 15.6rem;
+  // }
 }
 
 
@@ -571,12 +574,18 @@
   font-size: 1.7rem;
   font-weight: 500;
   width: 26rem;
+
+  // @include sp {
+  //   width: 15.6rem;
+  // }
 }
 
 .p-blog_details .c-article-nav__label--prev,
 .p-blog_details .c-article-nav__label--next {
   width: clamp(15.6rem, 40vw, 26rem);
 }
+
+
 
 
 .p-blog_details .c-article-nav__content {
@@ -599,9 +608,6 @@
 .p-blog_details .c-article-nav__text {
   white-space: normal;
   line-height: 1.56;
-  -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3; // ここで「3行」を確定させる
-    overflow: hidden;
   // width: 6.8rem;
 
   @include sp {}
@@ -695,31 +701,39 @@
 // ページ専用：パンくずの高さ調整（
 // ===============================================
 
-.p-blog_details .c-breadcrumb {
-  padding-right: 0;
-  padding-left: 0;
-  padding-top: 1.3rem;
-  padding-bottom: 0.7rem;
+.is-detail-page .c-breadcrumb {
+  padding: 1.3rem 0 0.7rem 0;
 
   @include sp {
-    min-height: 5.9rem;
-    padding-top: 0.3rem;
+     padding-block: 0.6rem; 
+    //  margin-bottom: 2rem;
+    // min-height: 5.9rem;
+    // padding-top: 0.3rem;
     // height: auto;
   }
 }
 
-.p-blog_details .c-breadcrumb__item {
+.is-detail-page .c-breadcrumb__item {
   font-size: 1.6rem;
   white-space: normal;
-  display: inline-block;
-  -ms-flex-align: initial;
-  align-items: initial;
-  gap: initial;
+   gap: 0;
+
+  @include sp {
+   
+  }
+}
+
+.is-detail-page .c-breadcrumb__item,
+.is-detail-page .c-breadcrumb a {
+  @include sp {
+    line-height: 1.5;  
+  }
 }
 
 
+
 /* 最後のパンくず以外に > を付ける */
-.p-blog_details .c-breadcrumb__item:not(:last-child)::after {
+.is-detail-page .c-breadcrumb__item:not(:last-child)::after {
   content: ">";
   display: inline-block;
   margin-left: 1.3rem;
@@ -730,8 +744,26 @@
 }
 
 /* 詳細ページでは before を使わない */
-.p-blog_details .c-breadcrumb__item+.c-breadcrumb__item::before {
+.is-detail-page .c-breadcrumb__item+.c-breadcrumb__item::before {
   content: none;
 }
 
+/* ===============================================
+# SP 共通：詳細ページのパンくずだけ折り返しレイアウト
+=============================================== */
 
+.is-detail-page .c-breadcrumb__list {
+  flex-wrap: wrap;
+  row-gap: 0.2rem;
+  column-gap: 3rem;
+
+  @include sp {
+    row-gap: 0;
+  }
+}
+
+
+.is-detail-page .c-breadcrumb__item.is-detail-page-item {
+  display: flex !important;
+  gap: 0 !important;
+}

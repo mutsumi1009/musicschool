@@ -7,14 +7,14 @@
 
  /* --- _p-blog-list.scss --- */
 .p-blog-list {
-  margin-top: 5.7rem; 
+  margin-top: 3rem; 
 
   @include sp {
       margin-top: 3.7rem;
   }
 
   .c-blog-card + .c-blog-card {
-      margin-top: 3rem;
+      margin-top: 7rem;
 
       @include sp {
           margin-top: 3.8rem;
@@ -24,12 +24,10 @@
   
 
 .p-blog-list__content {
-    // padding-block: 6.8rem 6.5rem;
     padding-block: 6.7rem 21rem;
 
 
     @include sp {
-        // display: flex;
         align-items: center;
         padding-block: 5rem 20.3rem;
 
