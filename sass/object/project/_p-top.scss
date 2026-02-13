@@ -765,7 +765,7 @@
         font-size: 1.6rem;
         line-height: 1.875;
         padding-inline: 0rem 1.9rem;
-        padding-top: 1.9rem;
+        padding-top: 1.7rem;
         gap: 1rem;
     }
 }
@@ -842,7 +842,7 @@
         margin-top: 3rem !important;
 
         @include sp {
-            margin-top: 4rem;
+            margin-top: 4.1rem !important;
         }
     }
 }
@@ -865,7 +865,7 @@
 
     @include sp {
         text-align: center;
-        margin-top: 3.6rem;
+        margin-top: 3.4rem;
     }
 }
 
@@ -880,6 +880,6 @@
     padding-block: 3.3rem 20.2rem;
 
     @include sp {
-        padding-block: 3rem 19.2rem;
+        padding-block: 2.5rem 18.9rem;
     }
 }
