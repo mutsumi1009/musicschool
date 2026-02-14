@@ -753,9 +753,11 @@
 =============================================== */
 
 .is-detail-page .c-breadcrumb__list {
-  flex-wrap: wrap;
-  row-gap: 0.2rem;
+  flex-wrap: nowrap;
+  row-gap: 0;
   column-gap: 3rem;
+  overflow-x: auto;
+  white-space: nowrap;
 
   @include sp {
     row-gap: 0;

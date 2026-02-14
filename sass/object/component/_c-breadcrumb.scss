@@ -11,18 +11,7 @@
    background-color: #E8E8E8;
    padding: 1rem 9.31rem 0.7rem 10rem;
    z-index: 2;
-
-   @include tab {
-     overflow-x: auto;
-     white-space: nowrap;
-     -webkit-overflow-scrolling: touch;
-
-     &::-webkit-scrollbar {
-       display: none;
-     }
-     -ms-overflow-style: none; /* IE, Edge用 */
-     scrollbar-width: none;/* Firefox用 */
-   }
+   overflow: hidden;
 
    @include sp {
      padding: 0.7rem 2rem 0.7rem 1.8rem;
@@ -34,15 +23,21 @@
    display: flex;
    flex-wrap: nowrap;
    gap: 0.5rem 2rem;
+   overflow-x: auto;     
+   white-space: nowrap;   
+   -webkit-overflow-scrolling: touch;
+   &::-webkit-scrollbar { display: none; }
+   -ms-overflow-style: none;
+   scrollbar-width: none;
 
-   @include md {
-     flex-wrap: nowrap;
-   }
+  //  @include md {
+  //    flex-wrap: nowrap;
+  //  }
 
-   @media screen and (max-width: 500px) {
-    flex-wrap: wrap;     
-    white-space: normal;
-   }
+  //  @media screen and (max-width: 500px) {
+  //   flex-wrap: wrap;     
+  //   white-space: normal;
+  //  }
  }
 
  .c-breadcrumb__item {
@@ -78,15 +73,15 @@
 # SP 共通：詳細ページのパンくずだけ折り返しレイアウト
 =============================================== */
  // bodyなどに .is-detail-page がついている場合のみ適用
- .is-detail-page .c-breadcrumb__list {
-   flex-wrap: wrap;
-   row-gap: 0.2rem;
-   column-gap: 3rem;
+//  .is-detail-page .c-breadcrumb__list {
+//    flex-wrap: wrap;
+//    row-gap: 0.2rem;
+//    column-gap: 3rem;
 
-   @include sp {
-     row-gap: 0;
-   }
- }
+//    @include sp {
+//      row-gap: 0;
+//    }
+//  }
 
 
  .is-detail-page .c-breadcrumb__item.is-detail-page-item {
