@@ -283,10 +283,8 @@ section[id] {
     overflow-x: auto;
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
-    -ms-overflow-style: none;
-    /* IE, Edge用 */
-    scrollbar-width: none;
-    /* Firefox用 */
+    -ms-overflow-style: none; /* IE, Edge用 */
+    scrollbar-width: none; /* Firefox用 */
   }
   .c-breadcrumb::-webkit-scrollbar {
     display: none;
@@ -295,7 +293,6 @@ section[id] {
 @media (max-width: 767px) {
   .c-breadcrumb {
     padding: 0.7rem 2rem 0.7rem 1.8rem;
-    min-height: 0;
   }
 }
 
@@ -313,7 +310,7 @@ section[id] {
         flex-wrap: nowrap;
   }
 }
-@media (max-width: 767px) {
+@media screen and (max-width: 500px) {
   .c-breadcrumb__list {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -3559,7 +3556,9 @@ TOPへ戻るボタン
 }
 
 .p-result_details .c-breadcrumb__item {
-  display: inline;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   line-height: 1.25;
 }
 
