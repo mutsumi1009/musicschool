@@ -9,13 +9,13 @@
    width: 100%;
    // min-height: 5rem;
    background-color: #E8E8E8;
-   padding: 1rem 9.31rem 0.7rem 10rem;
+   padding: 1.5rem 2.31rem 1.6rem 2rem;
    z-index: 2;
-   overflow: hidden;
+   //  overflow: visible;
 
    @include sp {
      padding: 0.7rem 2rem 0.7rem 1.8rem;
-    //  min-height: 0;
+     //  min-height: 0;
    }
  }
 
@@ -23,21 +23,27 @@
    display: flex;
    flex-wrap: nowrap;
    gap: 0.5rem 2rem;
-   overflow-x: auto;     
-   white-space: nowrap;   
+   overflow-x: auto;
+   white-space: nowrap;
    -webkit-overflow-scrolling: touch;
-   &::-webkit-scrollbar { display: none; }
+
+   &::-webkit-scrollbar {
+     display: none;
+   }
+
    -ms-overflow-style: none;
    scrollbar-width: none;
+   max-width: 108rem;
+   margin: 0 auto;
 
-  //  @include md {
-  //    flex-wrap: nowrap;
-  //  }
+   //  @include md {
+   //    flex-wrap: nowrap;
+   //  }
 
-  //  @media screen and (max-width: 500px) {
-  //   flex-wrap: wrap;     
-  //   white-space: normal;
-  //  }
+   //  @media screen and (max-width: 500px) {
+   //   flex-wrap: wrap;     
+   //   white-space: normal;
+   //  }
  }
 
  .c-breadcrumb__item {
@@ -73,15 +79,15 @@
 # SP 共通：詳細ページのパンくずだけ折り返しレイアウト
 =============================================== */
  // bodyなどに .is-detail-page がついている場合のみ適用
-//  .is-detail-page .c-breadcrumb__list {
-//    flex-wrap: wrap;
-//    row-gap: 0.2rem;
-//    column-gap: 3rem;
+ //  .is-detail-page .c-breadcrumb__list {
+ //    flex-wrap: wrap;
+ //    row-gap: 0.2rem;
+ //    column-gap: 3rem;
 
-//    @include sp {
-//      row-gap: 0;
-//    }
-//  }
+ //    @include sp {
+ //      row-gap: 0;
+ //    }
+ //  }
 
 
  .is-detail-page .c-breadcrumb__item.is-detail-page-item {
