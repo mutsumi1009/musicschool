@@ -277,18 +277,7 @@ section[id] {
   background-color: #E8E8E8;
   padding: 1rem 9.31rem 0.7rem 10rem;
   z-index: 2;
-}
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  .c-breadcrumb {
-    overflow-x: auto;
-    white-space: nowrap;
-    -webkit-overflow-scrolling: touch;
-    -ms-overflow-style: none; /* IE, Edge用 */
-    scrollbar-width: none; /* Firefox用 */
-  }
-  .c-breadcrumb::-webkit-scrollbar {
-    display: none;
-  }
+  overflow: hidden;
 }
 @media (max-width: 767px) {
   .c-breadcrumb {
@@ -303,19 +292,14 @@ section[id] {
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
   gap: 0.5rem 2rem;
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
-@media (min-width: 480px) and (max-width: 767px) {
-  .c-breadcrumb__list {
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
-  }
-}
-@media screen and (max-width: 500px) {
-  .c-breadcrumb__list {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    white-space: normal;
-  }
+.c-breadcrumb__list::-webkit-scrollbar {
+  display: none;
 }
 
 .c-breadcrumb__item {
@@ -356,20 +340,6 @@ section[id] {
 /* ===============================================
 # SP 共通：詳細ページのパンくずだけ折り返しレイアウト
 =============================================== */
-.is-detail-page .c-breadcrumb__list {
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  row-gap: 0.2rem;
-  -webkit-column-gap: 3rem;
-     -moz-column-gap: 3rem;
-          column-gap: 3rem;
-}
-@media (max-width: 767px) {
-  .is-detail-page .c-breadcrumb__list {
-    row-gap: 0;
-  }
-}
-
 .is-detail-page .c-breadcrumb__item.is-detail-page-item {
   display: -webkit-box !important;
   display: -ms-flexbox !important;
@@ -4366,12 +4336,14 @@ TOPへ戻るボタン
 # SP 共通：詳細ページのパンくずだけ折り返しレイアウト
 =============================================== */
 .is-detail-page .c-breadcrumb__list {
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  row-gap: 0.2rem;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  row-gap: 0;
   -webkit-column-gap: 3rem;
      -moz-column-gap: 3rem;
           column-gap: 3rem;
+  overflow-x: auto;
+  white-space: nowrap;
 }
 @media (max-width: 767px) {
   .is-detail-page .c-breadcrumb__list {
