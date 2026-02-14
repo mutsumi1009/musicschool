@@ -13,7 +13,6 @@
    z-index: 2;
 
    @include tab {
-     // font-size: 1.5rem;
      overflow-x: auto;
      white-space: nowrap;
      -webkit-overflow-scrolling: touch;
@@ -21,17 +20,13 @@
      &::-webkit-scrollbar {
        display: none;
      }
-
-     -ms-overflow-style: none;
-     /* IE, Edge用 */
-     scrollbar-width: none;
-     /* Firefox用 */
+     -ms-overflow-style: none; /* IE, Edge用 */
+     scrollbar-width: none;/* Firefox用 */
    }
 
    @include sp {
      padding: 0.7rem 2rem 0.7rem 1.8rem;
-     min-height: 0;
-     // height: 3.6rem;
+    //  min-height: 0;
    }
  }
 
@@ -44,9 +39,9 @@
      flex-wrap: nowrap;
    }
 
-   @include sp {
-     flex-wrap: wrap;
-     white-space: normal;
+   @media screen and (max-width: 500px) {
+    flex-wrap: wrap;     
+    white-space: normal;
    }
  }
 
