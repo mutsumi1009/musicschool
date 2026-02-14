@@ -275,12 +275,12 @@ section[id] {
   margin-top: 0;
   width: 100%;
   background-color: #E8E8E8;
-  padding: 1.5rem 2.31rem 1.6rem 2rem;
+  padding-block: 1.5rem 2rem;
   z-index: 2;
 }
 @media (max-width: 767px) {
   .c-breadcrumb {
-    padding: 0.7rem 2rem 0.7rem 1.8rem;
+    padding-block: 0.7rem;
   }
 }
 
@@ -1097,12 +1097,6 @@ TOPへ戻るボタン
   transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
   height: 8rem;
-  padding-inline: 10rem;
-}
-@media screen and (max-width: 1024px) {
-  .p-header {
-    padding-inline: 2rem;
-  }
 }
 @media (max-width: 767px) {
   .p-header {
@@ -1122,14 +1116,6 @@ TOPへ戻るボタン
       -ms-flex-align: center;
           align-items: center;
   height: 100%;
-  max-width: 108rem;
-  margin: 0 auto;
-  padding-inline: 0rem;
-}
-@media (max-width: 767px) {
-  .p-header__inner {
-    padding-inline: 2rem;
-  }
 }
 
 .logo {
