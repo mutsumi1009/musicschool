@@ -8,6 +8,11 @@
 	text-align: center;
 	transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 	height: 8rem;
+	padding-inline: 10rem;
+	
+	@media screen and (max-width: 1024px) {
+		padding-inline: 2rem;
+   }
 
 	@include sp {
 		height: 5rem;
@@ -23,11 +28,10 @@
 	max-width: 108rem;
 	margin: 0 auto;
 	// padding-inline: vw(100);
-	padding-inline: 10rem;
+	padding-inline: 0rem;
 
-	// @media screen and (max-width: 1024px) {
-	// 	padding-inline: 2rem;
-	// }
+	
+
 	@include sp {
 		padding-inline: 2rem;
 	}
