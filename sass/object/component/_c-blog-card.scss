@@ -15,15 +15,6 @@
     }
 }
 
-// .c-blog-card+.c-blog-card {
-//     margin-top: 7rem;
-
-//     @include sp {
-//         margin-top: 3.9rem;
-//     }
-// }
-
-
 .c-blog-card__link {
     display: flex;
     flex-direction: row;
@@ -46,7 +37,6 @@
     }
 }
 
-
 .c-blog-card__img {
     display: flex;
     position: relative;
@@ -66,14 +56,12 @@
     @include sp {
         width: auto;
         height: auto;
-        // object-fit: cover;
     }
 }
 
 .c-blog-card__body {
     display: flex;
     flex-direction: column;
-    // gap: 0.5rem;
     width: 100%;
     flex: 1;
 }

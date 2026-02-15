@@ -79,12 +79,6 @@
     }
 }
 
-.p-footer__logo img {
-
-    @include sp {
-        // width: 3.2rem; 
-    }
-}
 
 .p-footer__sns {
     display: flex;
@@ -130,8 +124,6 @@
     @include sp {
         font-size: 1.5rem;
         display: block;
-        // padding-block: 2.1rem;
-        // padding-inline: 3rem;
         margin-top: 2.4rem;
         white-space: nowrap;
     }

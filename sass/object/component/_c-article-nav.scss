@@ -6,12 +6,6 @@
 .c-article-nav {
     display: flex;
     justify-content: space-between;
-    // gap: 19.9rem;
-    // margin-top: 6rem;
-
-    @include sp {
-        // gap: 8rem;
-    }
 }
 
 
@@ -23,7 +17,6 @@
 }
 
 .c-article-nav__label {
-    // display: inline-block;
     display: inline-flex;
     align-items: center;
     justify-content: space-between;
@@ -31,11 +24,8 @@
     width: auto;
     height: 3.7rem;
     color: #fff;
-    // padding-inline: 2rem 2.32rem;
     font-size: 1.6rem;
     font-weight: 700;
-    // gap:1.9rem;
-    // margin-top: 6rem;
 }
 
 // 前の記事
@@ -53,7 +43,6 @@
         content: "◀";
         margin-right: 0.8rem;
         font-size: 1.5rem;
-        //  transform: translateY(1px);
 
         @include sp {
             font-size: 1.5rem;
@@ -83,7 +72,6 @@
 
 
 .c-article-nav__img {
-    // margin-top: 1.6rem;
 
     @include sp {
         margin-top: 0rem;
@@ -124,7 +112,6 @@
     }
 }
 
-
 .c-article-related__title {
     display: inline-flex;
     align-items: center;
@@ -134,11 +121,6 @@
     font-weight: 700;
     height: 5rem;
     padding: 0.8rem 1.6rem;
-    // margin-top: 10rem;
-
-    @include sp {
-        // margin-top: 5rem;
-    }
 }
 
 

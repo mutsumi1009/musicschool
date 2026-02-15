@@ -21,7 +21,6 @@
 }
 
 // フォーム全体
-
 .contact__form {
 
   @include sp {
@@ -38,7 +37,7 @@
 
   @include sp {
     gap: 0.8rem;
-    margin-top: 3rem;
+    margin-top: 3.3rem;
   }
 }
 
@@ -51,7 +50,6 @@
 
   @include sp {
     flex-direction: column;
-    // align-items: center;
     gap: 0.7rem;
   }
 }
@@ -85,7 +83,6 @@
 
   &-sub {
     display: block;
-    // margin-top: 0.5rem; 
     font-size: 2rem;
 
     @include sp {
@@ -98,7 +95,6 @@
 }
 
 .p-contact__item--inquiry {
-  //  margin-top: -1rem;
   @include sp {
     align-items: flex-start;
     gap: 0.1rem;
@@ -190,7 +186,7 @@
   gap: 0.6rem;
 
   @include sp {
-    gap: 1.1rem;
+    gap: 1rem;
   }
 
   label {
@@ -214,7 +210,6 @@
     height: 0;
 
     &:checked+.custom-checkbox-square {
-      // background-color: $main-color;
       border-color: $text-color;
 
       &::after {
@@ -231,7 +226,6 @@
   width: 2rem;
   height: 2rem;
   border: 0.5px solid #000;
-  // border-radius: 0.3rem;
   background-color: #fff;
   flex-shrink: 0;
   transition: background-color 0.3s, border-color 0.3s;

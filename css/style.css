@@ -275,12 +275,12 @@ section[id] {
   margin-top: 0;
   width: 100%;
   background-color: #E8E8E8;
-  padding-block: 1.5rem 2rem;
+  padding-block: 1.2rem 0.9rem;
   z-index: 2;
 }
 @media (max-width: 767px) {
   .c-breadcrumb {
-    padding-block: 0.7rem;
+    padding-block: 0.4rem 0.3rem;
   }
 }
 
@@ -294,13 +294,15 @@ section[id] {
   overflow-x: auto;
   white-space: nowrap;
   -webkit-overflow-scrolling: touch;
+}
+.c-breadcrumb__list::-webkit-scrollbar {
+  display: none;
+}
+.c-breadcrumb__list {
   -ms-overflow-style: none;
   scrollbar-width: none;
   max-width: 108rem;
   margin: 0 auto;
-}
-.c-breadcrumb__list::-webkit-scrollbar {
-  display: none;
 }
 
 .c-breadcrumb__item {
@@ -633,12 +635,14 @@ section[id] {
   width: -moz-fit-content;
   width: fit-content;
   margin-inline: auto;
+  line-height: 1.666;
 }
 @media (max-width: 767px) {
   .c-page-message {
     font-size: 1.6rem;
     text-align: left;
     margin-top: 0rem;
+    line-height: 1.87;
   }
 }
 
@@ -2175,7 +2179,6 @@ TOPへ戻るボタン
   line-height: 1.764;
   cursor: pointer;
   font-size: 1.8rem;
-  /* 開いている時は180度回転させる */
 }
 @media (max-width: 767px) {
   .p-faq__question {
@@ -2205,6 +2208,9 @@ TOPへ戻るボタン
     right: 15px;
     top: 55%;
   }
+}
+.p-faq__question {
+  /* 開いている時は180度回転させる */
 }
 .p-faq__question.is-open::after {
   -webkit-transform: translateY(-50%) rotate(180deg);
@@ -2429,7 +2435,6 @@ TOPへ戻るボタン
   -webkit-transition: opacity 0.3s ease, visibility 0.3s ease;
   transition: opacity 0.3s ease, visibility 0.3s ease;
   width: 30rem;
-  /* JSでクラスがついた時だけ、セットまとめて表示 */
 }
 @media (max-width: 767px) {
   .p-fixed-buttons {
@@ -2437,6 +2442,9 @@ TOPへ戻るボタン
     bottom: 31.5rem;
     gap: 1.9rem;
   }
+}
+.p-fixed-buttons {
+  /* JSでクラスがついた時だけ、セットまとめて表示 */
 }
 .p-fixed-buttons.is-show {
   opacity: 1;
@@ -2476,21 +2484,21 @@ TOPへ戻るボタン
 }
 
 .p-404 .p-page-btn {
-  margin-top: 3.4rem;
+  margin-top: 4rem;
   text-align: center;
 }
 @media (max-width: 767px) {
   .p-404 .p-page-btn {
-    margin-top: 0.9rem;
+    margin-top: 0.5rem;
   }
 }
 
 .p-404__content {
-  padding-block: 4.7rem 5rem;
+  padding-block: 6.8rem 9rem;
 }
 @media (max-width: 767px) {
-  .p-404 .c-page-message {
-    text-align: unset;
+  .p-404__content {
+    padding-block: 4.7rem 5rem;
   }
 }
 
@@ -2582,7 +2590,7 @@ TOPへ戻るボタン
 @media (max-width: 767px) {
   .p-contact__items {
     gap: 0.8rem;
-    margin-top: 3rem;
+    margin-top: 3.3rem;
   }
 }
 
@@ -2769,7 +2777,7 @@ TOPへ戻るボタン
 }
 @media (max-width: 767px) {
   .contact__checkbox-group {
-    gap: 1.1rem;
+    gap: 1rem;
   }
 }
 .contact__checkbox-group label {
@@ -3165,7 +3173,7 @@ TOPへ戻るボタン
           flex: none;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 7rem 10.6rem;
+  gap: 7.1rem 10.6rem;
   margin-top: 3rem;
 }
 @media (max-width: 767px) {
@@ -3196,12 +3204,26 @@ TOPへ戻るボタン
 }
 
 .p-result-list .c-result-card__img {
+  width: 100%;
+  max-width: 38.7rem;
   aspect-ratio: 387/273;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+@media (max-width: 767px) {
+  .p-result-list .c-result-card__img {
+    aspect-ratio: 335/200;
+  }
+}
+
+.p-result-list .c-result-card__link {
+  display: block;
 }
 
 .p-result-list .c-result-card__text {
   margin-top: 2rem;
 }
+
 .p-result-details__content {
   padding-block: 7rem 15.7rem;
 }
@@ -3457,15 +3479,16 @@ TOPへ戻るボタン
   mix-blend-mode: normal;
 }
 
-.p-result_details .c-result-card__img {
+.p-result_details .c-article-related .c-result-card__img {
+  max-width: 26rem;
   aspect-ratio: 260/183;
   -o-object-fit: cover;
      object-fit: cover;
 }
 @media (max-width: 767px) {
-  .p-result_details .c-result-card__img {
+  .p-result_details .c-article-related .c-result-card__img {
     width: 16rem;
-    aspect-ratio: 160/111;
+    aspect-ratio: 160/113;
     -ms-flex-negative: 0;
         flex-shrink: 0;
   }
@@ -3518,13 +3541,6 @@ TOPへ戻るボタン
   }
 }
 
-.p-result_details .c-breadcrumb__item {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  line-height: 1.25;
-}
-
 @media (max-width: 767px) {
   .is-result-detail .c-breadcrumb__item,
   .is-result-detail .c-breadcrumb a {
@@ -3536,6 +3552,12 @@ TOPへ戻るボタン
 .is-result-detail .c-hero::before {
   background-color: transparent !important;
   mix-blend-mode: normal !important;
+}
+
+@media (max-width: 767px) {
+  .p-result_details .c-article-related .c-tag--lg {
+    width: 8rem;
+  }
 }
 
 .p-blog_details__content {
@@ -4585,9 +4607,6 @@ th.is-recommend {
 }
 
 /* --- ボディ(tbody) --- */
-.p-plan-table__table tbody {
-  /*月額料金の行（1行目）を太字にする */
-}
 .p-plan-table__table tbody th {
   text-align: left;
   border-right: 1px solid #ccc;
@@ -4625,6 +4644,9 @@ th.is-recommend {
     padding-bottom: 1.6rem !important;
     line-height: 1.5625;
   }
+}
+.p-plan-table__table tbody {
+  /*月額料金の行（1行目）を太字にする */
 }
 .p-plan-table__table tbody tr:first-child {
   border-top: 1px solid #ccc;
