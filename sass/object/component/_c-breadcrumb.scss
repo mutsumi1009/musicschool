@@ -7,15 +7,12 @@
    color: $text-color;
    margin-top: 0;
    width: 100%;
-   // min-height: 5rem;
    background-color: #E8E8E8;
-   padding-block: 1.5rem 2rem;
+   padding-block: 1.2rem 0.9rem;
    z-index: 2;
-   //  overflow: visible;
-
+   
    @include sp {
-     padding-block: 0.7rem;
-     //  min-height: 0;
+     padding-block: 0.4rem 0.3rem;
    }
  }
 
@@ -35,15 +32,6 @@
    scrollbar-width: none;
    max-width: 108rem;
    margin: 0 auto;
-
-   //  @include md {
-   //    flex-wrap: nowrap;
-   //  }
-
-   //  @media screen and (max-width: 500px) {
-   //   flex-wrap: wrap;     
-   //   white-space: normal;
-   //  }
  }
 
  .c-breadcrumb__item {
@@ -67,7 +55,6 @@
 
    @include sp {
      font-size: 1.6rem;
-     // margin: 2rem 0 3rem;
    }
  }
 
@@ -78,18 +65,6 @@
  /* ===============================================
 # SP 共通：詳細ページのパンくずだけ折り返しレイアウト
 =============================================== */
- // bodyなどに .is-detail-page がついている場合のみ適用
- //  .is-detail-page .c-breadcrumb__list {
- //    flex-wrap: wrap;
- //    row-gap: 0.2rem;
- //    column-gap: 3rem;
-
- //    @include sp {
- //      row-gap: 0;
- //    }
- //  }
-
-
  .is-detail-page .c-breadcrumb__item.is-detail-page-item {
    display: flex !important;
    gap: 0 !important;

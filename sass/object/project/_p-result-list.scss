@@ -7,11 +7,9 @@
 .p-result-list__content {
   padding-block: 7rem 21.2rem;
 
-
   @include sp {
     align-items: center;
     padding-block: 5rem 20.3rem;
-
   }
 }
 
@@ -21,7 +19,7 @@
   flex: none;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 7rem 10.6rem;
+  gap: 7.1rem 10.6rem;
   margin-top: 3rem;
 
   @include sp {
@@ -54,15 +52,22 @@
 }
 
 
-
 .p-result-list .c-result-card__img {
+  width: 100%;
+  max-width: 38.7rem; 
   aspect-ratio: 387 / 273;
+  flex-shrink: 0; 
+
+  @include sp {
+     aspect-ratio: 335 / 200; 
+  }
+}
+
+.p-result-list .c-result-card__link {
+  display:block
 }
 
 .p-result-list .c-result-card__text {
   margin-top: 2rem;
-
-  @include sp {
-  
-  }
 }
+
