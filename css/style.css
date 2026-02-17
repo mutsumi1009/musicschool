@@ -224,7 +224,7 @@ section[id] {
   position: fixed;
   top: 0;
   z-index: 999;
-  background-color: #F5F5F5;
+  background-color: #fff;
 }
 @media (max-width: 767px) {
   .l-header {
@@ -232,7 +232,6 @@ section[id] {
   }
 }
 
-/* l-main.scss (または該当ファイル) */
 .l-main {
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -900,6 +899,11 @@ TOPへ戻るボタン
       -ms-flex-align: start;
           align-items: flex-start;
   gap: 1.6rem;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+.c-result-card__link:hover {
+  opacity: 0.7;
 }
 @media (max-width: 767px) {
   .c-result-card__link {
@@ -955,6 +959,7 @@ TOPへ戻るボタン
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+
 .c-article-nav__link {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1094,6 +1099,7 @@ TOPへ戻るボタン
   height: 5rem;
   padding: 0.8rem 1.6rem;
 }
+
 .p-header {
   text-align: center;
   -webkit-transition: background-color 0.3s ease-in-out, -webkit-box-shadow 0.3s ease-in-out;
@@ -1130,6 +1136,11 @@ TOPへ戻るボタン
       -ms-flex-align: center;
           align-items: center;
   height: 100%;
+  -webkit-transition: opacity 0.4s, color 0.4s;
+  transition: opacity 0.4s, color 0.4s;
+}
+.logo:hover {
+  opacity: 0.7;
 }
 @media (max-width: 767px) {
   .logo {
@@ -2402,6 +2413,9 @@ TOPへ戻るボタン
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
 }
+.p-top-blog__more-link:hover {
+  opacity: 0.7;
+}
 
 .p-top-page .p-blog-list {
   margin-top: 0;
@@ -2520,7 +2534,7 @@ TOPへ戻るボタン
 }
 
 .p-contact-send .p-page-btn {
-  margin-top: 3.5rem;
+  margin-top: 3.9rem;
 }
 @media (max-width: 767px) {
   .p-contact-send .p-page-btn {
@@ -3055,7 +3069,6 @@ TOPへ戻るボタン
   }
 }
 
-/* --- _p-blog-list.scss --- */
 .p-blog-list {
   margin-top: 3rem;
 }
@@ -3670,6 +3683,13 @@ TOPへ戻るボタン
     margin-top: 2.3rem;
   }
 }
+.p-blog-detail__sns a {
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+.p-blog-detail__sns a:hover {
+  opacity: 0.7;
+}
 
 .p-blog-detail__text--lead {
   margin-top: 3.8rem;
@@ -3736,6 +3756,7 @@ TOPへ戻るボタン
   -o-object-fit: cover;
      object-fit: cover;
 }
+
 .p-blog-detail__list {
   margin-top: 2rem;
   padding-bottom: 4rem;
@@ -3890,6 +3911,7 @@ TOPへ戻るボタン
       -ms-flex-align: center;
           align-items: center;
 }
+
 .p-sidebar-title {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3949,6 +3971,11 @@ TOPへ戻るボタン
   font-size: 1.8rem;
   font-weight: 700;
   padding: 1.5rem;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+.p-sidebar-banner__inner:hover {
+  opacity: 0.7;
 }
 @media (max-width: 767px) {
   .p-sidebar-banner__inner {
@@ -3987,6 +4014,8 @@ TOPへ戻るボタン
   height: 4rem;
   border: none;
   background-color: #E8E8E8;
+  max-width: 18rem;
+  padding-inline: 1.5rem;
 }
 @media (max-width: 767px) {
   .p-sidebar-search__input {
@@ -4104,6 +4133,12 @@ TOPへ戻るボタン
   gap: 1.5rem;
   text-decoration: none;
   color: #000;
+  cursor: pointer;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+.p-sidebar-recommend__link:hover {
+  opacity: 0.7;
 }
 
 .p-sidebar-recommend__img {
@@ -4135,6 +4170,12 @@ TOPへ戻るボタン
 
 .p-sidebar-category {
   font-size: 1.7rem;
+  cursor: pointer;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+.p-sidebar-category:hover {
+  opacity: 0.7;
 }
 @media (max-width: 767px) {
   .p-sidebar-category {
@@ -4178,6 +4219,7 @@ TOPへ戻るボタン
   font-weight: 500;
   width: 26rem;
 }
+
 .p-blog_details .c-article-nav__label--next {
   font-size: 1.7rem;
   font-weight: 500;
@@ -4213,12 +4255,18 @@ TOPへ戻るボタン
 
 .p-blog_details .c-article-nav__item {
   width: auto;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+.p-blog_details .c-article-nav__item:hover {
+  opacity: 0.7;
 }
 
 .p-blog_details .c-article-nav__text {
   white-space: normal;
   line-height: 1.56;
 }
+
 .p-blog_details .c-article-nav__img {
   margin: 0;
 }
@@ -4250,6 +4298,11 @@ TOPへ戻るボタン
 
 .p-blog_details .c-result-card__link {
   gap: 3rem;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+.p-blog_details .c-result-card__link:hover {
+  opacity: 0.7;
 }
 @media (max-width: 767px) {
   .p-blog_details .c-result-card__link {
@@ -4474,7 +4527,6 @@ TOPへ戻るボタン
 .p-plan__message {
   margin-top: 4.8rem;
   display: block;
-  /* ✅ 共通パーツ .c-page-message をこの中だけで上書き */
 }
 .p-plan__message .c-page-message {
   text-align: left !important;

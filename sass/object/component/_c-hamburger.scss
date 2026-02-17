@@ -23,11 +23,8 @@
  		transition: background-color 0.3s ease-in-out,
  			transform 0.3s ease-in-out,
  			opacity 0.3s ease-in-out;
-
-
  	}
  }
-
 
  // ★ 三本線のスタイル
  .c-hamburger__line,
@@ -44,7 +41,6 @@
  		opacity .35s ease,
  		background-color .35s ease;
  }
-
 
  // 中の線
  .c-hamburger__line {
