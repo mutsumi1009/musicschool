@@ -9,15 +9,9 @@
   max-width: 920px;
   padding-inline: 20px;
   margin: 0 auto;
-  // padding-inline: calc(20 / 1080 * 100%);
-  // padding-inline: 2rem;
-  // max-width: 92rem;
-  //  padding-top: 6.5rem;
-
+ 
   @include sp {
 		max-width: 100%;
-		// padding-inline: 2rem;
-    // padding-top: 4.7rem;
 	}
 }
 

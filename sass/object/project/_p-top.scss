@@ -747,7 +747,6 @@
     }
 }
 
-
 .p-faq__answer {
     display: flex;
     align-items: center;
@@ -871,6 +870,10 @@
 
     border-bottom: 1px solid currentColor;
     transition: opacity 0.3s;
+
+  &:hover {
+    opacity: 0.7; 
+  }
 }
 
 .p-top-page .p-blog-list {

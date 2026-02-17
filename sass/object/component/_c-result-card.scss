@@ -5,12 +5,20 @@
 
 .c-result-card {
   display: block;
+
 }
 
 .c-result-card__link {
   display: flex;
   align-items: flex-start;
   gap: 1.6rem;
+
+  transition: opacity 0.3s;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
 
   @include sp {
     display: block;
@@ -21,7 +29,7 @@
 .c-result-card__img {
   position: relative;
   overflow: hidden;
-  
+
   @include sp {
     display: block;
 
@@ -31,7 +39,7 @@
     width: 100%;
     height: auto;
     object-fit: cover;
-  
+
   }
 }
 
@@ -54,5 +62,5 @@
   font-size: 1.8rem;
   line-height: 1.777;
   text-align: right;
- 
+
 }
