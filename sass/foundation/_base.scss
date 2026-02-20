@@ -10,13 +10,15 @@ html {
   scroll-behavior: smooth;
 
 
-  
+
   @include pc {
     font-size: calc(10 / 920 * 100vw);
   }
+
   @media (min-width: 920px) {
     font-size: 10px;
   }
+
   @media(max-width:375px) {
     font-size: calc(10 /375 * 100vw);
   }
@@ -41,10 +43,8 @@ section[id] {
   }
 }
 
-//  img {
-//  	width: 100%;
-//  	height: auto;
-//  	display: block;
-//  }
-
-
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}

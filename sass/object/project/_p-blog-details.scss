@@ -379,10 +379,12 @@
   background-color: #E8E8E8;
   max-width: 18rem;
   padding-inline: 1.5rem;
+  appearance: none;        
+  -webkit-appearance: none;
 
-  
   @include sp {
-    width: 29.5rem;
+    width: calc(100% - 5.4rem); 
+    max-width: none;
     height: 5.4rem;
   }
 

@@ -1,0 +1,5 @@
+
+AuthUserFile "/home/xsh190605/moomoo009191.com/htpasswd/test.moomoo009191.com/site4/.htpasswd"
+AuthName "Member Site"
+AuthType BASIC
+require valid-user

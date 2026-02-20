@@ -47,6 +47,7 @@
 
 .page-top-btn {
   margin-inline: auto;
+  transition: opacity 0.4s, transform 0.4s;
 
   @include sp {
     margin-inline: 0.2rem;

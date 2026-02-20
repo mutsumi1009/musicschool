@@ -76,7 +76,7 @@ if (scrollHeight - scrollPosition <= footHeight) {
   // フッター手前に来たら position を absolute に変更
   $fixedButtons.css({
     position: "absolute",
-    bottom: footHeight, 
+    bottom: footHeight, 　
   });
 } else {
   // それ以外は元の fixed に戻す
