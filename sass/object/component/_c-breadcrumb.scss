@@ -8,11 +8,12 @@
    margin-top: 0;
    width: 100%;
    background-color: #E8E8E8;
-   padding-block: 1.2rem 0.9rem;
+   padding: 0;
+  //  padding-block: 1.2rem 0.9rem;
    z-index: 2;
    
    @include sp {
-     padding-block: 0.4rem 0.3rem;
+    //  padding-block: 0.4rem 0.3rem;
    }
  }
 
@@ -49,12 +50,18 @@
  }
 
  .c-breadcrumb a {
+  display: inline-block;
    color: $text-color;
    text-decoration: none;
    transition: opacity 0.3s ease;
+   height: 100%;
+   padding-block: 1.2rem 0.9rem;
 
    @include sp {
      font-size: 1.6rem;
+     padding-block: 1rem;
+     line-height: 1;
+     letter-spacing: 0.08em;
    }
  }
 

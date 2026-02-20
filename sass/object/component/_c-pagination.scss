@@ -28,6 +28,7 @@
   text-align: center;
   color: $text-color;
   text-decoration: none;
+  transition: background-color 0.4s, color 0.4s;
 
   &:hover {
     background-color: $text-color;
@@ -46,6 +47,8 @@
 .c-pagination__num.is-active {
   background-color: $text-color;
   color: #fff;
+  cursor: default;     
+  pointer-events: none
 }
 
 .c-pagination__dots {

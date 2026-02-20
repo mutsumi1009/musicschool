@@ -70,11 +70,14 @@
 
 .p-footer__logo {
     margin-top: 2.174rem;
+    // width: 3.2rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     @include sp {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+       
         margin-top: 1.6rem;
     }
 }
